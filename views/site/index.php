@@ -3,7 +3,7 @@
 /* @var $this yii\web\View */
 use yii\helpers\Html;
 
-$this->title = 'My Yii Application';
+$this->title = 'Vending Machine';
 ?>
 <div class="site-index">
 
@@ -12,7 +12,7 @@ $this->title = 'My Yii Application';
 
         <p class="lead">您现在可以进行预约购药！</p>
 
-        <p><a class="btn btn-lg btn-success" href="http://localhost:8080/basic/web/index.php?r=vem%2Findex">立即购买</a></p>
+        <p><a class="btn btn-lg btn-success" href="./index.php?r=buy%2Findex">立即购买</a></p>
     </div>
 
     <div class="body-content">
@@ -26,7 +26,7 @@ $this->title = 'My Yii Application';
                     ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
                     fugiat nulla pariatur.</p>
 
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/doc/">Yii Documentation &raquo;</a></p>
+                <p><a class="btn btn-default" href="http://www.yiiframework.com/doc/"> &raquo;</a></p>
             </div>
             <div class="col-lg-4">
                 <h2>Heading</h2>

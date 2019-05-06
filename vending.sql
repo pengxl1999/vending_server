@@ -1,16 +1,16 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : 127.0.0.1
-Source Server Version : 100131
+Source Server         : vending
+Source Server Version : 100138
 Source Host           : localhost:3306
 Source Database       : vending
 
 Target Server Type    : MYSQL
-Target Server Version : 100131
+Target Server Version : 100138
 File Encoding         : 65001
 
-Date: 2019-05-03 21:10:28
+Date: 2019-05-06 21:57:24
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -42,6 +42,10 @@ CREATE TABLE `customer_appointment` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- ----------------------------
+-- Records of customer_appointment
+-- ----------------------------
+
+-- ----------------------------
 -- Table structure for customer_car
 -- ----------------------------
 DROP TABLE IF EXISTS `customer_car`;
@@ -55,7 +59,15 @@ CREATE TABLE `customer_car` (
   KEY `c_id` (`c_id`),
   CONSTRAINT `customer_car_ibfk_1` FOREIGN KEY (`cc_medicine`) REFERENCES `medicine` (`m_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `customer_car_ibfk_2` FOREIGN KEY (`c_id`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of customer_car
+-- ----------------------------
+INSERT INTO `customer_car` VALUES ('1', '0', '0', '4');
+INSERT INTO `customer_car` VALUES ('3', '0', '1', '2');
+INSERT INTO `customer_car` VALUES ('4', '5', '1', '2');
+INSERT INTO `customer_car` VALUES ('5', '5', '0', '1');
 
 -- ----------------------------
 -- Table structure for customer_purchase
@@ -83,6 +95,10 @@ CREATE TABLE `customer_purchase` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- ----------------------------
+-- Records of customer_purchase
+-- ----------------------------
+
+-- ----------------------------
 -- Table structure for medicine
 -- ----------------------------
 DROP TABLE IF EXISTS `medicine`;
@@ -107,6 +123,7 @@ CREATE TABLE `medicine` (
   `cert` varchar(20) NOT NULL,
   `manufacturer` int(11) DEFAULT NULL,
   `img` varchar(255) DEFAULT NULL,
+  `money` decimal(11,2) NOT NULL,
   PRIMARY KEY (`m_id`),
   KEY `type` (`type`),
   KEY `manufacturer` (`manufacturer`),
@@ -117,6 +134,12 @@ CREATE TABLE `medicine` (
   CONSTRAINT `medicine_ibfk_3` FOREIGN KEY (`brand`) REFERENCES `medicine_brand` (`mb_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `medicine_ibfk_4` FOREIGN KEY (`fomulation`) REFERENCES `medicine_formulation` (`mft_id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of medicine
+-- ----------------------------
+INSERT INTO `medicine` VALUES ('0', 'test', null, null, null, null, '1', null, null, null, null, null, null, null, '0', null, null, '', null, null, '15.00');
+INSERT INTO `medicine` VALUES ('1', 'abcd', null, null, null, null, null, null, null, null, null, null, null, null, '0', null, null, '', null, 'fish1.png', '30.00');
 
 -- ----------------------------
 -- Table structure for medicine_brand
@@ -130,6 +153,10 @@ CREATE TABLE `medicine_brand` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- ----------------------------
+-- Records of medicine_brand
+-- ----------------------------
+
+-- ----------------------------
 -- Table structure for medicine_formulation
 -- ----------------------------
 DROP TABLE IF EXISTS `medicine_formulation`;
@@ -138,6 +165,10 @@ CREATE TABLE `medicine_formulation` (
   `mtf_name` varchar(255) NOT NULL,
   PRIMARY KEY (`mft_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of medicine_formulation
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for medicine_man
@@ -150,6 +181,10 @@ CREATE TABLE `medicine_man` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- ----------------------------
+-- Records of medicine_man
+-- ----------------------------
+
+-- ----------------------------
 -- Table structure for medicine_type
 -- ----------------------------
 DROP TABLE IF EXISTS `medicine_type`;
@@ -158,6 +193,12 @@ CREATE TABLE `medicine_type` (
   `mt_name` varchar(255) NOT NULL,
   PRIMARY KEY (`mt_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of medicine_type
+-- ----------------------------
+INSERT INTO `medicine_type` VALUES ('1', 'Rx');
+INSERT INTO `medicine_type` VALUES ('2', '????');
 
 -- ----------------------------
 -- Table structure for pharmacist
@@ -170,6 +211,10 @@ CREATE TABLE `pharmacist` (
   `location` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`u_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of pharmacist
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for pharmacist_appointment
@@ -187,6 +232,10 @@ CREATE TABLE `pharmacist_appointment` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- ----------------------------
+-- Records of pharmacist_appointment
+-- ----------------------------
+
+-- ----------------------------
 -- Table structure for user
 -- ----------------------------
 DROP TABLE IF EXISTS `user`;
@@ -201,6 +250,15 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
+-- Records of user
+-- ----------------------------
+INSERT INTO `user` VALUES ('0', '1', 'admin', 'admin', '', '');
+INSERT INTO `user` VALUES ('2', '2', 'asasd', '123456', '', '');
+INSERT INTO `user` VALUES ('4', '2', '1111', '1', '', '');
+INSERT INTO `user` VALUES ('5', '2', 'pxl', '1', '', '');
+INSERT INTO `user` VALUES ('6', '2', 'ddf', '1', '', '');
+
+-- ----------------------------
 -- Table structure for vem
 -- ----------------------------
 DROP TABLE IF EXISTS `vem`;
@@ -213,6 +271,10 @@ CREATE TABLE `vem` (
   KEY `vem_type` (`vem_type`),
   CONSTRAINT `vem_ibfk_1` FOREIGN KEY (`vem_type`) REFERENCES `vem_type` (`vt_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of vem
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for vem_status
@@ -231,6 +293,10 @@ CREATE TABLE `vem_status` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- ----------------------------
+-- Records of vem_status
+-- ----------------------------
+
+-- ----------------------------
 -- Table structure for vem_type
 -- ----------------------------
 DROP TABLE IF EXISTS `vem_type`;
@@ -239,3 +305,7 @@ CREATE TABLE `vem_type` (
   `vt_name` varchar(255) NOT NULL,
   PRIMARY KEY (`vt_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of vem_type
+-- ----------------------------

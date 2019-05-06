@@ -1,0 +1,131 @@
+<?php
+/**
+ *选择收货的地址（售货机地址）
+ */
+use app\models\Medicine;
+use app\models\VemSearch;
+use yii\data\ActiveDataProvider;
+use yii\grid\GridView;
+use yii\helpers\Html;
+use yii\web\View;
+use yii\widgets\DetailView;
+
+/* @var $dataProvider yii\data\ActiveDataProvider */
+/* @var $dataProvider1 yii\data\ActiveDataProvider */
+/* @var $searchModel app\models\VemSearch */
+
+$this->title = '选择取货地点';
+$this->params['breadcrumbs'][] = ['label' => '我的购物车', 'url' => ['cart']];
+$this->params['breadcrumbs'][] = $this->title;
+?>
+
+<div>
+    <p>
+        <?= Html::a('返回', ['cart'], ['class' => 'btn btn-primary']) ?>
+    </p>
+    <h1><strong style="font-size: large">您的购买信息</strong></h1>
+    <?= GridView::widget([
+        'dataProvider' => $dataProvider,
+        //'filterModel' => $searchModel,
+        'options' => ['id' => 'grid'],
+        'columns' => [
+            [
+                'class' => 'yii\grid\SerialColumn',
+                'headerOptions' => ['style' => 'text-align:center', 'width' => '30'],
+                'contentOptions' => ['style' => 'text-align:center', 'width' => '30'],
+            ],
+            //'cc_id',
+            //'c_id',
+            [
+                'label' => '图片',
+                'enableSorting' => false,
+                'format' => 'raw',
+                'value' => function($model) {
+                    $medicine = \app\models\Medicine::findOne(['m_id' => $model->cc_medicine]);
+                    return Html::img('images/medicine/'.$medicine->img, ['alt' => $medicine->name, 'width' => '100']);
+                },
+                'headerOptions' => ['style' => 'text-align:center; font-size:x-small', 'width' => '100'],
+                'contentOptions' => ['align' => 'center'],
+            ],
+            [
+                'label' => '药品名称',
+                'enableSorting' => false,
+                'value' => function($model) {
+                    $medicine = \app\models\Medicine::findOne(['m_id' => $model->cc_medicine]);
+                    $medicineTypeId = $medicine->type;
+                    if($medicineTypeId === 1) {
+                        \app\controllers\BuyController::$hasRx = true;
+                    }
+                    return $medicine->name;
+                },
+                'headerOptions' => ['style' => 'text-align:center; font-size:x-small'],
+                'contentOptions' => ['align' => 'center'],
+            ],
+            [
+                'label' => '价格',
+                'enableSorting' => false,
+                'value' => function($model) {
+                    $medicine = \app\models\Medicine::findOne(['m_id' => $model->cc_medicine]);
+                    return $medicine->money;
+                },
+                'headerOptions' => ['style' => 'text-align:center', 'width' => '60'],
+                'contentOptions' => ['style' => 'text-align:center', 'width' => '60'],
+            ],
+            //'cc_medicine',
+            [
+                'label' => '数量',
+                'enableSorting' => false,
+                'value' => function($model) {
+                    $medicine = \app\models\Medicine::findOne(['m_id' => $model->cc_medicine]);
+                    \app\controllers\BuyController::$money += $medicine->money * $model->cc_num;
+                    return $model->cc_num;
+                },
+                'headerOptions' => ['style' => 'text-align:center', 'width' => '50'],
+                'contentOptions' => ['style' => 'text-align:center', 'width' => '50'],
+            ],
+            //'cc_num',
+        ],
+    ]); ?>
+
+    <?php
+        if(\app\controllers\BuyController::$hasRx === true) {
+            echo "
+                <div>
+                    <p>您的订单中包含处方药，请上传处方！</p>
+                    <a class='btn btn-default' href='' >上传图片</a>
+                </div>
+                ";
+        }
+    ?>
+
+</div>
+
+
+<div class="vem-index">
+
+    <h1><strong style="font-size: large"><?= Html::encode($this->title) ?></strong></h1>
+    <?= GridView::widget([
+        'dataProvider' => $dataProvider1,
+        'filterModel' => $searchModel,
+        'columns' => [
+            [
+                'class' => 'yii\grid\SerialColumn',
+                'headerOptions' => ['style' => 'text-align:center', 'width' => '30'],
+                'contentOptions' => ['style' => 'text-align:center', 'width' => '30'],
+            ],
+
+            //'vem_id',
+            'vem_name',
+            'vem_location',
+            //'vem_type',
+
+            [
+                'header' => '操作',
+                'headerOptions' => ['style' => 'text-align:center', 'width' => '100'],
+                'contentOptions' => ['style' => 'text-align:center', 'width' => '100'],
+                'class' => 'yii\grid\ActionColumn'
+            ],
+        ],
+    ]); ?>
+
+</div>

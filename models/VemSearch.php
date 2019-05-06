@@ -18,7 +18,7 @@ class VemSearch extends Vem
     {
         return [
             [['vem_id', 'vem_type'], 'integer'],
-            [['vem_name', 'vem_addr'], 'safe'],
+            [['vem_name', 'vem_location'], 'safe'],
         ];
     }
 
@@ -63,7 +63,7 @@ class VemSearch extends Vem
         ]);
 
         $query->andFilterWhere(['like', 'vem_name', $this->vem_name])
-            ->andFilterWhere(['like', 'vem_addr', $this->vem_addr]);
+            ->andFilterWhere(['like', 'vem_location', $this->vem_location]);
 
         return $dataProvider;
     }

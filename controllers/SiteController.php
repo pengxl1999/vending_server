@@ -2,6 +2,12 @@
 
 namespace app\controllers;
 
+use app\models\CustomerCar;
+use app\models\CustomerPurchase;
+use app\models\Medicine;
+use app\models\MedicineSearch;
+use app\models\SignInForm;
+use app\models\User;
 use app\models\Vem;
 use app\models\VemSearch;
 use Yii;
@@ -10,7 +16,6 @@ use yii\web\Controller;
 use yii\web\Response;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
-use app\models\ContactForm;
 
 class SiteController extends Controller
 {
@@ -63,6 +68,12 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+        if(!Yii::$app->user->isGuest) {
+            if(!session_id())   session_start();
+            $username = Yii::$app->user->identity->username;
+            $user = User::findByUsername($username);
+            $_SESSION['userId'] = $user['id'];
+        }
         return $this->render('index');
     }
 
@@ -79,9 +90,24 @@ class SiteController extends Controller
 
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            return $this->goBack();
-        }
 
+            $session = \yii::$app->session;
+            if(!$session->isActive)
+            {
+                $session->open();
+
+            }
+            $type = $model->getUser()->getUserType();
+            //$id = $model->getUser()->id;
+            //$session->set('type',$type);
+            //if($type === '1'){
+            //    $pro = Professor::findOne($id);
+            //    $session->set('depart',$pro->pro_depart);
+            //}
+            //$session->set('user',$id);
+            //$session->set('password',$model->getUser()->password);
+            return $this->goHome();
+        }
         $model->password = '';
         return $this->render('login', [
             'model' => $model,
@@ -123,14 +149,61 @@ class SiteController extends Controller
      *
      * @return string
      */
-    public function actionAbout()
+    public function actionSuccess()
     {
-        return $this->render('about');
+        return $this->render('success');
     }
 
-    public function actionBuy()
+    /*public function actionBuy($userId, $medId)
     {
-        return $this->render('buy');
-    }
 
+    }*/
+
+//    public function actionCart($userId, $medId)
+//    {
+//        $CustomerPurchase = CustomerPurchase::findOne($userId);
+//        $cart = new CustomerCar();
+//        $cart['cc_id'] = $CustomerPurchase['cp_id'];
+//        $cart['c_id'] = $userId;        //用户id
+//        $cart['cc_medicine'] = $medId;      //药品id
+//        return $this->render('cart', ['model' => $cart]);
+//    }
+
+    /**
+     * Displays sign-in page.
+     *
+     * @return string
+     */
+    public function actionCreate()
+    {
+        $model = new SignInForm();
+        if ($model->signIn()) {
+            $this->redirect(['success']);
+        }
+
+//
+//            $session = \yii::$app->session;
+//            if(!$session->isActive)
+//            {
+//                $session->open();
+//
+//            }
+//            $type = $model->getUser()->getUserType();
+//            $id = $model->getUser()->id;
+//            $session->set('type',$type);
+//            if($type === '1'){
+//                $pro = Professor::findOne($id);
+//                $session->set('depart',$pro->pro_depart);
+//            }
+//            $session->set('user',$id);
+//            $session->set('password',$model->getUser()->password);
+//            return $this->goHome();
+//        }
+        $model->id = User::getMaxID() + 1;
+        $model->user_type = 2;
+        $model->password = '';
+        return $this->render('create', [
+            'model' => $model,
+        ]);
+    }
 }

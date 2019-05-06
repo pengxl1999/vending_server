@@ -19,7 +19,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'vem_name') ?>
 
-    <?= $form->field($model, 'vem_addr') ?>
+    <?= $form->field($model, 'vem_location') ?>
 
     <?= $form->field($model, 'vem_type') ?>
 

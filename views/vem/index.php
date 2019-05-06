@@ -7,16 +7,16 @@ use yii\grid\GridView;
 /* @var $searchModel app\models\VemSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = '售货机详细信息';
-//$this->params['breadcrumbs'][] = $this->title;
+$this->title = 'Vems';
+$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="vem-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
-    <!--<p>
+    <p>
         <?= Html::a('Create Vem', ['create'], ['class' => 'btn btn-success']) ?>
-    </p>-->
+    </p>
 
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
@@ -24,14 +24,14 @@ $this->title = '售货机详细信息';
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
         'columns' => [
-            //['class' => 'yii\grid\SerialColumn'],
+            ['class' => 'yii\grid\SerialColumn'],
 
             'vem_id',
             'vem_name',
-            'vem_addr',
+            'vem_location',
             'vem_type',
 
-            //['class' => 'yii\grid\ActionColumn'],
+            ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
 

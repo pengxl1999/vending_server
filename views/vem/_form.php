@@ -16,7 +16,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'vem_name')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'vem_addr')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'vem_location')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'vem_type')->textInput() ?>
 

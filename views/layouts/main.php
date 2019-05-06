@@ -13,6 +13,7 @@ use app\assets\AppAsset;
 AppAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
+
 <!DOCTYPE html>
 <html lang="<?= Yii::$app->language ?>">
 <head>
@@ -41,15 +42,19 @@ AppAsset::register($this);
         'items' => [
             ['label' => '首页', 'url' => ['/site/index']],
             ['label' => '售货机信息', 'url' => ['/vem/index']],
-            ['label' => '购买药品', 'url' => ['/site/buy']],
-            ['label' => '取消订单', 'url' => ['/site/contact']],
+            ['label' => '购买药品', 'url' => ['/buy/index']],
+            /*['label' => '购买药品', 'url' => ['/buy/index&userId='
+                . Yii::$app->user->identity->username .
+                '&medId=']],*/
+            ['label' => '我的订单', 'url' => ['/site/contact']],
+            ['label' => '我的购物车', 'url' => ['/buy/cart']],
             Yii::$app->user->isGuest ? (
-                ['label' => 'Login', 'url' => ['/site/login']]
+                ['label' => '登录/注册', 'url' => ['/site/login']]
             ) : (
                 '<li>'
                 . Html::beginForm(['/site/logout'], 'post')
                 . Html::submitButton(
-                    'Logout (' . Yii::$app->user->identity->username . ')',
+                    '退出登录(' . Yii::$app->user->identity->username . ')',
                     ['class' => 'btn btn-link logout']
                 )
                 . Html::endForm()
@@ -68,15 +73,6 @@ AppAsset::register($this);
         <?= $content ?>
     </div>
 </div>
-
-<footer class="footer">
-    <div class="container">
-        <p class="pull-left">&copy; Pengxl <?= date('Y') ?></p>
-
-        <!-- <p class="pull-right"><?= Yii::powered() ?></p> -->
-        <p class="pull-right">Powered By Pengxl</p>
-    </div>
-</footer>
 
 <?php $this->endBody() ?>
 </body>
