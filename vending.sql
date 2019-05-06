@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 100138
 File Encoding         : 65001
 
-Date: 2019-05-06 21:57:24
+Date: 2019-05-06 22:12:54
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -23,10 +23,10 @@ CREATE TABLE `customer_appointment` (
   `ca_id` int(11) NOT NULL AUTO_INCREMENT,
   `c_id` int(11) NOT NULL,
   `m_id` int(11) NOT NULL,
-  `ca_time` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  `ca_time` datetime DEFAULT NULL,
   `status` int(11) DEFAULT NULL,
   `v_id` int(11) DEFAULT NULL,
-  `deadline` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  `deadline` datetime DEFAULT NULL,
   `num` int(11) DEFAULT '1',
   `img` varchar(255) DEFAULT NULL,
   `pa_id` int(11) DEFAULT NULL,
@@ -77,7 +77,7 @@ CREATE TABLE `customer_purchase` (
   `cp_id` int(11) NOT NULL,
   `c_id` int(11) NOT NULL,
   `m_id` int(11) NOT NULL,
-  `cp_time` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  `cp_time` datetime DEFAULT NULL,
   `status` int(11) DEFAULT NULL,
   `v_id` int(11) DEFAULT NULL,
   `num` int(11) DEFAULT '1',
@@ -223,7 +223,7 @@ DROP TABLE IF EXISTS `pharmacist_appointment`;
 CREATE TABLE `pharmacist_appointment` (
   `pa_id` int(11) NOT NULL,
   `p_id` int(11) DEFAULT NULL,
-  `time` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  `time` datetime DEFAULT NULL,
   `image` varchar(20) DEFAULT NULL,
   `reason` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`pa_id`),
