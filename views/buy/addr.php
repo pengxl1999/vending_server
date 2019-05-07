@@ -88,7 +88,7 @@ $this->params['breadcrumbs'][] = $this->title;
     ]); ?>
 
     <?php
-        if(\app\controllers\BuyController::$hasRx === true) {
+        if(\app\controllers\BuyController::$hasRx === true && \app\controllers\BuyController::$isUploaded == false) {
             echo '
                 <div>
                     <p>您的订单中包含处方药，请上传处方！</p>
@@ -96,6 +96,13 @@ $this->params['breadcrumbs'][] = $this->title;
                         href="javascript:location.reload();">上传图片</a>
                 </div>
                 ';
+        }
+        else if(\app\controllers\BuyController::$hasRx === true && \app\controllers\BuyController::$isUploaded == true){
+            echo '
+                <div>
+                    <p>处方图片上传成功！下单成功后，请前往“我的订单”页面查看审核状态</p>
+                </div>
+            ';
         }
     ?>
 
@@ -133,7 +140,6 @@ $this->params['breadcrumbs'][] = $this->title;
 <script>
     function getResultFromAndroid(isSuccess) {
         if(isSuccess) {
-            alert('上传成功！');
             <?php
                 \app\controllers\BuyController::$isUploaded = true;     //图片已上传，可以进行结算
             ?>
