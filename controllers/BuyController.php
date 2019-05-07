@@ -136,23 +136,21 @@ class BuyController extends Controller
         ]);
     }
 
-    public function actionAddr($cart, $mMoney) {     //支付页面， medId == -1 ? 全部购买 : 只购买medId
+    public function actionAddr($cart, $mMoney, $isUploaded = false) {     //支付页面， cart == -1 ? 全部购买 : 只购买cart
         if($mMoney == 0) {     //总金额为0，不进行操作
             return $this->redirect(['cart']);
         }
+        self::$isUploaded = $isUploaded;
         if($cart == -1) {
             $searchModel = new CustomerCarSearch();
             $dataProvider = $searchModel->searchByUser($_SESSION['userId']);    //购买信息provider
-            $searchModel = new VemSearch();
-            $dataProvider1 = $searchModel->search(Yii::$app->request->queryParams);     //售货机信息provider
         } else {
             $searchModel = new CustomerCarSearch();
             $dataProvider = $searchModel->searchById($cart);
-            $searchModel = new VemSearch();
-            $dataProvider1 = $searchModel->search(Yii::$app->request->queryParams);
         }
+        $searchModel = new VemSearch();
+        $dataProvider1 = $searchModel->search(Yii::$app->request->queryParams);
         return $this->render('addr', [
-            'medId' => $cart,
             'mMoney' => $mMoney,
             'dataProvider' => $dataProvider,
             'dataProvider1' => $dataProvider1,

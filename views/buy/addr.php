@@ -139,8 +139,7 @@ $this->params['breadcrumbs'][] = $this->title;
 <script>
     function getResultFromAndroid(isSuccess) {
         if(isSuccess) {
-            var test = window.location.href;
-            alert(test);
+            window.location.href += '&isUploaded=true';
         }
         else {
             alert('上传失败！请重新上传！');
