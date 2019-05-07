@@ -92,8 +92,7 @@ $this->params['breadcrumbs'][] = $this->title;
             echo '
                 <div>
                     <p>您的订单中包含处方药，请上传处方！</p>
-                    <a class="btn btn-default" onclick="window.android.getImageForBuying()"
-                        href="javascript:location.reload();">上传图片</a>
+                    <a class="btn btn-default" onclick="window.android.getImageForBuying()">上传图片</a>
                 </div>
                 ';
         }
@@ -143,6 +142,7 @@ $this->params['breadcrumbs'][] = $this->title;
             <?php
                 \app\controllers\BuyController::$isUploaded = true;     //图片已上传，可以进行结算
             ?>
+            location.reload();
         }
         else {
             alert('上传失败！请重新上传！');
