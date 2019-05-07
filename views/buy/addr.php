@@ -89,12 +89,12 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?php
         if(\app\controllers\BuyController::$hasRx === true) {
-            echo "
+            echo '
                 <div>
                     <p>您的订单中包含处方药，请上传处方！</p>
-                    <a class='btn btn-default' href='' >上传图片</a>
+                    <button class="btn-default" onclick="window.android.getImageForBuying()">上传图片</button>
                 </div>
-                ";
+                ';
         }
     ?>
 
@@ -129,3 +129,16 @@ $this->params['breadcrumbs'][] = $this->title;
     ]); ?>
 
 </div>
+<script>
+    function getResultFromAndroid(isSuccess) {
+        if(isSuccess) {
+            alert("上传成功！");
+            <?php
+                \app\controllers\BuyController::$isUploaded = true;     //图片已上传，可以进行结算
+            ?>
+        }
+        else {
+            alert("上传失败！请重新上传！");
+        }
+    }
+</script>

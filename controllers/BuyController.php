@@ -56,6 +56,7 @@ class BuyController extends Controller
         }
 
         self::$hasRx = false;
+        self::$isUploaded = false;
         if($medId !== -1) {
             $this->addMedToCart($medId);
         }
@@ -81,6 +82,7 @@ class BuyController extends Controller
             return $this->redirect('./index.php?r=site/login');
         }
         self::$money = 0;
+        self::$isUploaded = false;
         if($operation !== -1) {
             switch ($operation) {
                 case 0:
@@ -139,6 +141,7 @@ class BuyController extends Controller
         if($mMoney == 0) {     //总金额为0，不进行操作
             return $this->redirect(['cart']);
         }
+        self::$isUploaded = false;
         if($cart == -1) {
             $searchModel = new CustomerCarSearch();
             $dataProvider = $searchModel->searchByUser($_SESSION['userId']);    //购买信息provider
@@ -160,7 +163,6 @@ class BuyController extends Controller
     }
 
     public function addMedToCart($medId) {
-
         if(($cart = CustomerCar::findOne([
             'c_id' => $_SESSION['userId'],
             'cc_medicine' => $medId,
