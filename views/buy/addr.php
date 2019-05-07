@@ -53,7 +53,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'value' => function($model) {
                     $medicine = \app\models\Medicine::findOne(['m_id' => $model->cc_medicine]);
                     $medicineTypeId = $medicine->type;
-                    if($medicineTypeId === 1) {
+                    if($medicineTypeId == 1) {
                         \app\controllers\BuyController::$hasRx = true;
                     }
                     return $medicine->name;
@@ -142,7 +142,6 @@ $this->params['breadcrumbs'][] = $this->title;
             <?php
                 \app\controllers\BuyController::$isUploaded = true;     //图片已上传，可以进行结算
             ?>
-            location.reload();
         }
         else {
             alert('上传失败！请重新上传！');

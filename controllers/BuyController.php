@@ -81,7 +81,7 @@ class BuyController extends Controller
             return $this->redirect('./index.php?r=site/login');
         }
         self::$money = 0;
-        self::$isUploaded = false;
+        //self::$isUploaded = false;
         if($operation !== -1) {
             switch ($operation) {
                 case 0:
