@@ -39,7 +39,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'value' => function($model) {
                     return Html::img('images/medicine/'.$model->img, ['alt' => $model->name, 'width' => 100]);
                 },
-                'headerOptions' => ['style' => 'text-align:center; font-size:x-small', 'width' => '80'],
+                'headerOptions' => ['style' => 'text-align:center', 'width' => '80'],
                 'contentOptions' => ['align' => 'center'],
             ],
             //'img',
@@ -47,7 +47,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'header' => "名称",
                 'class' => 'yii\grid\ActionColumn',
                 'template'=> '{name}',
-                'headerOptions' => ['style' => 'text-align:center; font-size:x-small', 'width' => '100'],
+                'headerOptions' => ['style' => 'text-align:center', 'width' => '100'],
                 'contentOptions' => ['align' => 'center'],
                 'buttons' => [
                     'name' => function ($url, $model) {
@@ -80,7 +80,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'value' => function($model) {
                     return $model->money;
                 },
-                'headerOptions' => ['style' => 'text-align:center; font-size:x-small', 'width' => '80'],
+                'headerOptions' => ['style' => 'text-align:center', 'width' => '80'],
                 'contentOptions' => ['align' => 'center'],
             ],
             //'money',
@@ -90,7 +90,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'header' => "购买",
                 'class' => 'yii\grid\ActionColumn',
                 'template'=> '{buyNow}{addToCart}',
-                'headerOptions' => ['style' => 'text-align:center; font-size:x-small', 'width' => '100'],
+                'headerOptions' => ['style' => 'text-align:center', 'width' => '100'],
                 'contentOptions' => ['align' => 'center', 'width' => '100'],
                 'buttons' => [
                     'buyNow' => function ($url, $model) {
