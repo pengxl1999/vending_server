@@ -37,9 +37,9 @@ $this->params['breadcrumbs'][] = $this->title;
                 'enableSorting' => false,
                 'format' => 'raw',
                 'value' => function($model) {
-                    return Html::img('images/medicine/'.$model->img, ['alt' => $model->name, 'width' => 100]);
+                    return Html::img('images/medicine/'.$model->img, ['alt' => $model->name, 'width' => 80]);
                 },
-                'headerOptions' => ['style' => 'text-align:center', 'width' => '60'],
+                'headerOptions' => ['style' => 'text-align:center'],
                 'contentOptions' => ['align' => 'center'],
             ],
             //'img',
@@ -47,7 +47,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'header' => "名称",
                 'class' => 'yii\grid\ActionColumn',
                 'template'=> '{name}',
-                'headerOptions' => ['style' => 'text-align:center', 'width' => '100'],
+                'headerOptions' => ['style' => 'text-align:center', 'width' => '150'],
                 'contentOptions' => ['align' => 'center'],
                 'buttons' => [
                     'name' => function ($url, $model) {
@@ -80,7 +80,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'value' => function($model) {
                     return $model->money;
                 },
-                'headerOptions' => ['style' => 'text-align:center', 'width' => '80'],
+                'headerOptions' => ['style' => 'text-align:center'],
                 'contentOptions' => ['align' => 'center'],
             ],
             //'money',
@@ -90,8 +90,8 @@ $this->params['breadcrumbs'][] = $this->title;
                 'header' => "购买",
                 'class' => 'yii\grid\ActionColumn',
                 'template'=> '{buyNow}{addToCart}',
-                'headerOptions' => ['style' => 'text-align:center', 'width' => '100'],
-                'contentOptions' => ['align' => 'center', 'width' => '100'],
+                'headerOptions' => ['style' => 'text-align:center'],
+                'contentOptions' => ['align' => 'center'],
                 'buttons' => [
                     'buyNow' => function ($url, $model) {
                         //$_SESSION['medId'] = $model->m_id;

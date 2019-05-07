@@ -26,8 +26,8 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             [
                 'class' => 'yii\grid\SerialColumn',
-                'headerOptions' => ['style' => 'text-align:center', 'width' => '30'],
-                'contentOptions' => ['style' => 'text-align:center', 'width' => '30'],
+                'headerOptions' => ['style' => 'text-align:center', 'width' => '20'],
+                'contentOptions' => ['style' => 'text-align:center', 'width' => '20'],
             ],
             //'cc_id',
             //'c_id',
@@ -37,9 +37,9 @@ $this->params['breadcrumbs'][] = $this->title;
                 'format' => 'raw',
                 'value' => function($model) {
                     $medicine = \app\models\Medicine::findOne(['m_id' => $model->cc_medicine]);
-                    return Html::img('images/medicine/'.$medicine->img, ['alt' => $medicine->name, 'width' => 100]);
+                    return Html::img('images/medicine/'.$medicine->img, ['alt' => $medicine->name, 'width' => 80]);
                 },
-                'headerOptions' => ['style' => 'text-align:center', 'width' => '60'],
+                'headerOptions' => ['style' => 'text-align:center'],
                 'contentOptions' => ['align' => 'center'],
             ],
             [
@@ -49,7 +49,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     $medicine = \app\models\Medicine::findOne(['m_id' => $model->cc_medicine]);
                     return $medicine->name;
                 },
-                'headerOptions' => ['style' => 'text-align:center'],
+                'headerOptions' => ['style' => 'text-align:center', 'width' => '150'],
                 'contentOptions' => ['align' => 'center'],
             ],
             [
@@ -59,8 +59,8 @@ $this->params['breadcrumbs'][] = $this->title;
                     $medicine = \app\models\Medicine::findOne(['m_id' => $model->cc_medicine]);
                     return $medicine->money;
                 },
-                'headerOptions' => ['style' => 'text-align:center', 'width' => '60'],
-                'contentOptions' => ['style' => 'text-align:center', 'width' => '60'],
+                'headerOptions' => ['style' => 'text-align:center'],
+                'contentOptions' => ['style' => 'text-align:center'],
             ],
             //'cc_medicine',
             [
@@ -71,8 +71,8 @@ $this->params['breadcrumbs'][] = $this->title;
                     \app\controllers\BuyController::$money += $medicine->money * $model->cc_num;
                     return $model->cc_num;
                 },
-                'headerOptions' => ['style' => 'text-align:center', 'width' => '50'],
-                'contentOptions' => ['style' => 'text-align:center', 'width' => '50'],
+                'headerOptions' => ['style' => 'text-align:center'],
+                'contentOptions' => ['style' => 'text-align:center'],
             ],
             //'cc_num',
 
@@ -80,7 +80,8 @@ $this->params['breadcrumbs'][] = $this->title;
                 'header' => '选项',
                 'class' => 'yii\grid\ActionColumn',
                 'template'=> '{add}{sub}{delete}{buy}',
-                'headerOptions' => ['style' => 'text-align:center', 'width' => '60'],
+                'headerOptions' => ['style' => 'text-align:center'],
+                'contentOptions' => ['align' => 'center'],
                 'buttons' => [
                     'add' => function ($url, $model) {
                         //$_SESSION['medId'] = $model->m_id;
