@@ -88,7 +88,7 @@ $this->params['breadcrumbs'][] = $this->title;
     ]); ?>
 
     <?php
-        if(\app\controllers\BuyController::$hasRx === true && \app\controllers\BuyController::$isUploaded == false) {
+        if(\app\controllers\BuyController::$hasRx == true && \app\controllers\BuyController::$isUploaded == false) {
             echo '
                 <div>
                     <p>您的订单中包含处方药，请上传处方！</p>
@@ -96,7 +96,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 </div>
                 ';
         }
-        else if(\app\controllers\BuyController::$hasRx === true && \app\controllers\BuyController::$isUploaded == true){
+        else if(\app\controllers\BuyController::$hasRx == true && \app\controllers\BuyController::$isUploaded == true){
             echo '
                 <div>
                     <p>处方图片上传成功！下单成功后，请前往“我的订单”页面查看审核状态</p>
