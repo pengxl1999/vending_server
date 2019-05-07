@@ -56,7 +56,6 @@ class BuyController extends Controller
         }
 
         self::$hasRx = false;
-        self::$isUploaded = false;
         if($medId !== -1) {
             $this->addMedToCart($medId);
         }
@@ -141,7 +140,6 @@ class BuyController extends Controller
         if($mMoney == 0) {     //总金额为0，不进行操作
             return $this->redirect(['cart']);
         }
-        self::$isUploaded = false;
         if($cart == -1) {
             $searchModel = new CustomerCarSearch();
             $dataProvider = $searchModel->searchByUser($_SESSION['userId']);    //购买信息provider
