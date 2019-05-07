@@ -39,7 +39,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'value' => function($model) {
                     return Html::img('images/medicine/'.$model->img, ['alt' => $model->name, 'width' => 100]);
                 },
-                'headerOptions' => ['style' => 'text-align:center', 'width' => '80'],
+                'headerOptions' => ['style' => 'text-align:center', 'width' => '60'],
                 'contentOptions' => ['align' => 'center'],
             ],
             //'img',

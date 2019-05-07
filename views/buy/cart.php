@@ -39,7 +39,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     $medicine = \app\models\Medicine::findOne(['m_id' => $model->cc_medicine]);
                     return Html::img('images/medicine/'.$medicine->img, ['alt' => $medicine->name, 'width' => 100]);
                 },
-                'headerOptions' => ['style' => 'text-align:center; font-size:x-small', 'width' => '100'],
+                'headerOptions' => ['style' => 'text-align:center', 'width' => '60'],
                 'contentOptions' => ['align' => 'center'],
             ],
             [
@@ -49,7 +49,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     $medicine = \app\models\Medicine::findOne(['m_id' => $model->cc_medicine]);
                     return $medicine->name;
                 },
-                'headerOptions' => ['style' => 'text-align:center; font-size:x-small'],
+                'headerOptions' => ['style' => 'text-align:center'],
                 'contentOptions' => ['align' => 'center'],
             ],
             [
