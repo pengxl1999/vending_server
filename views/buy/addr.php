@@ -139,9 +139,8 @@ $this->params['breadcrumbs'][] = $this->title;
 <script>
     function getResultFromAndroid(isSuccess) {
         if(isSuccess) {
-            <?php
-                \app\controllers\BuyController::$isUploaded = true;     //图片已上传，可以进行结算
-            ?>
+            var test = window.location.href;
+            alert(test);
         }
         else {
             alert('上传失败！请重新上传！');
