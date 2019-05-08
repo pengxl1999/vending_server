@@ -15,7 +15,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <?= Html::a('返回', ['login'], ['class' => 'btn btn-primary']) ?>
     </p>
 
-    <h1><strong style="font-size: large"><?= Html::encode($this->title) ?></strong></h1>
+    <h1><strong style="font-size: x-large"><?= Html::encode($this->title) ?></strong></h1>
 
     <br/>
 
