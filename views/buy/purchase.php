@@ -19,6 +19,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
+    <br/>
     <form action="./index.php?r=buy/purchase" method="post">
         <input type="text" name="search_cp" placeholder="搜索订单" style="font-size: medium"/>
         <input type="submit" value="搜索" class="btn btn-primary" />

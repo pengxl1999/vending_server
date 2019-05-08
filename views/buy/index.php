@@ -18,6 +18,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><strong style="font-size: large"><?= Html::encode($this->title) ?></strong></h1>
     <?php //echo $this->render('_search', ['model' => $searchModel]); ?>
 
+    <br/>
     <form action="./index.php?r=buy/index" method="post">
         <input type="text" name="search_med" placeholder="搜索药品" style="font-size: medium"/>
         <input type="submit" value="搜索" class="btn btn-primary" />
