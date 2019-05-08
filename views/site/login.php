@@ -11,7 +11,7 @@ $this->title = '登录';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-login">
-    <h1><?= Html::encode($this->title) ?></h1>
+    <h1><strong style="font-size: large"><?= Html::encode($this->title) ?></strong></h1>
 
     <br/>
 

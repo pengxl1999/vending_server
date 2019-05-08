@@ -10,7 +10,12 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 
 <div class="site-login">
-    <h1><?= Html::encode($this->title) ?></h1>
+
+    <p>
+        <?= Html::a('返回', ['cart'], ['class' => 'btn btn-primary']) ?>
+    </p>
+
+    <h1><strong style="font-size: large"><?= Html::encode($this->title) ?></strong></h1>
 
     <br/>
 
