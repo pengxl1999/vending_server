@@ -86,6 +86,10 @@ class BuyController extends Controller
      * @return string
      */
     public function actionPurchase() {
+        if(Yii::$app->user->isGuest) {
+            return $this->redirect('./index.php?r=site/login');
+        }
+
         $searchModel = new CustomerPurchaseSearch();
 
         $post = Yii::$app->request->post();

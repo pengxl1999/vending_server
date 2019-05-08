@@ -14,11 +14,10 @@ use yii\base\Model;
 class SignInForm extends Model
 {
     public $id;
-    public $username;
+    public $username = '';
     public $user_type;
-    public $password;
-    public $confirmPassword;
-
+    public $password = '';
+    public $confirmPassword = '';
 
 
     /**
@@ -86,6 +85,9 @@ class SignInForm extends Model
         $model = new User();
         $this->load(Yii::$app->request->post());
         //print_r($this);
+        if($this->username == '' && $this->password == '' && $this->confirmPassword == '') {
+            return false;
+        }
         if($this->validate()) {
             $model['id'] = $this->id;
             $model['username'] = $this->username;

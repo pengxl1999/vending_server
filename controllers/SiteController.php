@@ -126,23 +126,6 @@ class SiteController extends Controller
         return $this->goHome();
     }
 
-    /**
-     * Displays contact page.
-     *
-     * @return Response|string
-     */
-    public function actionContact()
-    {
-        $model = new ContactForm();
-        if ($model->load(Yii::$app->request->post()) && $model->contact(Yii::$app->params['adminEmail'])) {
-            Yii::$app->session->setFlash('contactFormSubmitted');
-
-            return $this->refresh();
-        }
-        return $this->render('contact', [
-            'model' => $model,
-        ]);
-    }
 
     /**
      * Displays about page.
@@ -180,7 +163,6 @@ class SiteController extends Controller
         if ($model->signIn()) {
             $this->redirect(['success']);
         }
-
 //
 //            $session = \yii::$app->session;
 //            if(!$session->isActive)
@@ -202,6 +184,7 @@ class SiteController extends Controller
         $model->id = User::getMaxID() + 1;
         $model->user_type = 2;
         $model->password = '';
+        $model->confirmPassword = '';
         return $this->render('create', [
             'model' => $model,
         ]);
