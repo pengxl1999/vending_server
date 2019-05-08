@@ -46,7 +46,7 @@ AppAsset::register($this);
             /*['label' => '购买药品', 'url' => ['/buy/index&userId='
                 . Yii::$app->user->identity->username .
                 '&medId=']],*/
-            ['label' => '我的订单', 'url' => ['/site/contact']],
+            ['label' => '我的订单', 'url' => ['/buy/purchase']],
             ['label' => '我的购物车', 'url' => ['/buy/cart']],
             Yii::$app->user->isGuest ? (
                 ['label' => '登录/注册', 'url' => ['/site/login']]

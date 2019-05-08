@@ -56,11 +56,11 @@ class CustomerPurchase extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'cp_id' => 'Cp ID',
+            'cp_id' => '订单编号',
             'c_id' => 'C ID',
             'm_id' => 'M ID',
-            'cp_time' => 'Cp Time',
-            'status' => 'Status',
+            'cp_time' => '下单时间',
+            'status' => '状态',
             'v_id' => 'V ID',
             'num' => 'Num',
             'img' => 'Img',

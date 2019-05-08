@@ -19,7 +19,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php //echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <form action="./index.php?r=buy/index" method="post">
-        <input type="text" name="search" placeholder="搜索药品" style="font-size: x-small"/>
+        <input type="text" name="search_med" placeholder="搜索药品" style="font-size: medium"/>
         <input type="submit" value="搜索" class="btn btn-primary" />
     </form>
 
@@ -37,10 +37,10 @@ $this->params['breadcrumbs'][] = $this->title;
                 'enableSorting' => false,
                 'format' => 'raw',
                 'value' => function($model) {
-                    return Html::img('images/medicine/'.$model->img, ['alt' => $model->name, 'width' => 80]);
+                    return Html::img('images/medicine/'.$model->img, ['alt' => $model->name, 'width' => '80']);
                 },
-                'headerOptions' => ['style' => 'text-align:center'],
-                'contentOptions' => ['align' => 'center'],
+                'headerOptions' => ['style' => 'text-align:center', 'width' => '80'],
+                'contentOptions' => ['align' => 'center', 'width' => '80'],
             ],
             //'img',
             [

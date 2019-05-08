@@ -6,6 +6,7 @@ namespace app\controllers;
 use app\models\CustomerCar;
 use app\models\CustomerCarSearch;
 use app\models\CustomerPurchase;
+use app\models\CustomerPurchaseSearch;
 use app\models\Medicine;
 use app\models\MedicineSearch;
 use app\models\SignInForm;
@@ -50,6 +51,11 @@ class BuyController extends Controller
         ];
     }
 
+    /**
+     * 购买药品
+     * @param int $medId
+     * @return string|Response
+     */
     public function actionIndex($medId = -1) {
         if(Yii::$app->user->isGuest) {
             return $this->redirect('./index.php?r=site/login');
@@ -63,8 +69,8 @@ class BuyController extends Controller
         $searchModel = new MedicineSearch();
         $post = Yii::$app->request->post();
 
-        if(isset($_POST['search'])) {       //判断是否有search
-            $search = $post['search'];
+        if(isset($post['search_med'])) {       //判断是否搜索
+            $search = $post['search_med'];
             $dataProvider = $searchModel->searchByParams($search);
         } else {
             $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
@@ -75,6 +81,35 @@ class BuyController extends Controller
         ]);
     }
 
+    /**
+     * 我的订单
+     * @return string
+     */
+    public function actionPurchase() {
+        $searchModel = new CustomerPurchaseSearch();
+
+        $post = Yii::$app->request->post();
+        if(isset($post['search_cp'])) {
+            $search = $post['search_cp'];
+            $dataProvider = $searchModel->searchByParams($search);
+        } else {
+            $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        }
+
+        return $this->render('purchase', [
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+        ]);
+    }
+
+    /**
+     * 我的购物车
+     * @param int $medId
+     * @param int $operation
+     * @return string|Response
+     * @throws \Throwable
+     * @throws \yii\db\StaleObjectException
+     */
     public function actionCart($medId = -1, $operation = -1)    //medId不为-1，新增药品；operation不为-1，0增加、1减少或2删除
     {
         if(Yii::$app->user->isGuest) {
@@ -130,12 +165,24 @@ class BuyController extends Controller
         ]);
     }
 
+    /**
+     * 药品详细信息
+     * @param $medId
+     * @return string
+     */
     public function actionDetail($medId) {
         return $this->render('detail', [
             'model' => Medicine::findOne($medId),
         ]);
     }
 
+    /**
+     * 选择地址
+     * @param $cart
+     * @param $mMoney
+     * @param bool $isUploaded
+     * @return string|Response
+     */
     public function actionAddr($cart, $mMoney, $isUploaded = false) {     //支付页面， cart == -1 ? 全部购买 : 只购买cart
         if($mMoney == 0) {     //总金额为0，不进行操作
             return $this->redirect(['cart']);

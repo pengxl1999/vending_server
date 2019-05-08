@@ -14,7 +14,9 @@ $this->title = '我的购物车';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="customer-car-index">
-
+    <p>
+        <?= Html::a('继续购买', ['index'], ['class' => 'btn btn-primary']) ?>
+    </p>
     <h1><strong style="font-size: large"><?= Html::encode($this->title) ?></strong></h1>
 
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
