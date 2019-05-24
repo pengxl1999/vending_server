@@ -209,6 +209,14 @@ class BuyController extends Controller
         ]);
     }
 
+    /**
+     * 支付页面，接入支付宝
+     * @return string
+     */
+    public function actionPay() {
+        return $this->render('pay');
+    }
+
     public function addMedToCart($medId) {
         if(($cart = CustomerCar::findOne([
             'c_id' => $_SESSION['userId'],
