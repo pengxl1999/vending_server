@@ -19,13 +19,16 @@ use yii\web\Controller;
 use yii\web\Response;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
+use app\models\BuyStatus;
+
+require "../vendor/alipay/wappay/buildermodel/AlipayTradeWapPayContentBuilder.php";
+require "../vendor/alipay/wappay/service/AlipayTradeService.php";
+require "../vendor/alipay/config.php";
 
 class BuyController extends Controller
 {
     public $enableCsrfValidation = false;
-    public static $money = 0;       //总金额
-    public static $hasRx = false;       //是否有处方药
-    public static $isUploaded = false;      //是否上传图片
+
     /**
      * {@inheritdoc}
      */
@@ -61,7 +64,7 @@ class BuyController extends Controller
             return $this->redirect('./index.php?r=site/login');
         }
 
-        self::$hasRx = false;
+        BuyStatus::$hasRx[$_SESSION['userId']] = false;
         if($medId !== -1) {
             $this->addMedToCart($medId);
         }
@@ -119,7 +122,7 @@ class BuyController extends Controller
         if(Yii::$app->user->isGuest) {
             return $this->redirect('./index.php?r=site/login');
         }
-        self::$money = 0;
+        BuyStatus::$totalAmount[$_SESSION['userId']] = 0;
         //self::$isUploaded = false;
         if($operation !== -1) {
             switch ($operation) {
@@ -191,7 +194,8 @@ class BuyController extends Controller
         if($mMoney == 0) {     //总金额为0，不进行操作
             return $this->redirect(['cart']);
         }
-        self::$isUploaded = $isUploaded;
+        BuyStatus::$isUploaded[$_SESSION['userId']] = $isUploaded;
+        BuyStatus::$totalAmount[$_SESSION['userId']] = 0;
         if($cart == -1) {
             $searchModel = new CustomerCarSearch();
             $dataProvider = $searchModel->searchByUser($_SESSION['userId']);    //购买信息provider
@@ -200,7 +204,7 @@ class BuyController extends Controller
             $dataProvider = $searchModel->searchById($cart);
         }
         $searchModel = new VemSearch();
-        $dataProvider1 = $searchModel->search(Yii::$app->request->queryParams);
+        $dataProvider1 = $searchModel->search(Yii::$app->request->queryParams);     //售货机信息provider
         return $this->render('addr', [
             'mMoney' => $mMoney,
             'dataProvider' => $dataProvider,
@@ -209,14 +213,27 @@ class BuyController extends Controller
         ]);
     }
 
-    /**
-     * 支付页面，接入支付宝
-     * @return string
-     */
     public function actionPay() {
-        return $this->render('pay');
+
+        //实例化builder
+        $alipay = new \AlipayTradeWapPayContentBuilder();
+        $alipay->setTotalAmount(0.01);
+        $alipay->setSubject('智能药品售货机预约购药');
+        $alipay->setBody('药品');
+
+        //获取config
+        $config = Yii::$app->params['alipay'];
+        //实例化service
+        $service = new \AlipayTradeService($config);
+        //支付
+        $result = $service->wapPay($alipay, $config['return_url'], $config['notify_url']);
+        var_dump($result);
     }
 
+    /**
+     * 添加id为medId的药品
+     * @param $medId
+     */
     public function addMedToCart($medId) {
         if(($cart = CustomerCar::findOne([
             'c_id' => $_SESSION['userId'],

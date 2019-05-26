@@ -10,6 +10,7 @@ use yii\helpers\Html;
 use yii\web\View;
 use yii\widgets\DetailView;
 
+/* @var $mMoney */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 /* @var $dataProvider1 yii\data\ActiveDataProvider */
 /* @var $searchModel app\models\VemSearch */
@@ -54,7 +55,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     $medicine = \app\models\Medicine::findOne(['m_id' => $model->cc_medicine]);
                     $medicineTypeId = $medicine->type;
                     if($medicineTypeId == 1) {
-                        \app\controllers\BuyController::$hasRx = true;
+                        \app\models\BuyStatus::$hasRx[$_SESSION['userId']] = true;
                     }
                     return $medicine->name;
                 },
@@ -77,7 +78,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'enableSorting' => false,
                 'value' => function($model) {
                     $medicine = \app\models\Medicine::findOne(['m_id' => $model->cc_medicine]);
-                    \app\controllers\BuyController::$money += $medicine->money * $model->cc_num;
+                    \app\models\BuyStatus::$totalAmount[$_SESSION['userId']] += $medicine->money * $model->cc_num;
                     return $model->cc_num;
                 },
                 'headerOptions' => ['style' => 'text-align:center', 'width' => '50'],
@@ -88,7 +89,7 @@ $this->params['breadcrumbs'][] = $this->title;
     ]); ?>
 
     <?php
-        if(\app\controllers\BuyController::$hasRx == true && \app\controllers\BuyController::$isUploaded == false) {
+        if(\app\models\BuyStatus::$hasRx[$_SESSION['userId']] == true && \app\models\BuyStatus::$isUploaded[$_SESSION['userId']] == false) {
             echo '
                 <div>
                     <p>您的订单中包含处方药，请上传处方！</p>
@@ -96,7 +97,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 </div>
                 ';
         }
-        else if(\app\controllers\BuyController::$hasRx == true && \app\controllers\BuyController::$isUploaded == true){
+        else if(\app\models\BuyStatus::$hasRx[$_SESSION['userId']] == true && \app\models\BuyStatus::$isUploaded[$_SESSION['userId']] == true){
             echo '
                 <div>
                     <p>处方图片上传成功！下单成功后，请前往“我的订单”页面查看审核状态</p>
@@ -144,9 +145,17 @@ $this->params['breadcrumbs'][] = $this->title;
             ],
         ],
     ]); ?>
-
 </div>
+
+<footer class="footer" style="height: 80px">
+    <?= Html::a('支付', ['pay'], ['class' => 'btn btn-default pull-right',
+        'style' => 'margin-right:20px;']); ?>
+</footer>
+
 <script>
+    /**
+     * Android反馈信息，检测是否上传成功
+     */
     function getResultFromAndroid(isSuccess) {
         if(isSuccess) {
             window.location.href += '&isUploaded=true';

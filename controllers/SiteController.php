@@ -16,6 +16,7 @@ use yii\web\Controller;
 use yii\web\Response;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
+use app\models\BuyStatus;
 
 class SiteController extends Controller
 {
@@ -74,6 +75,9 @@ class SiteController extends Controller
             $user = User::findByUsername($username);
             $_SESSION['userId'] = $user['id'];
         }
+        BuyStatus::$totalAmount[$_SESSION['userId']] = 0;
+        BuyStatus::$hasRx[$_SESSION['userId']] = false;
+        BuyStatus::$isUploaded[$_SESSION['userId']] = false;
         return $this->render('index');
     }
 

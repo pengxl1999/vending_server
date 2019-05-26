@@ -17199,3 +17199,1848 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1557280328.877
     'REQUEST_TIME' => 1557280328
 ]
+2019-05-26 07:17:55 [::1][0][6g4bemui76a1aa6m0034fkt3op][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "pay". in E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('pay', Array)
+#1 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\xampp\htdocs\basic\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in E:\xampp\htdocs\basic\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\xampp\htdocs\basic\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2019-05-26 07:17:54 [::1][0][6g4bemui76a1aa6m0034fkt3op][info][application] $_GET = [
+    'r' => 'pay'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Phpstorm-669499eb' => 'd4c24652-d7f0-4aa9-96f5-594c93671c41'
+    'PHPSESSID' => '6g4bemui76a1aa6m0034fkt3op'
+    '_identity' => '37f51e3538ffd1113b047306da0ea7a02f6a6d0457d5015980ab41b4e740d29ea:2:{i:0;s:9:\"_identity\";i:1;s:16:\"[\"0\",\"\",2592000]\";}'
+    '_csrf' => 'bf3b0e7d0c48d5fdbb2d37fec7e72924e187dd3a55e2e7a184c9937193e72307a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"rGXYTZeJHJf2nTK08W-Ddb4ycUyBk9mB\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '0'
+    'userId' => '0'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'Phpstorm-669499eb=d4c24652-d7f0-4aa9-96f5-594c93671c41; PHPSESSID=6g4bemui76a1aa6m0034fkt3op; _identity=37f51e3538ffd1113b047306da0ea7a02f6a6d0457d5015980ab41b4e740d29ea%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A16%3A%22%5B%220%22%2C%22%22%2C2592000%5D%22%3B%7D; _csrf=bf3b0e7d0c48d5fdbb2d37fec7e72924e187dd3a55e2e7a184c9937193e72307a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22rGXYTZeJHJf2nTK08W-Ddb4ycUyBk9mB%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\VanDyke Software\\Clients\\;E:\\Python27\\;E:\\Python27\\Scripts;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\dotnet\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Java\\jdk1.8.0_172\\bin;E:\\android_sdk\\platform-tools;E:\\android_sdk\\tools;E:\\Program Files (x86)\\opencv\\build\\x64\\vc15\\bin;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;E:\\MinGW\\include;E:\\MinGW\\lib;E:\\Python;E:\\Program Files\\Git\\cmd;C:\\Users\\Peng\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files\\Java\\jdk1.8.0_172\\bin;;E:\\Program Files\\Microsoft VS Code\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4 Server at localhost Port 8080</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'E:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/xampp/htdocs/basic/web/index.php'
+    'REMOTE_PORT' => '55114'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=pay'
+    'REQUEST_URI' => '/basic/web/index.php?r=pay'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1558847874.953
+    'REQUEST_TIME' => 1558847874
+]
+2019-05-26 07:22:48 [::1][0][6g4bemui76a1aa6m0034fkt3op][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "addr". in E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('addr', Array)
+#1 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\xampp\htdocs\basic\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in E:\xampp\htdocs\basic\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\xampp\htdocs\basic\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2019-05-26 07:22:48 [::1][0][6g4bemui76a1aa6m0034fkt3op][info][application] $_GET = [
+    'r' => 'addr'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Phpstorm-669499eb' => 'd4c24652-d7f0-4aa9-96f5-594c93671c41'
+    'PHPSESSID' => '6g4bemui76a1aa6m0034fkt3op'
+    '_identity' => '37f51e3538ffd1113b047306da0ea7a02f6a6d0457d5015980ab41b4e740d29ea:2:{i:0;s:9:\"_identity\";i:1;s:16:\"[\"0\",\"\",2592000]\";}'
+    '_csrf' => 'bf3b0e7d0c48d5fdbb2d37fec7e72924e187dd3a55e2e7a184c9937193e72307a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"rGXYTZeJHJf2nTK08W-Ddb4ycUyBk9mB\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '0'
+    'userId' => '0'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://localhost:8080/basic/web/index.php?r=buy%2Faddr&cart=-1&mMoney=120'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'Phpstorm-669499eb=d4c24652-d7f0-4aa9-96f5-594c93671c41; PHPSESSID=6g4bemui76a1aa6m0034fkt3op; _identity=37f51e3538ffd1113b047306da0ea7a02f6a6d0457d5015980ab41b4e740d29ea%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A16%3A%22%5B%220%22%2C%22%22%2C2592000%5D%22%3B%7D; _csrf=bf3b0e7d0c48d5fdbb2d37fec7e72924e187dd3a55e2e7a184c9937193e72307a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22rGXYTZeJHJf2nTK08W-Ddb4ycUyBk9mB%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\VanDyke Software\\Clients\\;E:\\Python27\\;E:\\Python27\\Scripts;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\dotnet\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Java\\jdk1.8.0_172\\bin;E:\\android_sdk\\platform-tools;E:\\android_sdk\\tools;E:\\Program Files (x86)\\opencv\\build\\x64\\vc15\\bin;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;E:\\MinGW\\include;E:\\MinGW\\lib;E:\\Python;E:\\Program Files\\Git\\cmd;C:\\Users\\Peng\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files\\Java\\jdk1.8.0_172\\bin;;E:\\Program Files\\Microsoft VS Code\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4 Server at localhost Port 8080</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'E:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/xampp/htdocs/basic/web/index.php'
+    'REMOTE_PORT' => '55553'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=addr'
+    'REQUEST_URI' => '/basic/web/index.php?r=addr'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1558848168.717
+    'REQUEST_TIME' => 1558848168
+]
+2019-05-26 07:23:17 [::1][0][6g4bemui76a1aa6m0034fkt3op][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "addr". in E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('addr', Array)
+#1 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\xampp\htdocs\basic\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in E:\xampp\htdocs\basic\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\xampp\htdocs\basic\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2019-05-26 07:23:17 [::1][0][6g4bemui76a1aa6m0034fkt3op][info][application] $_GET = [
+    'r' => 'addr'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Phpstorm-669499eb' => 'd4c24652-d7f0-4aa9-96f5-594c93671c41'
+    'PHPSESSID' => '6g4bemui76a1aa6m0034fkt3op'
+    '_identity' => '37f51e3538ffd1113b047306da0ea7a02f6a6d0457d5015980ab41b4e740d29ea:2:{i:0;s:9:\"_identity\";i:1;s:16:\"[\"0\",\"\",2592000]\";}'
+    '_csrf' => 'bf3b0e7d0c48d5fdbb2d37fec7e72924e187dd3a55e2e7a184c9937193e72307a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"rGXYTZeJHJf2nTK08W-Ddb4ycUyBk9mB\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '0'
+    'userId' => '0'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://localhost:8080/basic/web/index.php?r=buy%2Faddr&cart=-1&mMoney=120'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'Phpstorm-669499eb=d4c24652-d7f0-4aa9-96f5-594c93671c41; PHPSESSID=6g4bemui76a1aa6m0034fkt3op; _identity=37f51e3538ffd1113b047306da0ea7a02f6a6d0457d5015980ab41b4e740d29ea%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A16%3A%22%5B%220%22%2C%22%22%2C2592000%5D%22%3B%7D; _csrf=bf3b0e7d0c48d5fdbb2d37fec7e72924e187dd3a55e2e7a184c9937193e72307a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22rGXYTZeJHJf2nTK08W-Ddb4ycUyBk9mB%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\VanDyke Software\\Clients\\;E:\\Python27\\;E:\\Python27\\Scripts;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\dotnet\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Java\\jdk1.8.0_172\\bin;E:\\android_sdk\\platform-tools;E:\\android_sdk\\tools;E:\\Program Files (x86)\\opencv\\build\\x64\\vc15\\bin;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;E:\\MinGW\\include;E:\\MinGW\\lib;E:\\Python;E:\\Program Files\\Git\\cmd;C:\\Users\\Peng\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files\\Java\\jdk1.8.0_172\\bin;;E:\\Program Files\\Microsoft VS Code\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4 Server at localhost Port 8080</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'E:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/xampp/htdocs/basic/web/index.php'
+    'REMOTE_PORT' => '55588'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=addr'
+    'REQUEST_URI' => '/basic/web/index.php?r=addr'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1558848197.44
+    'REQUEST_TIME' => 1558848197
+]
+2019-05-26 07:24:33 [::1][0][6g4bemui76a1aa6m0034fkt3op][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "alipay/pay". in E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('alipay/pay', Array)
+#1 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\xampp\htdocs\basic\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in E:\xampp\htdocs\basic\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\xampp\htdocs\basic\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2019-05-26 07:24:32 [::1][0][6g4bemui76a1aa6m0034fkt3op][info][application] $_GET = [
+    'r' => 'alipay/pay'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Phpstorm-669499eb' => 'd4c24652-d7f0-4aa9-96f5-594c93671c41'
+    'PHPSESSID' => '6g4bemui76a1aa6m0034fkt3op'
+    '_identity' => '37f51e3538ffd1113b047306da0ea7a02f6a6d0457d5015980ab41b4e740d29ea:2:{i:0;s:9:\"_identity\";i:1;s:16:\"[\"0\",\"\",2592000]\";}'
+    '_csrf' => 'bf3b0e7d0c48d5fdbb2d37fec7e72924e187dd3a55e2e7a184c9937193e72307a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"rGXYTZeJHJf2nTK08W-Ddb4ycUyBk9mB\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '0'
+    'userId' => '0'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://localhost:8080/basic/web/index.php?r=buy%2Faddr&cart=-1&mMoney=120'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'Phpstorm-669499eb=d4c24652-d7f0-4aa9-96f5-594c93671c41; PHPSESSID=6g4bemui76a1aa6m0034fkt3op; _identity=37f51e3538ffd1113b047306da0ea7a02f6a6d0457d5015980ab41b4e740d29ea%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A16%3A%22%5B%220%22%2C%22%22%2C2592000%5D%22%3B%7D; _csrf=bf3b0e7d0c48d5fdbb2d37fec7e72924e187dd3a55e2e7a184c9937193e72307a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22rGXYTZeJHJf2nTK08W-Ddb4ycUyBk9mB%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\VanDyke Software\\Clients\\;E:\\Python27\\;E:\\Python27\\Scripts;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\dotnet\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Java\\jdk1.8.0_172\\bin;E:\\android_sdk\\platform-tools;E:\\android_sdk\\tools;E:\\Program Files (x86)\\opencv\\build\\x64\\vc15\\bin;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;E:\\MinGW\\include;E:\\MinGW\\lib;E:\\Python;E:\\Program Files\\Git\\cmd;C:\\Users\\Peng\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files\\Java\\jdk1.8.0_172\\bin;;E:\\Program Files\\Microsoft VS Code\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4 Server at localhost Port 8080</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'E:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/xampp/htdocs/basic/web/index.php'
+    'REMOTE_PORT' => '55680'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=alipay%2Fpay'
+    'REQUEST_URI' => '/basic/web/index.php?r=alipay%2Fpay'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1558848272.94
+    'REQUEST_TIME' => 1558848272
+]
+2019-05-26 07:25:12 [::1][0][6g4bemui76a1aa6m0034fkt3op][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "alipay/pay". in E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('alipay/pay', Array)
+#1 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\xampp\htdocs\basic\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in E:\xampp\htdocs\basic\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\xampp\htdocs\basic\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2019-05-26 07:25:12 [::1][0][6g4bemui76a1aa6m0034fkt3op][info][application] $_GET = [
+    'r' => 'alipay/pay'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Phpstorm-669499eb' => 'd4c24652-d7f0-4aa9-96f5-594c93671c41'
+    'PHPSESSID' => '6g4bemui76a1aa6m0034fkt3op'
+    '_identity' => '37f51e3538ffd1113b047306da0ea7a02f6a6d0457d5015980ab41b4e740d29ea:2:{i:0;s:9:\"_identity\";i:1;s:16:\"[\"0\",\"\",2592000]\";}'
+    '_csrf' => 'bf3b0e7d0c48d5fdbb2d37fec7e72924e187dd3a55e2e7a184c9937193e72307a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"rGXYTZeJHJf2nTK08W-Ddb4ycUyBk9mB\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '0'
+    'userId' => '0'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://localhost:8080/basic/web/index.php?r=buy%2Faddr&cart=-1&mMoney=120'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'Phpstorm-669499eb=d4c24652-d7f0-4aa9-96f5-594c93671c41; PHPSESSID=6g4bemui76a1aa6m0034fkt3op; _identity=37f51e3538ffd1113b047306da0ea7a02f6a6d0457d5015980ab41b4e740d29ea%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A16%3A%22%5B%220%22%2C%22%22%2C2592000%5D%22%3B%7D; _csrf=bf3b0e7d0c48d5fdbb2d37fec7e72924e187dd3a55e2e7a184c9937193e72307a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22rGXYTZeJHJf2nTK08W-Ddb4ycUyBk9mB%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\VanDyke Software\\Clients\\;E:\\Python27\\;E:\\Python27\\Scripts;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\dotnet\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Java\\jdk1.8.0_172\\bin;E:\\android_sdk\\platform-tools;E:\\android_sdk\\tools;E:\\Program Files (x86)\\opencv\\build\\x64\\vc15\\bin;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;E:\\MinGW\\include;E:\\MinGW\\lib;E:\\Python;E:\\Program Files\\Git\\cmd;C:\\Users\\Peng\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files\\Java\\jdk1.8.0_172\\bin;;E:\\Program Files\\Microsoft VS Code\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4 Server at localhost Port 8080</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'E:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/xampp/htdocs/basic/web/index.php'
+    'REMOTE_PORT' => '55724'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=alipay%2Fpay'
+    'REQUEST_URI' => '/basic/web/index.php?r=alipay%2Fpay'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1558848312.153
+    'REQUEST_TIME' => 1558848312
+]
+2019-05-26 07:25:16 [::1][0][6g4bemui76a1aa6m0034fkt3op][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "alipay/pay". in E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('alipay/pay', Array)
+#1 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\xampp\htdocs\basic\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in E:\xampp\htdocs\basic\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\xampp\htdocs\basic\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2019-05-26 07:25:16 [::1][0][6g4bemui76a1aa6m0034fkt3op][info][application] $_GET = [
+    'r' => 'alipay/pay'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Phpstorm-669499eb' => 'd4c24652-d7f0-4aa9-96f5-594c93671c41'
+    'PHPSESSID' => '6g4bemui76a1aa6m0034fkt3op'
+    '_identity' => '37f51e3538ffd1113b047306da0ea7a02f6a6d0457d5015980ab41b4e740d29ea:2:{i:0;s:9:\"_identity\";i:1;s:16:\"[\"0\",\"\",2592000]\";}'
+    '_csrf' => 'bf3b0e7d0c48d5fdbb2d37fec7e72924e187dd3a55e2e7a184c9937193e72307a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"rGXYTZeJHJf2nTK08W-Ddb4ycUyBk9mB\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '0'
+    'userId' => '0'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://localhost:8080/basic/web/index.php?r=buy%2Faddr&cart=-1&mMoney=120'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'Phpstorm-669499eb=d4c24652-d7f0-4aa9-96f5-594c93671c41; PHPSESSID=6g4bemui76a1aa6m0034fkt3op; _identity=37f51e3538ffd1113b047306da0ea7a02f6a6d0457d5015980ab41b4e740d29ea%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A16%3A%22%5B%220%22%2C%22%22%2C2592000%5D%22%3B%7D; _csrf=bf3b0e7d0c48d5fdbb2d37fec7e72924e187dd3a55e2e7a184c9937193e72307a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22rGXYTZeJHJf2nTK08W-Ddb4ycUyBk9mB%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\VanDyke Software\\Clients\\;E:\\Python27\\;E:\\Python27\\Scripts;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\dotnet\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Java\\jdk1.8.0_172\\bin;E:\\android_sdk\\platform-tools;E:\\android_sdk\\tools;E:\\Program Files (x86)\\opencv\\build\\x64\\vc15\\bin;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;E:\\MinGW\\include;E:\\MinGW\\lib;E:\\Python;E:\\Program Files\\Git\\cmd;C:\\Users\\Peng\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files\\Java\\jdk1.8.0_172\\bin;;E:\\Program Files\\Microsoft VS Code\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4 Server at localhost Port 8080</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'E:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/xampp/htdocs/basic/web/index.php'
+    'REMOTE_PORT' => '55725'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=alipay%2Fpay'
+    'REQUEST_URI' => '/basic/web/index.php?r=alipay%2Fpay'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1558848316.058
+    'REQUEST_TIME' => 1558848316
+]
+2019-05-26 07:26:01 [::1][0][6g4bemui76a1aa6m0034fkt3op][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "../alipay/wappay/pay". in E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('../alipay/wappa...', Array)
+#1 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\xampp\htdocs\basic\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in E:\xampp\htdocs\basic\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\xampp\htdocs\basic\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2019-05-26 07:26:01 [::1][0][6g4bemui76a1aa6m0034fkt3op][info][application] $_GET = [
+    'r' => '../alipay/wappay/pay'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Phpstorm-669499eb' => 'd4c24652-d7f0-4aa9-96f5-594c93671c41'
+    'PHPSESSID' => '6g4bemui76a1aa6m0034fkt3op'
+    '_identity' => '37f51e3538ffd1113b047306da0ea7a02f6a6d0457d5015980ab41b4e740d29ea:2:{i:0;s:9:\"_identity\";i:1;s:16:\"[\"0\",\"\",2592000]\";}'
+    '_csrf' => 'bf3b0e7d0c48d5fdbb2d37fec7e72924e187dd3a55e2e7a184c9937193e72307a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"rGXYTZeJHJf2nTK08W-Ddb4ycUyBk9mB\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '0'
+    'userId' => '0'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://localhost:8080/basic/web/index.php?r=buy%2Faddr&cart=-1&mMoney=120'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'Phpstorm-669499eb=d4c24652-d7f0-4aa9-96f5-594c93671c41; PHPSESSID=6g4bemui76a1aa6m0034fkt3op; _identity=37f51e3538ffd1113b047306da0ea7a02f6a6d0457d5015980ab41b4e740d29ea%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A16%3A%22%5B%220%22%2C%22%22%2C2592000%5D%22%3B%7D; _csrf=bf3b0e7d0c48d5fdbb2d37fec7e72924e187dd3a55e2e7a184c9937193e72307a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22rGXYTZeJHJf2nTK08W-Ddb4ycUyBk9mB%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\VanDyke Software\\Clients\\;E:\\Python27\\;E:\\Python27\\Scripts;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\dotnet\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Java\\jdk1.8.0_172\\bin;E:\\android_sdk\\platform-tools;E:\\android_sdk\\tools;E:\\Program Files (x86)\\opencv\\build\\x64\\vc15\\bin;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;E:\\MinGW\\include;E:\\MinGW\\lib;E:\\Python;E:\\Program Files\\Git\\cmd;C:\\Users\\Peng\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files\\Java\\jdk1.8.0_172\\bin;;E:\\Program Files\\Microsoft VS Code\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4 Server at localhost Port 8080</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'E:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/xampp/htdocs/basic/web/index.php'
+    'REMOTE_PORT' => '55789'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=..%2Falipay%2Fwappay%2Fpay'
+    'REQUEST_URI' => '/basic/web/index.php?r=..%2Falipay%2Fwappay%2Fpay'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1558848361.353
+    'REQUEST_TIME' => 1558848361
+]
+2019-05-26 07:26:49 [::1][0][6g4bemui76a1aa6m0034fkt3op][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "../alipay/wappay/pay". in E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('../alipay/wappa...', Array)
+#1 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\xampp\htdocs\basic\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in E:\xampp\htdocs\basic\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\xampp\htdocs\basic\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2019-05-26 07:26:49 [::1][0][6g4bemui76a1aa6m0034fkt3op][info][application] $_GET = [
+    'r' => '../alipay/wappay/pay'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Phpstorm-669499eb' => 'd4c24652-d7f0-4aa9-96f5-594c93671c41'
+    'PHPSESSID' => '6g4bemui76a1aa6m0034fkt3op'
+    '_identity' => '37f51e3538ffd1113b047306da0ea7a02f6a6d0457d5015980ab41b4e740d29ea:2:{i:0;s:9:\"_identity\";i:1;s:16:\"[\"0\",\"\",2592000]\";}'
+    '_csrf' => 'bf3b0e7d0c48d5fdbb2d37fec7e72924e187dd3a55e2e7a184c9937193e72307a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"rGXYTZeJHJf2nTK08W-Ddb4ycUyBk9mB\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '0'
+    'userId' => '0'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://localhost:8080/basic/web/index.php?r=buy%2Faddr&cart=-1&mMoney=120'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'Phpstorm-669499eb=d4c24652-d7f0-4aa9-96f5-594c93671c41; PHPSESSID=6g4bemui76a1aa6m0034fkt3op; _identity=37f51e3538ffd1113b047306da0ea7a02f6a6d0457d5015980ab41b4e740d29ea%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A16%3A%22%5B%220%22%2C%22%22%2C2592000%5D%22%3B%7D; _csrf=bf3b0e7d0c48d5fdbb2d37fec7e72924e187dd3a55e2e7a184c9937193e72307a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22rGXYTZeJHJf2nTK08W-Ddb4ycUyBk9mB%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\VanDyke Software\\Clients\\;E:\\Python27\\;E:\\Python27\\Scripts;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\dotnet\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Java\\jdk1.8.0_172\\bin;E:\\android_sdk\\platform-tools;E:\\android_sdk\\tools;E:\\Program Files (x86)\\opencv\\build\\x64\\vc15\\bin;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;E:\\MinGW\\include;E:\\MinGW\\lib;E:\\Python;E:\\Program Files\\Git\\cmd;C:\\Users\\Peng\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files\\Java\\jdk1.8.0_172\\bin;;E:\\Program Files\\Microsoft VS Code\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4 Server at localhost Port 8080</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'E:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/xampp/htdocs/basic/web/index.php'
+    'REMOTE_PORT' => '55844'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=..%2Falipay%2Fwappay%2Fpay'
+    'REQUEST_URI' => '/basic/web/index.php?r=..%2Falipay%2Fwappay%2Fpay'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1558848409.461
+    'REQUEST_TIME' => 1558848409
+]
+2019-05-26 08:04:31 [::1][0][6g4bemui76a1aa6m0034fkt3op][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "../alipay/wappay/pay.php". in E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('../alipay/wappa...', Array)
+#1 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\xampp\htdocs\basic\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in E:\xampp\htdocs\basic\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\xampp\htdocs\basic\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2019-05-26 08:04:31 [::1][0][6g4bemui76a1aa6m0034fkt3op][info][application] $_GET = [
+    'r' => '../alipay/wappay/pay.php'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Phpstorm-669499eb' => 'd4c24652-d7f0-4aa9-96f5-594c93671c41'
+    'PHPSESSID' => '6g4bemui76a1aa6m0034fkt3op'
+    '_identity' => '37f51e3538ffd1113b047306da0ea7a02f6a6d0457d5015980ab41b4e740d29ea:2:{i:0;s:9:\"_identity\";i:1;s:16:\"[\"0\",\"\",2592000]\";}'
+    '_csrf' => 'bf3b0e7d0c48d5fdbb2d37fec7e72924e187dd3a55e2e7a184c9937193e72307a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"rGXYTZeJHJf2nTK08W-Ddb4ycUyBk9mB\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '0'
+    'userId' => '0'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://localhost:8080/basic/web/index.php?r=buy%2Faddr&cart=-1&mMoney=120'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'Phpstorm-669499eb=d4c24652-d7f0-4aa9-96f5-594c93671c41; PHPSESSID=6g4bemui76a1aa6m0034fkt3op; _identity=37f51e3538ffd1113b047306da0ea7a02f6a6d0457d5015980ab41b4e740d29ea%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A16%3A%22%5B%220%22%2C%22%22%2C2592000%5D%22%3B%7D; _csrf=bf3b0e7d0c48d5fdbb2d37fec7e72924e187dd3a55e2e7a184c9937193e72307a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22rGXYTZeJHJf2nTK08W-Ddb4ycUyBk9mB%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\VanDyke Software\\Clients\\;E:\\Python27\\;E:\\Python27\\Scripts;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\dotnet\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Java\\jdk1.8.0_172\\bin;E:\\android_sdk\\platform-tools;E:\\android_sdk\\tools;E:\\Program Files (x86)\\opencv\\build\\x64\\vc15\\bin;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;E:\\MinGW\\include;E:\\MinGW\\lib;E:\\Python;E:\\Program Files\\Git\\cmd;C:\\Users\\Peng\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files\\Java\\jdk1.8.0_172\\bin;;E:\\Program Files\\Microsoft VS Code\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4 Server at localhost Port 8080</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'E:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/xampp/htdocs/basic/web/index.php'
+    'REMOTE_PORT' => '58599'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=..%2Falipay%2Fwappay%2Fpay.php'
+    'REQUEST_URI' => '/basic/web/index.php?r=..%2Falipay%2Fwappay%2Fpay.php'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1558850671.208
+    'REQUEST_TIME' => 1558850671
+]
+2019-05-26 08:26:57 [::1][0][6g4bemui76a1aa6m0034fkt3op][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined index: subject in E:\xampp\htdocs\basic\views\buy\index.php:21
+Stack trace:
+#0 E:\xampp\htdocs\basic\views\buy\index.php(21): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'E:\\xampp\\htdocs...', 21, Array)
+#1 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\View.php(348): require('E:\\xampp\\htdocs...')
+#2 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('E:\\xampp\\htdocs...', Array)
+#3 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('E:\\xampp\\htdocs...', Array, Object(app\controllers\BuyController))
+#4 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render('index', Array, Object(app\controllers\BuyController))
+#5 E:\xampp\htdocs\basic\controllers\BuyController.php(80): yii\base\Controller->render('index', Array)
+#6 [internal function]: app\controllers\BuyController->actionIndex(-1)
+#7 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#9 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#10 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('buy/index', Array)
+#11 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 E:\xampp\htdocs\basic\web\index.php(12): yii\base\Application->run()
+#13 {main}
+2019-05-26 08:26:56 [::1][0][6g4bemui76a1aa6m0034fkt3op][info][application] $_GET = [
+    'r' => 'buy/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Phpstorm-669499eb' => 'd4c24652-d7f0-4aa9-96f5-594c93671c41'
+    'PHPSESSID' => '6g4bemui76a1aa6m0034fkt3op'
+    '_identity' => '37f51e3538ffd1113b047306da0ea7a02f6a6d0457d5015980ab41b4e740d29ea:2:{i:0;s:9:\"_identity\";i:1;s:16:\"[\"0\",\"\",2592000]\";}'
+    '_csrf' => 'bf3b0e7d0c48d5fdbb2d37fec7e72924e187dd3a55e2e7a184c9937193e72307a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"rGXYTZeJHJf2nTK08W-Ddb4ycUyBk9mB\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '0'
+    'userId' => '0'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://localhost:8080/basic/web/index.php?r=buy%2Faddr&cart=-1&mMoney=120'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'Phpstorm-669499eb=d4c24652-d7f0-4aa9-96f5-594c93671c41; PHPSESSID=6g4bemui76a1aa6m0034fkt3op; _identity=37f51e3538ffd1113b047306da0ea7a02f6a6d0457d5015980ab41b4e740d29ea%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A16%3A%22%5B%220%22%2C%22%22%2C2592000%5D%22%3B%7D; _csrf=bf3b0e7d0c48d5fdbb2d37fec7e72924e187dd3a55e2e7a184c9937193e72307a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22rGXYTZeJHJf2nTK08W-Ddb4ycUyBk9mB%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\VanDyke Software\\Clients\\;E:\\Python27\\;E:\\Python27\\Scripts;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\dotnet\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Java\\jdk1.8.0_172\\bin;E:\\android_sdk\\platform-tools;E:\\android_sdk\\tools;E:\\Program Files (x86)\\opencv\\build\\x64\\vc15\\bin;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;E:\\MinGW\\include;E:\\MinGW\\lib;E:\\Python;E:\\Program Files\\Git\\cmd;C:\\Users\\Peng\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files\\Java\\jdk1.8.0_172\\bin;;E:\\Program Files\\Microsoft VS Code\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4 Server at localhost Port 8080</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'E:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/xampp/htdocs/basic/web/index.php'
+    'REMOTE_PORT' => '60355'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=buy%2Findex'
+    'REQUEST_URI' => '/basic/web/index.php?r=buy%2Findex'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1558852016.936
+    'REQUEST_TIME' => 1558852016
+]
+2019-05-26 08:27:23 [::1][0][6g4bemui76a1aa6m0034fkt3op][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined index: subject in E:\xampp\htdocs\basic\views\buy\index.php:21
+Stack trace:
+#0 E:\xampp\htdocs\basic\views\buy\index.php(21): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'E:\\xampp\\htdocs...', 21, Array)
+#1 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\View.php(348): require('E:\\xampp\\htdocs...')
+#2 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('E:\\xampp\\htdocs...', Array)
+#3 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('E:\\xampp\\htdocs...', Array, Object(app\controllers\BuyController))
+#4 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render('index', Array, Object(app\controllers\BuyController))
+#5 E:\xampp\htdocs\basic\controllers\BuyController.php(80): yii\base\Controller->render('index', Array)
+#6 [internal function]: app\controllers\BuyController->actionIndex(-1)
+#7 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#9 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#10 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('buy/index', Array)
+#11 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 E:\xampp\htdocs\basic\web\index.php(12): yii\base\Application->run()
+#13 {main}
+2019-05-26 08:27:23 [::1][0][6g4bemui76a1aa6m0034fkt3op][info][application] $_GET = [
+    'r' => 'buy/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Phpstorm-669499eb' => 'd4c24652-d7f0-4aa9-96f5-594c93671c41'
+    'PHPSESSID' => '6g4bemui76a1aa6m0034fkt3op'
+    '_identity' => '37f51e3538ffd1113b047306da0ea7a02f6a6d0457d5015980ab41b4e740d29ea:2:{i:0;s:9:\"_identity\";i:1;s:16:\"[\"0\",\"\",2592000]\";}'
+    '_csrf' => 'bf3b0e7d0c48d5fdbb2d37fec7e72924e187dd3a55e2e7a184c9937193e72307a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"rGXYTZeJHJf2nTK08W-Ddb4ycUyBk9mB\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '0'
+    'userId' => '0'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://localhost:8080/basic/web/index.php?r=buy%2Faddr&cart=-1&mMoney=120'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'Phpstorm-669499eb=d4c24652-d7f0-4aa9-96f5-594c93671c41; PHPSESSID=6g4bemui76a1aa6m0034fkt3op; _identity=37f51e3538ffd1113b047306da0ea7a02f6a6d0457d5015980ab41b4e740d29ea%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A16%3A%22%5B%220%22%2C%22%22%2C2592000%5D%22%3B%7D; _csrf=bf3b0e7d0c48d5fdbb2d37fec7e72924e187dd3a55e2e7a184c9937193e72307a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22rGXYTZeJHJf2nTK08W-Ddb4ycUyBk9mB%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\VanDyke Software\\Clients\\;E:\\Python27\\;E:\\Python27\\Scripts;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\dotnet\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Java\\jdk1.8.0_172\\bin;E:\\android_sdk\\platform-tools;E:\\android_sdk\\tools;E:\\Program Files (x86)\\opencv\\build\\x64\\vc15\\bin;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;E:\\MinGW\\include;E:\\MinGW\\lib;E:\\Python;E:\\Program Files\\Git\\cmd;C:\\Users\\Peng\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files\\Java\\jdk1.8.0_172\\bin;;E:\\Program Files\\Microsoft VS Code\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4 Server at localhost Port 8080</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'E:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/xampp/htdocs/basic/web/index.php'
+    'REMOTE_PORT' => '60386'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=buy%2Findex'
+    'REQUEST_URI' => '/basic/web/index.php?r=buy%2Findex'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1558852043.346
+    'REQUEST_TIME' => 1558852043
+]
+2019-05-26 08:27:26 [::1][0][6g4bemui76a1aa6m0034fkt3op][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined index: subject in E:\xampp\htdocs\basic\views\buy\index.php:21
+Stack trace:
+#0 E:\xampp\htdocs\basic\views\buy\index.php(21): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'E:\\xampp\\htdocs...', 21, Array)
+#1 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\View.php(348): require('E:\\xampp\\htdocs...')
+#2 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('E:\\xampp\\htdocs...', Array)
+#3 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('E:\\xampp\\htdocs...', Array, Object(app\controllers\BuyController))
+#4 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render('index', Array, Object(app\controllers\BuyController))
+#5 E:\xampp\htdocs\basic\controllers\BuyController.php(80): yii\base\Controller->render('index', Array)
+#6 [internal function]: app\controllers\BuyController->actionIndex(-1)
+#7 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#9 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#10 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('buy/index', Array)
+#11 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 E:\xampp\htdocs\basic\web\index.php(12): yii\base\Application->run()
+#13 {main}
+2019-05-26 08:27:26 [::1][0][6g4bemui76a1aa6m0034fkt3op][info][application] $_GET = [
+    'r' => 'buy/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Phpstorm-669499eb' => 'd4c24652-d7f0-4aa9-96f5-594c93671c41'
+    'PHPSESSID' => '6g4bemui76a1aa6m0034fkt3op'
+    '_identity' => '37f51e3538ffd1113b047306da0ea7a02f6a6d0457d5015980ab41b4e740d29ea:2:{i:0;s:9:\"_identity\";i:1;s:16:\"[\"0\",\"\",2592000]\";}'
+    '_csrf' => 'bf3b0e7d0c48d5fdbb2d37fec7e72924e187dd3a55e2e7a184c9937193e72307a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"rGXYTZeJHJf2nTK08W-Ddb4ycUyBk9mB\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '0'
+    'userId' => '0'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://localhost:8080/basic/web/index.php?r=buy%2Faddr&cart=-1&mMoney=120'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'Phpstorm-669499eb=d4c24652-d7f0-4aa9-96f5-594c93671c41; PHPSESSID=6g4bemui76a1aa6m0034fkt3op; _identity=37f51e3538ffd1113b047306da0ea7a02f6a6d0457d5015980ab41b4e740d29ea%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A16%3A%22%5B%220%22%2C%22%22%2C2592000%5D%22%3B%7D; _csrf=bf3b0e7d0c48d5fdbb2d37fec7e72924e187dd3a55e2e7a184c9937193e72307a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22rGXYTZeJHJf2nTK08W-Ddb4ycUyBk9mB%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\VanDyke Software\\Clients\\;E:\\Python27\\;E:\\Python27\\Scripts;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\dotnet\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Java\\jdk1.8.0_172\\bin;E:\\android_sdk\\platform-tools;E:\\android_sdk\\tools;E:\\Program Files (x86)\\opencv\\build\\x64\\vc15\\bin;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;E:\\MinGW\\include;E:\\MinGW\\lib;E:\\Python;E:\\Program Files\\Git\\cmd;C:\\Users\\Peng\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files\\Java\\jdk1.8.0_172\\bin;;E:\\Program Files\\Microsoft VS Code\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4 Server at localhost Port 8080</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'E:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/xampp/htdocs/basic/web/index.php'
+    'REMOTE_PORT' => '60385'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=buy%2Findex'
+    'REQUEST_URI' => '/basic/web/index.php?r=buy%2Findex'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1558852046.204
+    'REQUEST_TIME' => 1558852046
+]
+2019-05-26 08:54:53 [::1][0][6g4bemui76a1aa6m0034fkt3op][error][Error] Error: Access to undeclared static property: app\controllers\BuyController::$money in E:\xampp\htdocs\basic\views\buy\cart.php:125
+Stack trace:
+#0 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\View.php(348): require()
+#1 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('E:\\xampp\\htdocs...', Array)
+#2 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('E:\\xampp\\htdocs...', Array, Object(app\controllers\BuyController))
+#3 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render('cart', Array, Object(app\controllers\BuyController))
+#4 E:\xampp\htdocs\basic\controllers\BuyController.php(167): yii\base\Controller->render('cart', Array)
+#5 [internal function]: app\controllers\BuyController->actionCart(-1, -1)
+#6 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#7 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#8 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('cart', Array)
+#9 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('buy/cart', Array)
+#10 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 E:\xampp\htdocs\basic\web\index.php(12): yii\base\Application->run()
+#12 {main}
+2019-05-26 08:54:53 [::1][0][6g4bemui76a1aa6m0034fkt3op][info][application] $_GET = [
+    'r' => 'buy/cart'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Phpstorm-669499eb' => 'd4c24652-d7f0-4aa9-96f5-594c93671c41'
+    'PHPSESSID' => '6g4bemui76a1aa6m0034fkt3op'
+    '_identity' => '37f51e3538ffd1113b047306da0ea7a02f6a6d0457d5015980ab41b4e740d29ea:2:{i:0;s:9:\"_identity\";i:1;s:16:\"[\"0\",\"\",2592000]\";}'
+    '_csrf' => 'bf3b0e7d0c48d5fdbb2d37fec7e72924e187dd3a55e2e7a184c9937193e72307a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"rGXYTZeJHJf2nTK08W-Ddb4ycUyBk9mB\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '0'
+    'userId' => '0'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://localhost:8080/basic/web/index.php?r=buy%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'Phpstorm-669499eb=d4c24652-d7f0-4aa9-96f5-594c93671c41; PHPSESSID=6g4bemui76a1aa6m0034fkt3op; _identity=37f51e3538ffd1113b047306da0ea7a02f6a6d0457d5015980ab41b4e740d29ea%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A16%3A%22%5B%220%22%2C%22%22%2C2592000%5D%22%3B%7D; _csrf=bf3b0e7d0c48d5fdbb2d37fec7e72924e187dd3a55e2e7a184c9937193e72307a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22rGXYTZeJHJf2nTK08W-Ddb4ycUyBk9mB%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\VanDyke Software\\Clients\\;E:\\Python27\\;E:\\Python27\\Scripts;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\dotnet\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Java\\jdk1.8.0_172\\bin;E:\\android_sdk\\platform-tools;E:\\android_sdk\\tools;E:\\Program Files (x86)\\opencv\\build\\x64\\vc15\\bin;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;E:\\MinGW\\include;E:\\MinGW\\lib;E:\\Python;E:\\Program Files\\Git\\cmd;C:\\Users\\Peng\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files\\Java\\jdk1.8.0_172\\bin;;E:\\Program Files\\Microsoft VS Code\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4 Server at localhost Port 8080</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'E:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/xampp/htdocs/basic/web/index.php'
+    'REMOTE_PORT' => '62329'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=buy%2Fcart'
+    'REQUEST_URI' => '/basic/web/index.php?r=buy%2Fcart'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1558853693.52
+    'REQUEST_TIME' => 1558853693
+]
+2019-05-26 08:55:25 [::1][0][6g4bemui76a1aa6m0034fkt3op][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined offset: 0 in E:\xampp\htdocs\basic\views\buy\addr.php:81
+Stack trace:
+#0 E:\xampp\htdocs\basic\views\buy\addr.php(81): yii\base\ErrorHandler->handleError(8, 'Undefined offse...', 'E:\\xampp\\htdocs...', 81, Array)
+#1 [internal function]: yii\base\View->{closure}(Object(app\models\CustomerCar), 1, 0, Object(yii\grid\DataColumn))
+#2 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\grid\DataColumn.php(230): call_user_func(Object(Closure), Object(app\models\CustomerCar), 1, 0, Object(yii\grid\DataColumn))
+#3 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\grid\DataColumn.php(244): yii\grid\DataColumn->getDataCellValue(Object(app\models\CustomerCar), 1, 0)
+#4 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\grid\Column.php(111): yii\grid\DataColumn->renderDataCellContent(Object(app\models\CustomerCar), 1, 0)
+#5 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\grid\GridView.php(525): yii\grid\Column->renderDataCell(Object(app\models\CustomerCar), 1, 0)
+#6 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\grid\GridView.php(494): yii\grid\GridView->renderTableRow(Object(app\models\CustomerCar), 1, 0)
+#7 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\grid\GridView.php(358): yii\grid\GridView->renderTableBody()
+#8 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\widgets\BaseListView.php(160): yii\grid\GridView->renderItems()
+#9 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\grid\GridView.php(326): yii\widgets\BaseListView->renderSection('{items}')
+#10 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\widgets\BaseListView.php(135): yii\grid\GridView->renderSection('{items}')
+#11 [internal function]: yii\widgets\BaseListView->yii\widgets\{closure}(Array)
+#12 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\widgets\BaseListView.php(138): preg_replace_callback('/{\\w+}/', Object(Closure), '{summary}\n{item...')
+#13 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\grid\GridView.php(301): yii\widgets\BaseListView->run()
+#14 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Widget.php(140): yii\grid\GridView->run()
+#15 E:\xampp\htdocs\basic\views\buy\addr.php(29): yii\base\Widget::widget(Array)
+#16 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\View.php(348): require('E:\\xampp\\htdocs...')
+#17 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('E:\\xampp\\htdocs...', Array)
+#18 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('E:\\xampp\\htdocs...', Array, Object(app\controllers\BuyController))
+#19 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render('addr', Array, Object(app\controllers\BuyController))
+#20 E:\xampp\htdocs\basic\controllers\BuyController.php(207): yii\base\Controller->render('addr', Array)
+#21 [internal function]: app\controllers\BuyController->actionAddr('-1', '120', false)
+#22 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#23 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#24 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('addr', Array)
+#25 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('buy/addr', Array)
+#26 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#27 E:\xampp\htdocs\basic\web\index.php(12): yii\base\Application->run()
+#28 {main}
+2019-05-26 08:55:24 [::1][0][6g4bemui76a1aa6m0034fkt3op][info][application] $_GET = [
+    'r' => 'buy/addr'
+    'cart' => '-1'
+    'mMoney' => '120'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Phpstorm-669499eb' => 'd4c24652-d7f0-4aa9-96f5-594c93671c41'
+    'PHPSESSID' => '6g4bemui76a1aa6m0034fkt3op'
+    '_identity' => '37f51e3538ffd1113b047306da0ea7a02f6a6d0457d5015980ab41b4e740d29ea:2:{i:0;s:9:\"_identity\";i:1;s:16:\"[\"0\",\"\",2592000]\";}'
+    '_csrf' => 'bf3b0e7d0c48d5fdbb2d37fec7e72924e187dd3a55e2e7a184c9937193e72307a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"rGXYTZeJHJf2nTK08W-Ddb4ycUyBk9mB\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '0'
+    'userId' => '0'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://localhost:8080/basic/web/index.php?r=buy%2Fcart'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'Phpstorm-669499eb=d4c24652-d7f0-4aa9-96f5-594c93671c41; PHPSESSID=6g4bemui76a1aa6m0034fkt3op; _identity=37f51e3538ffd1113b047306da0ea7a02f6a6d0457d5015980ab41b4e740d29ea%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A16%3A%22%5B%220%22%2C%22%22%2C2592000%5D%22%3B%7D; _csrf=bf3b0e7d0c48d5fdbb2d37fec7e72924e187dd3a55e2e7a184c9937193e72307a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22rGXYTZeJHJf2nTK08W-Ddb4ycUyBk9mB%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\VanDyke Software\\Clients\\;E:\\Python27\\;E:\\Python27\\Scripts;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\dotnet\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Java\\jdk1.8.0_172\\bin;E:\\android_sdk\\platform-tools;E:\\android_sdk\\tools;E:\\Program Files (x86)\\opencv\\build\\x64\\vc15\\bin;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;E:\\MinGW\\include;E:\\MinGW\\lib;E:\\Python;E:\\Program Files\\Git\\cmd;C:\\Users\\Peng\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files\\Java\\jdk1.8.0_172\\bin;;E:\\Program Files\\Microsoft VS Code\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4 Server at localhost Port 8080</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'E:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/xampp/htdocs/basic/web/index.php'
+    'REMOTE_PORT' => '62370'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=buy%2Faddr&cart=-1&mMoney=120'
+    'REQUEST_URI' => '/basic/web/index.php?r=buy%2Faddr&cart=-1&mMoney=120'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1558853724.814
+    'REQUEST_TIME' => 1558853724
+]
+2019-05-26 09:01:34 [::1][0][6g4bemui76a1aa6m0034fkt3op][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined offset: 0 in E:\xampp\htdocs\basic\views\buy\addr.php:81
+Stack trace:
+#0 E:\xampp\htdocs\basic\views\buy\addr.php(81): yii\base\ErrorHandler->handleError(8, 'Undefined offse...', 'E:\\xampp\\htdocs...', 81, Array)
+#1 [internal function]: yii\base\View->{closure}(Object(app\models\CustomerCar), 1, 0, Object(yii\grid\DataColumn))
+#2 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\grid\DataColumn.php(230): call_user_func(Object(Closure), Object(app\models\CustomerCar), 1, 0, Object(yii\grid\DataColumn))
+#3 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\grid\DataColumn.php(244): yii\grid\DataColumn->getDataCellValue(Object(app\models\CustomerCar), 1, 0)
+#4 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\grid\Column.php(111): yii\grid\DataColumn->renderDataCellContent(Object(app\models\CustomerCar), 1, 0)
+#5 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\grid\GridView.php(525): yii\grid\Column->renderDataCell(Object(app\models\CustomerCar), 1, 0)
+#6 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\grid\GridView.php(494): yii\grid\GridView->renderTableRow(Object(app\models\CustomerCar), 1, 0)
+#7 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\grid\GridView.php(358): yii\grid\GridView->renderTableBody()
+#8 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\widgets\BaseListView.php(160): yii\grid\GridView->renderItems()
+#9 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\grid\GridView.php(326): yii\widgets\BaseListView->renderSection('{items}')
+#10 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\widgets\BaseListView.php(135): yii\grid\GridView->renderSection('{items}')
+#11 [internal function]: yii\widgets\BaseListView->yii\widgets\{closure}(Array)
+#12 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\widgets\BaseListView.php(138): preg_replace_callback('/{\\w+}/', Object(Closure), '{summary}\n{item...')
+#13 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\grid\GridView.php(301): yii\widgets\BaseListView->run()
+#14 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Widget.php(140): yii\grid\GridView->run()
+#15 E:\xampp\htdocs\basic\views\buy\addr.php(29): yii\base\Widget::widget(Array)
+#16 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\View.php(348): require('E:\\xampp\\htdocs...')
+#17 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('E:\\xampp\\htdocs...', Array)
+#18 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('E:\\xampp\\htdocs...', Array, Object(app\controllers\BuyController))
+#19 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render('addr', Array, Object(app\controllers\BuyController))
+#20 E:\xampp\htdocs\basic\controllers\BuyController.php(207): yii\base\Controller->render('addr', Array)
+#21 [internal function]: app\controllers\BuyController->actionAddr('-1', '120', false)
+#22 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#23 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#24 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('addr', Array)
+#25 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('buy/addr', Array)
+#26 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#27 E:\xampp\htdocs\basic\web\index.php(12): yii\base\Application->run()
+#28 {main}
+2019-05-26 09:01:34 [::1][0][6g4bemui76a1aa6m0034fkt3op][info][application] $_GET = [
+    'r' => 'buy/addr'
+    'cart' => '-1'
+    'mMoney' => '120'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Phpstorm-669499eb' => 'd4c24652-d7f0-4aa9-96f5-594c93671c41'
+    'PHPSESSID' => '6g4bemui76a1aa6m0034fkt3op'
+    '_identity' => '37f51e3538ffd1113b047306da0ea7a02f6a6d0457d5015980ab41b4e740d29ea:2:{i:0;s:9:\"_identity\";i:1;s:16:\"[\"0\",\"\",2592000]\";}'
+    '_csrf' => 'bf3b0e7d0c48d5fdbb2d37fec7e72924e187dd3a55e2e7a184c9937193e72307a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"rGXYTZeJHJf2nTK08W-Ddb4ycUyBk9mB\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '0'
+    'userId' => '0'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://localhost:8080/basic/web/index.php?r=buy%2Fcart'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'Phpstorm-669499eb=d4c24652-d7f0-4aa9-96f5-594c93671c41; PHPSESSID=6g4bemui76a1aa6m0034fkt3op; _identity=37f51e3538ffd1113b047306da0ea7a02f6a6d0457d5015980ab41b4e740d29ea%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A16%3A%22%5B%220%22%2C%22%22%2C2592000%5D%22%3B%7D; _csrf=bf3b0e7d0c48d5fdbb2d37fec7e72924e187dd3a55e2e7a184c9937193e72307a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22rGXYTZeJHJf2nTK08W-Ddb4ycUyBk9mB%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\VanDyke Software\\Clients\\;E:\\Python27\\;E:\\Python27\\Scripts;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\dotnet\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Java\\jdk1.8.0_172\\bin;E:\\android_sdk\\platform-tools;E:\\android_sdk\\tools;E:\\Program Files (x86)\\opencv\\build\\x64\\vc15\\bin;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;E:\\MinGW\\include;E:\\MinGW\\lib;E:\\Python;E:\\Program Files\\Git\\cmd;C:\\Users\\Peng\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files\\Java\\jdk1.8.0_172\\bin;;E:\\Program Files\\Microsoft VS Code\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4 Server at localhost Port 8080</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'E:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/xampp/htdocs/basic/web/index.php'
+    'REMOTE_PORT' => '64968'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=buy%2Faddr&cart=-1&mMoney=120'
+    'REQUEST_URI' => '/basic/web/index.php?r=buy%2Faddr&cart=-1&mMoney=120'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1558854094.076
+    'REQUEST_TIME' => 1558854094
+]
+2019-05-26 09:35:39 [::1][0][6g4bemui76a1aa6m0034fkt3op][error][Error] Error: Class 'app\controllers\BuyStatus' not found in E:\xampp\htdocs\basic\controllers\BuyController.php:192
+Stack trace:
+#0 [internal function]: app\controllers\BuyController->actionAddr('-1', '120', false)
+#1 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#2 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#3 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('addr', Array)
+#4 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('buy/addr', Array)
+#5 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 E:\xampp\htdocs\basic\web\index.php(12): yii\base\Application->run()
+#7 {main}
+2019-05-26 09:35:38 [::1][0][6g4bemui76a1aa6m0034fkt3op][info][application] $_GET = [
+    'r' => 'buy/addr'
+    'cart' => '-1'
+    'mMoney' => '120'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Phpstorm-669499eb' => 'd4c24652-d7f0-4aa9-96f5-594c93671c41'
+    'PHPSESSID' => '6g4bemui76a1aa6m0034fkt3op'
+    '_identity' => '37f51e3538ffd1113b047306da0ea7a02f6a6d0457d5015980ab41b4e740d29ea:2:{i:0;s:9:\"_identity\";i:1;s:16:\"[\"0\",\"\",2592000]\";}'
+    '_csrf' => 'bf3b0e7d0c48d5fdbb2d37fec7e72924e187dd3a55e2e7a184c9937193e72307a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"rGXYTZeJHJf2nTK08W-Ddb4ycUyBk9mB\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '0'
+    'userId' => '0'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://localhost:8080/basic/web/index.php?r=buy%2Fcart'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'Phpstorm-669499eb=d4c24652-d7f0-4aa9-96f5-594c93671c41; PHPSESSID=6g4bemui76a1aa6m0034fkt3op; _identity=37f51e3538ffd1113b047306da0ea7a02f6a6d0457d5015980ab41b4e740d29ea%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A16%3A%22%5B%220%22%2C%22%22%2C2592000%5D%22%3B%7D; _csrf=bf3b0e7d0c48d5fdbb2d37fec7e72924e187dd3a55e2e7a184c9937193e72307a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22rGXYTZeJHJf2nTK08W-Ddb4ycUyBk9mB%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\VanDyke Software\\Clients\\;E:\\Python27\\;E:\\Python27\\Scripts;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\dotnet\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Java\\jdk1.8.0_172\\bin;E:\\android_sdk\\platform-tools;E:\\android_sdk\\tools;E:\\Program Files (x86)\\opencv\\build\\x64\\vc15\\bin;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;E:\\MinGW\\include;E:\\MinGW\\lib;E:\\Python;E:\\Program Files\\Git\\cmd;C:\\Users\\Peng\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files\\Java\\jdk1.8.0_172\\bin;;E:\\Program Files\\Microsoft VS Code\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4 Server at localhost Port 8080</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'E:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/xampp/htdocs/basic/web/index.php'
+    'REMOTE_PORT' => '53954'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=buy%2Faddr&cart=-1&mMoney=120'
+    'REQUEST_URI' => '/basic/web/index.php?r=buy%2Faddr&cart=-1&mMoney=120'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1558856138.951
+    'REQUEST_TIME' => 1558856138
+]
+2019-05-26 10:06:41 [::1][0][6g4bemui76a1aa6m0034fkt3op][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined offset: 0 in E:\xampp\htdocs\basic\controllers\BuyController.php:220
+Stack trace:
+#0 E:\xampp\htdocs\basic\controllers\BuyController.php(220): yii\base\ErrorHandler->handleError(8, 'Undefined offse...', 'E:\\xampp\\htdocs...', 220, Array)
+#1 [internal function]: app\controllers\BuyController->actionPay()
+#2 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('pay', Array)
+#5 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('buy/pay', Array)
+#6 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 E:\xampp\htdocs\basic\web\index.php(12): yii\base\Application->run()
+#8 {main}
+2019-05-26 10:06:40 [::1][0][6g4bemui76a1aa6m0034fkt3op][info][application] $_GET = [
+    'r' => 'buy/pay'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Phpstorm-669499eb' => 'd4c24652-d7f0-4aa9-96f5-594c93671c41'
+    'PHPSESSID' => '6g4bemui76a1aa6m0034fkt3op'
+    '_identity' => '37f51e3538ffd1113b047306da0ea7a02f6a6d0457d5015980ab41b4e740d29ea:2:{i:0;s:9:\"_identity\";i:1;s:16:\"[\"0\",\"\",2592000]\";}'
+    '_csrf' => 'bf3b0e7d0c48d5fdbb2d37fec7e72924e187dd3a55e2e7a184c9937193e72307a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"rGXYTZeJHJf2nTK08W-Ddb4ycUyBk9mB\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '0'
+    'userId' => '0'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://localhost:8080/basic/web/index.php?r=buy%2Faddr&cart=-1&mMoney=120'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'Phpstorm-669499eb=d4c24652-d7f0-4aa9-96f5-594c93671c41; PHPSESSID=6g4bemui76a1aa6m0034fkt3op; _identity=37f51e3538ffd1113b047306da0ea7a02f6a6d0457d5015980ab41b4e740d29ea%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A16%3A%22%5B%220%22%2C%22%22%2C2592000%5D%22%3B%7D; _csrf=bf3b0e7d0c48d5fdbb2d37fec7e72924e187dd3a55e2e7a184c9937193e72307a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22rGXYTZeJHJf2nTK08W-Ddb4ycUyBk9mB%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\VanDyke Software\\Clients\\;E:\\Python27\\;E:\\Python27\\Scripts;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\dotnet\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Java\\jdk1.8.0_172\\bin;E:\\android_sdk\\platform-tools;E:\\android_sdk\\tools;E:\\Program Files (x86)\\opencv\\build\\x64\\vc15\\bin;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;E:\\MinGW\\include;E:\\MinGW\\lib;E:\\Python;E:\\Program Files\\Git\\cmd;C:\\Users\\Peng\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files\\Java\\jdk1.8.0_172\\bin;;E:\\Program Files\\Microsoft VS Code\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4 Server at localhost Port 8080</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'E:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/xampp/htdocs/basic/web/index.php'
+    'REMOTE_PORT' => '56123'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=buy%2Fpay'
+    'REQUEST_URI' => '/basic/web/index.php?r=buy%2Fpay'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1558858000.805
+    'REQUEST_TIME' => 1558858000
+]
+2019-05-26 10:08:13 [::1][0][6g4bemui76a1aa6m0034fkt3op][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined offset: 0 in E:\xampp\htdocs\basic\controllers\BuyController.php:220
+Stack trace:
+#0 E:\xampp\htdocs\basic\controllers\BuyController.php(220): yii\base\ErrorHandler->handleError(8, 'Undefined offse...', 'E:\\xampp\\htdocs...', 220, Array)
+#1 [internal function]: app\controllers\BuyController->actionPay()
+#2 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('pay', Array)
+#5 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('buy/pay', Array)
+#6 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 E:\xampp\htdocs\basic\web\index.php(12): yii\base\Application->run()
+#8 {main}
+2019-05-26 10:08:13 [::1][0][6g4bemui76a1aa6m0034fkt3op][info][application] $_GET = [
+    'r' => 'buy/pay'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Phpstorm-669499eb' => 'd4c24652-d7f0-4aa9-96f5-594c93671c41'
+    'PHPSESSID' => '6g4bemui76a1aa6m0034fkt3op'
+    '_identity' => '37f51e3538ffd1113b047306da0ea7a02f6a6d0457d5015980ab41b4e740d29ea:2:{i:0;s:9:\"_identity\";i:1;s:16:\"[\"0\",\"\",2592000]\";}'
+    '_csrf' => 'bf3b0e7d0c48d5fdbb2d37fec7e72924e187dd3a55e2e7a184c9937193e72307a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"rGXYTZeJHJf2nTK08W-Ddb4ycUyBk9mB\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '0'
+    'userId' => '0'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://localhost:8080/basic/web/index.php?r=buy%2Faddr&cart=-1&mMoney=120'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'Phpstorm-669499eb=d4c24652-d7f0-4aa9-96f5-594c93671c41; PHPSESSID=6g4bemui76a1aa6m0034fkt3op; _identity=37f51e3538ffd1113b047306da0ea7a02f6a6d0457d5015980ab41b4e740d29ea%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A16%3A%22%5B%220%22%2C%22%22%2C2592000%5D%22%3B%7D; _csrf=bf3b0e7d0c48d5fdbb2d37fec7e72924e187dd3a55e2e7a184c9937193e72307a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22rGXYTZeJHJf2nTK08W-Ddb4ycUyBk9mB%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\VanDyke Software\\Clients\\;E:\\Python27\\;E:\\Python27\\Scripts;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\dotnet\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Java\\jdk1.8.0_172\\bin;E:\\android_sdk\\platform-tools;E:\\android_sdk\\tools;E:\\Program Files (x86)\\opencv\\build\\x64\\vc15\\bin;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;E:\\MinGW\\include;E:\\MinGW\\lib;E:\\Python;E:\\Program Files\\Git\\cmd;C:\\Users\\Peng\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files\\Java\\jdk1.8.0_172\\bin;;E:\\Program Files\\Microsoft VS Code\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4 Server at localhost Port 8080</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'E:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/xampp/htdocs/basic/web/index.php'
+    'REMOTE_PORT' => '56223'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=buy%2Fpay'
+    'REQUEST_URI' => '/basic/web/index.php?r=buy%2Fpay'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1558858093.304
+    'REQUEST_TIME' => 1558858093
+]
+2019-05-26 10:08:36 [::1][0][6g4bemui76a1aa6m0034fkt3op][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined index: alipay in E:\xampp\htdocs\basic\controllers\BuyController.php:225
+Stack trace:
+#0 E:\xampp\htdocs\basic\controllers\BuyController.php(225): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'E:\\xampp\\htdocs...', 225, Array)
+#1 [internal function]: app\controllers\BuyController->actionPay()
+#2 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('pay', Array)
+#5 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('buy/pay', Array)
+#6 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 E:\xampp\htdocs\basic\web\index.php(12): yii\base\Application->run()
+#8 {main}
+2019-05-26 10:08:36 [::1][0][6g4bemui76a1aa6m0034fkt3op][info][application] $_GET = [
+    'r' => 'buy/pay'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Phpstorm-669499eb' => 'd4c24652-d7f0-4aa9-96f5-594c93671c41'
+    'PHPSESSID' => '6g4bemui76a1aa6m0034fkt3op'
+    '_identity' => '37f51e3538ffd1113b047306da0ea7a02f6a6d0457d5015980ab41b4e740d29ea:2:{i:0;s:9:\"_identity\";i:1;s:16:\"[\"0\",\"\",2592000]\";}'
+    '_csrf' => 'bf3b0e7d0c48d5fdbb2d37fec7e72924e187dd3a55e2e7a184c9937193e72307a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"rGXYTZeJHJf2nTK08W-Ddb4ycUyBk9mB\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '0'
+    'userId' => '0'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://localhost:8080/basic/web/index.php?r=buy%2Faddr&cart=-1&mMoney=120'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'Phpstorm-669499eb=d4c24652-d7f0-4aa9-96f5-594c93671c41; PHPSESSID=6g4bemui76a1aa6m0034fkt3op; _identity=37f51e3538ffd1113b047306da0ea7a02f6a6d0457d5015980ab41b4e740d29ea%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A16%3A%22%5B%220%22%2C%22%22%2C2592000%5D%22%3B%7D; _csrf=bf3b0e7d0c48d5fdbb2d37fec7e72924e187dd3a55e2e7a184c9937193e72307a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22rGXYTZeJHJf2nTK08W-Ddb4ycUyBk9mB%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\VanDyke Software\\Clients\\;E:\\Python27\\;E:\\Python27\\Scripts;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\dotnet\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Java\\jdk1.8.0_172\\bin;E:\\android_sdk\\platform-tools;E:\\android_sdk\\tools;E:\\Program Files (x86)\\opencv\\build\\x64\\vc15\\bin;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;E:\\MinGW\\include;E:\\MinGW\\lib;E:\\Python;E:\\Program Files\\Git\\cmd;C:\\Users\\Peng\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files\\Java\\jdk1.8.0_172\\bin;;E:\\Program Files\\Microsoft VS Code\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4 Server at localhost Port 8080</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'E:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/xampp/htdocs/basic/web/index.php'
+    'REMOTE_PORT' => '56255'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=buy%2Fpay'
+    'REQUEST_URI' => '/basic/web/index.php?r=buy%2Fpay'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1558858116.558
+    'REQUEST_TIME' => 1558858116
+]
+2019-05-26 10:11:22 [::1][0][6g4bemui76a1aa6m0034fkt3op][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined index: alipay in E:\xampp\htdocs\basic\controllers\BuyController.php:225
+Stack trace:
+#0 E:\xampp\htdocs\basic\controllers\BuyController.php(225): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'E:\\xampp\\htdocs...', 225, Array)
+#1 [internal function]: app\controllers\BuyController->actionPay()
+#2 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('pay', Array)
+#5 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('buy/pay', Array)
+#6 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 E:\xampp\htdocs\basic\web\index.php(12): yii\base\Application->run()
+#8 {main}
+2019-05-26 10:11:22 [::1][0][6g4bemui76a1aa6m0034fkt3op][info][application] $_GET = [
+    'r' => 'buy/pay'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Phpstorm-669499eb' => 'd4c24652-d7f0-4aa9-96f5-594c93671c41'
+    'PHPSESSID' => '6g4bemui76a1aa6m0034fkt3op'
+    '_identity' => '37f51e3538ffd1113b047306da0ea7a02f6a6d0457d5015980ab41b4e740d29ea:2:{i:0;s:9:\"_identity\";i:1;s:16:\"[\"0\",\"\",2592000]\";}'
+    '_csrf' => 'bf3b0e7d0c48d5fdbb2d37fec7e72924e187dd3a55e2e7a184c9937193e72307a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"rGXYTZeJHJf2nTK08W-Ddb4ycUyBk9mB\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '0'
+    'userId' => '0'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://localhost:8080/basic/web/index.php?r=buy%2Faddr&cart=-1&mMoney=120'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'Phpstorm-669499eb=d4c24652-d7f0-4aa9-96f5-594c93671c41; PHPSESSID=6g4bemui76a1aa6m0034fkt3op; _identity=37f51e3538ffd1113b047306da0ea7a02f6a6d0457d5015980ab41b4e740d29ea%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A16%3A%22%5B%220%22%2C%22%22%2C2592000%5D%22%3B%7D; _csrf=bf3b0e7d0c48d5fdbb2d37fec7e72924e187dd3a55e2e7a184c9937193e72307a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22rGXYTZeJHJf2nTK08W-Ddb4ycUyBk9mB%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\VanDyke Software\\Clients\\;E:\\Python27\\;E:\\Python27\\Scripts;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\dotnet\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Java\\jdk1.8.0_172\\bin;E:\\android_sdk\\platform-tools;E:\\android_sdk\\tools;E:\\Program Files (x86)\\opencv\\build\\x64\\vc15\\bin;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;E:\\MinGW\\include;E:\\MinGW\\lib;E:\\Python;E:\\Program Files\\Git\\cmd;C:\\Users\\Peng\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files\\Java\\jdk1.8.0_172\\bin;;E:\\Program Files\\Microsoft VS Code\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4 Server at localhost Port 8080</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'E:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/xampp/htdocs/basic/web/index.php'
+    'REMOTE_PORT' => '56436'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=buy%2Fpay'
+    'REQUEST_URI' => '/basic/web/index.php?r=buy%2Fpay'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1558858282.247
+    'REQUEST_TIME' => 1558858282
+]
+2019-05-26 10:11:37 [::1][0][6g4bemui76a1aa6m0034fkt3op][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined index: alipay in E:\xampp\htdocs\basic\controllers\BuyController.php:225
+Stack trace:
+#0 E:\xampp\htdocs\basic\controllers\BuyController.php(225): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'E:\\xampp\\htdocs...', 225, Array)
+#1 [internal function]: app\controllers\BuyController->actionPay()
+#2 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('pay', Array)
+#5 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('buy/pay', Array)
+#6 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 E:\xampp\htdocs\basic\web\index.php(12): yii\base\Application->run()
+#8 {main}
+2019-05-26 10:11:37 [::1][0][6g4bemui76a1aa6m0034fkt3op][info][application] $_GET = [
+    'r' => 'buy/pay'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Phpstorm-669499eb' => 'd4c24652-d7f0-4aa9-96f5-594c93671c41'
+    'PHPSESSID' => '6g4bemui76a1aa6m0034fkt3op'
+    '_identity' => '37f51e3538ffd1113b047306da0ea7a02f6a6d0457d5015980ab41b4e740d29ea:2:{i:0;s:9:\"_identity\";i:1;s:16:\"[\"0\",\"\",2592000]\";}'
+    '_csrf' => 'bf3b0e7d0c48d5fdbb2d37fec7e72924e187dd3a55e2e7a184c9937193e72307a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"rGXYTZeJHJf2nTK08W-Ddb4ycUyBk9mB\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '0'
+    'userId' => '0'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://localhost:8080/basic/web/index.php?r=buy%2Faddr&cart=-1&mMoney=120'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'Phpstorm-669499eb=d4c24652-d7f0-4aa9-96f5-594c93671c41; PHPSESSID=6g4bemui76a1aa6m0034fkt3op; _identity=37f51e3538ffd1113b047306da0ea7a02f6a6d0457d5015980ab41b4e740d29ea%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A16%3A%22%5B%220%22%2C%22%22%2C2592000%5D%22%3B%7D; _csrf=bf3b0e7d0c48d5fdbb2d37fec7e72924e187dd3a55e2e7a184c9937193e72307a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22rGXYTZeJHJf2nTK08W-Ddb4ycUyBk9mB%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\VanDyke Software\\Clients\\;E:\\Python27\\;E:\\Python27\\Scripts;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\dotnet\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Java\\jdk1.8.0_172\\bin;E:\\android_sdk\\platform-tools;E:\\android_sdk\\tools;E:\\Program Files (x86)\\opencv\\build\\x64\\vc15\\bin;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;E:\\MinGW\\include;E:\\MinGW\\lib;E:\\Python;E:\\Program Files\\Git\\cmd;C:\\Users\\Peng\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files\\Java\\jdk1.8.0_172\\bin;;E:\\Program Files\\Microsoft VS Code\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4 Server at localhost Port 8080</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'E:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/xampp/htdocs/basic/web/index.php'
+    'REMOTE_PORT' => '56456'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=buy%2Fpay'
+    'REQUEST_URI' => '/basic/web/index.php?r=buy%2Fpay'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1558858297.116
+    'REQUEST_TIME' => 1558858297
+]
+2019-05-26 10:16:10 [::1][0][6g4bemui76a1aa6m0034fkt3op][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined index: alipay in E:\xampp\htdocs\basic\controllers\BuyController.php:225
+Stack trace:
+#0 E:\xampp\htdocs\basic\controllers\BuyController.php(225): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'E:\\xampp\\htdocs...', 225, Array)
+#1 [internal function]: app\controllers\BuyController->actionPay()
+#2 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('pay', Array)
+#5 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('buy/pay', Array)
+#6 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 E:\xampp\htdocs\basic\web\index.php(12): yii\base\Application->run()
+#8 {main}
+2019-05-26 10:16:09 [::1][0][6g4bemui76a1aa6m0034fkt3op][info][application] $_GET = [
+    'r' => 'buy/pay'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Phpstorm-669499eb' => 'd4c24652-d7f0-4aa9-96f5-594c93671c41'
+    'PHPSESSID' => '6g4bemui76a1aa6m0034fkt3op'
+    '_identity' => '37f51e3538ffd1113b047306da0ea7a02f6a6d0457d5015980ab41b4e740d29ea:2:{i:0;s:9:\"_identity\";i:1;s:16:\"[\"0\",\"\",2592000]\";}'
+    '_csrf' => 'bf3b0e7d0c48d5fdbb2d37fec7e72924e187dd3a55e2e7a184c9937193e72307a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"rGXYTZeJHJf2nTK08W-Ddb4ycUyBk9mB\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '0'
+    'userId' => '0'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://localhost:8080/basic/web/index.php?r=buy%2Faddr&cart=-1&mMoney=120'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'Phpstorm-669499eb=d4c24652-d7f0-4aa9-96f5-594c93671c41; PHPSESSID=6g4bemui76a1aa6m0034fkt3op; _identity=37f51e3538ffd1113b047306da0ea7a02f6a6d0457d5015980ab41b4e740d29ea%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A16%3A%22%5B%220%22%2C%22%22%2C2592000%5D%22%3B%7D; _csrf=bf3b0e7d0c48d5fdbb2d37fec7e72924e187dd3a55e2e7a184c9937193e72307a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22rGXYTZeJHJf2nTK08W-Ddb4ycUyBk9mB%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\VanDyke Software\\Clients\\;E:\\Python27\\;E:\\Python27\\Scripts;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\dotnet\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Java\\jdk1.8.0_172\\bin;E:\\android_sdk\\platform-tools;E:\\android_sdk\\tools;E:\\Program Files (x86)\\opencv\\build\\x64\\vc15\\bin;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;E:\\MinGW\\include;E:\\MinGW\\lib;E:\\Python;E:\\Program Files\\Git\\cmd;C:\\Users\\Peng\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files\\Java\\jdk1.8.0_172\\bin;;E:\\Program Files\\Microsoft VS Code\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4 Server at localhost Port 8080</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'E:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/xampp/htdocs/basic/web/index.php'
+    'REMOTE_PORT' => '56752'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=buy%2Fpay'
+    'REQUEST_URI' => '/basic/web/index.php?r=buy%2Fpay'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1558858569.807
+    'REQUEST_TIME' => 1558858569
+]
+2019-05-26 10:16:43 [::1][0][6g4bemui76a1aa6m0034fkt3op][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined index: result_url in E:\xampp\htdocs\basic\controllers\BuyController.php:229
+Stack trace:
+#0 E:\xampp\htdocs\basic\controllers\BuyController.php(229): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'E:\\xampp\\htdocs...', 229, Array)
+#1 [internal function]: app\controllers\BuyController->actionPay()
+#2 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('pay', Array)
+#5 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('buy/pay', Array)
+#6 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 E:\xampp\htdocs\basic\web\index.php(12): yii\base\Application->run()
+#8 {main}
+2019-05-26 10:16:43 [::1][0][6g4bemui76a1aa6m0034fkt3op][info][application] $_GET = [
+    'r' => 'buy/pay'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Phpstorm-669499eb' => 'd4c24652-d7f0-4aa9-96f5-594c93671c41'
+    'PHPSESSID' => '6g4bemui76a1aa6m0034fkt3op'
+    '_identity' => '37f51e3538ffd1113b047306da0ea7a02f6a6d0457d5015980ab41b4e740d29ea:2:{i:0;s:9:\"_identity\";i:1;s:16:\"[\"0\",\"\",2592000]\";}'
+    '_csrf' => 'bf3b0e7d0c48d5fdbb2d37fec7e72924e187dd3a55e2e7a184c9937193e72307a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"rGXYTZeJHJf2nTK08W-Ddb4ycUyBk9mB\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '0'
+    'userId' => '0'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://localhost:8080/basic/web/index.php?r=buy%2Faddr&cart=-1&mMoney=120'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'Phpstorm-669499eb=d4c24652-d7f0-4aa9-96f5-594c93671c41; PHPSESSID=6g4bemui76a1aa6m0034fkt3op; _identity=37f51e3538ffd1113b047306da0ea7a02f6a6d0457d5015980ab41b4e740d29ea%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A16%3A%22%5B%220%22%2C%22%22%2C2592000%5D%22%3B%7D; _csrf=bf3b0e7d0c48d5fdbb2d37fec7e72924e187dd3a55e2e7a184c9937193e72307a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22rGXYTZeJHJf2nTK08W-Ddb4ycUyBk9mB%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\VanDyke Software\\Clients\\;E:\\Python27\\;E:\\Python27\\Scripts;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\dotnet\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Java\\jdk1.8.0_172\\bin;E:\\android_sdk\\platform-tools;E:\\android_sdk\\tools;E:\\Program Files (x86)\\opencv\\build\\x64\\vc15\\bin;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;E:\\MinGW\\include;E:\\MinGW\\lib;E:\\Python;E:\\Program Files\\Git\\cmd;C:\\Users\\Peng\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files\\Java\\jdk1.8.0_172\\bin;;E:\\Program Files\\Microsoft VS Code\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4 Server at localhost Port 8080</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'E:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/xampp/htdocs/basic/web/index.php'
+    'REMOTE_PORT' => '56791'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=buy%2Fpay'
+    'REQUEST_URI' => '/basic/web/index.php?r=buy%2Fpay'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1558858603.485
+    'REQUEST_TIME' => 1558858603
+]
