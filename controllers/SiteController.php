@@ -74,10 +74,10 @@ class SiteController extends Controller
             $username = Yii::$app->user->identity->username;
             $user = User::findByUsername($username);
             $_SESSION['userId'] = $user['id'];
+            BuyStatus::$totalAmount[$_SESSION['userId']] = 0;
+            BuyStatus::$hasRx[$_SESSION['userId']] = false;
+            BuyStatus::$isUploaded[$_SESSION['userId']] = false;
         }
-        BuyStatus::$totalAmount[$_SESSION['userId']] = 0;
-        BuyStatus::$hasRx[$_SESSION['userId']] = false;
-        BuyStatus::$isUploaded[$_SESSION['userId']] = false;
         return $this->render('index');
     }
 
