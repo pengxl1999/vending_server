@@ -19044,3 +19044,425 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1558858603.485
     'REQUEST_TIME' => 1558858603
 ]
+2019-05-26 10:20:33 [::1][0][6g4bemui76a1aa6m0034fkt3op][error][yii\base\ErrorException:64] yii\base\ErrorException: yii\BaseYii::main(): Failed opening required 'alipay/wappay/buildermodel/AlipayTradeWapPayContentBuilder.php' (include_path='E:\xampp\php\PEAR') in E:\xampp\htdocs\basic\controllers\BuyController.php:24
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2019-05-26 10:20:32 [::1][0][6g4bemui76a1aa6m0034fkt3op][info][application] $_GET = [
+    'r' => 'buy/pay'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Phpstorm-669499eb' => 'd4c24652-d7f0-4aa9-96f5-594c93671c41'
+    'PHPSESSID' => '6g4bemui76a1aa6m0034fkt3op'
+    '_identity' => '37f51e3538ffd1113b047306da0ea7a02f6a6d0457d5015980ab41b4e740d29ea:2:{i:0;s:9:\"_identity\";i:1;s:16:\"[\"0\",\"\",2592000]\";}'
+    '_csrf' => 'bf3b0e7d0c48d5fdbb2d37fec7e72924e187dd3a55e2e7a184c9937193e72307a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"rGXYTZeJHJf2nTK08W-Ddb4ycUyBk9mB\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '0'
+    'userId' => '0'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://localhost:8080/basic/web/index.php?r=buy%2Faddr&cart=-1&mMoney=120'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'Phpstorm-669499eb=d4c24652-d7f0-4aa9-96f5-594c93671c41; PHPSESSID=6g4bemui76a1aa6m0034fkt3op; _identity=37f51e3538ffd1113b047306da0ea7a02f6a6d0457d5015980ab41b4e740d29ea%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A16%3A%22%5B%220%22%2C%22%22%2C2592000%5D%22%3B%7D; _csrf=bf3b0e7d0c48d5fdbb2d37fec7e72924e187dd3a55e2e7a184c9937193e72307a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22rGXYTZeJHJf2nTK08W-Ddb4ycUyBk9mB%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\VanDyke Software\\Clients\\;E:\\Python27\\;E:\\Python27\\Scripts;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\dotnet\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Java\\jdk1.8.0_172\\bin;E:\\android_sdk\\platform-tools;E:\\android_sdk\\tools;E:\\Program Files (x86)\\opencv\\build\\x64\\vc15\\bin;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;E:\\MinGW\\include;E:\\MinGW\\lib;E:\\Python;E:\\Program Files\\Git\\cmd;C:\\Users\\Peng\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files\\Java\\jdk1.8.0_172\\bin;;E:\\Program Files\\Microsoft VS Code\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4 Server at localhost Port 8080</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'E:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/xampp/htdocs/basic/web/index.php'
+    'REMOTE_PORT' => '57076'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=buy%2Fpay'
+    'REQUEST_URI' => '/basic/web/index.php?r=buy%2Fpay'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1558858832.803
+    'REQUEST_TIME' => 1558858832
+]
+2019-05-26 10:20:41 [::1][0][6g4bemui76a1aa6m0034fkt3op][error][yii\base\ErrorException:64] yii\base\ErrorException: yii\BaseYii::main(): Failed opening required 'alipay/wappay/buildermodel/AlipayTradeWapPayContentBuilder.php' (include_path='E:\xampp\php\PEAR') in E:\xampp\htdocs\basic\controllers\BuyController.php:24
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2019-05-26 10:20:41 [::1][0][6g4bemui76a1aa6m0034fkt3op][info][application] $_GET = [
+    'r' => 'buy/addr'
+    'cart' => '-1'
+    'mMoney' => '120'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Phpstorm-669499eb' => 'd4c24652-d7f0-4aa9-96f5-594c93671c41'
+    'PHPSESSID' => '6g4bemui76a1aa6m0034fkt3op'
+    '_identity' => '37f51e3538ffd1113b047306da0ea7a02f6a6d0457d5015980ab41b4e740d29ea:2:{i:0;s:9:\"_identity\";i:1;s:16:\"[\"0\",\"\",2592000]\";}'
+    '_csrf' => 'bf3b0e7d0c48d5fdbb2d37fec7e72924e187dd3a55e2e7a184c9937193e72307a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"rGXYTZeJHJf2nTK08W-Ddb4ycUyBk9mB\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '0'
+    'userId' => '0'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://localhost:8080/basic/web/index.php?r=buy%2Fcart'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'Phpstorm-669499eb=d4c24652-d7f0-4aa9-96f5-594c93671c41; PHPSESSID=6g4bemui76a1aa6m0034fkt3op; _identity=37f51e3538ffd1113b047306da0ea7a02f6a6d0457d5015980ab41b4e740d29ea%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A16%3A%22%5B%220%22%2C%22%22%2C2592000%5D%22%3B%7D; _csrf=bf3b0e7d0c48d5fdbb2d37fec7e72924e187dd3a55e2e7a184c9937193e72307a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22rGXYTZeJHJf2nTK08W-Ddb4ycUyBk9mB%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\VanDyke Software\\Clients\\;E:\\Python27\\;E:\\Python27\\Scripts;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\dotnet\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Java\\jdk1.8.0_172\\bin;E:\\android_sdk\\platform-tools;E:\\android_sdk\\tools;E:\\Program Files (x86)\\opencv\\build\\x64\\vc15\\bin;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;E:\\MinGW\\include;E:\\MinGW\\lib;E:\\Python;E:\\Program Files\\Git\\cmd;C:\\Users\\Peng\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files\\Java\\jdk1.8.0_172\\bin;;E:\\Program Files\\Microsoft VS Code\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4 Server at localhost Port 8080</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'E:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/xampp/htdocs/basic/web/index.php'
+    'REMOTE_PORT' => '57075'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=buy%2Faddr&cart=-1&mMoney=120'
+    'REQUEST_URI' => '/basic/web/index.php?r=buy%2Faddr&cart=-1&mMoney=120'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1558858841.43
+    'REQUEST_TIME' => 1558858841
+]
+2019-05-26 10:20:42 [::1][0][6g4bemui76a1aa6m0034fkt3op][error][yii\base\ErrorException:64] yii\base\ErrorException: yii\BaseYii::main(): Failed opening required 'alipay/wappay/buildermodel/AlipayTradeWapPayContentBuilder.php' (include_path='E:\xampp\php\PEAR') in E:\xampp\htdocs\basic\controllers\BuyController.php:24
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2019-05-26 10:20:42 [::1][0][6g4bemui76a1aa6m0034fkt3op][info][application] $_GET = [
+    'r' => 'buy/cart'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Phpstorm-669499eb' => 'd4c24652-d7f0-4aa9-96f5-594c93671c41'
+    'PHPSESSID' => '6g4bemui76a1aa6m0034fkt3op'
+    '_identity' => '37f51e3538ffd1113b047306da0ea7a02f6a6d0457d5015980ab41b4e740d29ea:2:{i:0;s:9:\"_identity\";i:1;s:16:\"[\"0\",\"\",2592000]\";}'
+    '_csrf' => 'bf3b0e7d0c48d5fdbb2d37fec7e72924e187dd3a55e2e7a184c9937193e72307a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"rGXYTZeJHJf2nTK08W-Ddb4ycUyBk9mB\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '0'
+    'userId' => '0'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://localhost:8080/basic/web/index.php?r=buy%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'Phpstorm-669499eb=d4c24652-d7f0-4aa9-96f5-594c93671c41; PHPSESSID=6g4bemui76a1aa6m0034fkt3op; _identity=37f51e3538ffd1113b047306da0ea7a02f6a6d0457d5015980ab41b4e740d29ea%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A16%3A%22%5B%220%22%2C%22%22%2C2592000%5D%22%3B%7D; _csrf=bf3b0e7d0c48d5fdbb2d37fec7e72924e187dd3a55e2e7a184c9937193e72307a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22rGXYTZeJHJf2nTK08W-Ddb4ycUyBk9mB%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\VanDyke Software\\Clients\\;E:\\Python27\\;E:\\Python27\\Scripts;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\dotnet\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Java\\jdk1.8.0_172\\bin;E:\\android_sdk\\platform-tools;E:\\android_sdk\\tools;E:\\Program Files (x86)\\opencv\\build\\x64\\vc15\\bin;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;E:\\MinGW\\include;E:\\MinGW\\lib;E:\\Python;E:\\Program Files\\Git\\cmd;C:\\Users\\Peng\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files\\Java\\jdk1.8.0_172\\bin;;E:\\Program Files\\Microsoft VS Code\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4 Server at localhost Port 8080</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'E:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/xampp/htdocs/basic/web/index.php'
+    'REMOTE_PORT' => '57086'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=buy%2Fcart'
+    'REQUEST_URI' => '/basic/web/index.php?r=buy%2Fcart'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1558858842.322
+    'REQUEST_TIME' => 1558858842
+]
+2019-05-26 10:20:44 [::1][0][6g4bemui76a1aa6m0034fkt3op][error][yii\base\ErrorException:64] yii\base\ErrorException: yii\BaseYii::main(): Failed opening required 'alipay/wappay/buildermodel/AlipayTradeWapPayContentBuilder.php' (include_path='E:\xampp\php\PEAR') in E:\xampp\htdocs\basic\controllers\BuyController.php:24
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2019-05-26 10:20:44 [::1][0][6g4bemui76a1aa6m0034fkt3op][info][application] $_GET = [
+    'r' => 'buy/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Phpstorm-669499eb' => 'd4c24652-d7f0-4aa9-96f5-594c93671c41'
+    'PHPSESSID' => '6g4bemui76a1aa6m0034fkt3op'
+    '_identity' => '37f51e3538ffd1113b047306da0ea7a02f6a6d0457d5015980ab41b4e740d29ea:2:{i:0;s:9:\"_identity\";i:1;s:16:\"[\"0\",\"\",2592000]\";}'
+    '_csrf' => 'bf3b0e7d0c48d5fdbb2d37fec7e72924e187dd3a55e2e7a184c9937193e72307a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"rGXYTZeJHJf2nTK08W-Ddb4ycUyBk9mB\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '0'
+    'userId' => '0'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://localhost:8080/basic/web/index.php?r=buy%2Fcart'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'Phpstorm-669499eb=d4c24652-d7f0-4aa9-96f5-594c93671c41; PHPSESSID=6g4bemui76a1aa6m0034fkt3op; _identity=37f51e3538ffd1113b047306da0ea7a02f6a6d0457d5015980ab41b4e740d29ea%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A16%3A%22%5B%220%22%2C%22%22%2C2592000%5D%22%3B%7D; _csrf=bf3b0e7d0c48d5fdbb2d37fec7e72924e187dd3a55e2e7a184c9937193e72307a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22rGXYTZeJHJf2nTK08W-Ddb4ycUyBk9mB%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\VanDyke Software\\Clients\\;E:\\Python27\\;E:\\Python27\\Scripts;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\dotnet\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Java\\jdk1.8.0_172\\bin;E:\\android_sdk\\platform-tools;E:\\android_sdk\\tools;E:\\Program Files (x86)\\opencv\\build\\x64\\vc15\\bin;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;E:\\MinGW\\include;E:\\MinGW\\lib;E:\\Python;E:\\Program Files\\Git\\cmd;C:\\Users\\Peng\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files\\Java\\jdk1.8.0_172\\bin;;E:\\Program Files\\Microsoft VS Code\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4 Server at localhost Port 8080</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'E:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/xampp/htdocs/basic/web/index.php'
+    'REMOTE_PORT' => '57089'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=buy%2Findex'
+    'REQUEST_URI' => '/basic/web/index.php?r=buy%2Findex'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1558858844.309
+    'REQUEST_TIME' => 1558858844
+]
+2019-05-26 10:20:51 [::1][0][6g4bemui76a1aa6m0034fkt3op][error][yii\base\ErrorException:64] yii\base\ErrorException: yii\BaseYii::main(): Failed opening required 'alipay/wappay/buildermodel/AlipayTradeWapPayContentBuilder.php' (include_path='E:\xampp\php\PEAR') in E:\xampp\htdocs\basic\controllers\BuyController.php:24
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2019-05-26 10:20:51 [::1][0][6g4bemui76a1aa6m0034fkt3op][info][application] $_GET = [
+    'r' => 'buy/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Phpstorm-669499eb' => 'd4c24652-d7f0-4aa9-96f5-594c93671c41'
+    'PHPSESSID' => '6g4bemui76a1aa6m0034fkt3op'
+    '_identity' => '37f51e3538ffd1113b047306da0ea7a02f6a6d0457d5015980ab41b4e740d29ea:2:{i:0;s:9:\"_identity\";i:1;s:16:\"[\"0\",\"\",2592000]\";}'
+    '_csrf' => 'bf3b0e7d0c48d5fdbb2d37fec7e72924e187dd3a55e2e7a184c9937193e72307a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"rGXYTZeJHJf2nTK08W-Ddb4ycUyBk9mB\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '0'
+    'userId' => '0'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'Phpstorm-669499eb=d4c24652-d7f0-4aa9-96f5-594c93671c41; PHPSESSID=6g4bemui76a1aa6m0034fkt3op; _identity=37f51e3538ffd1113b047306da0ea7a02f6a6d0457d5015980ab41b4e740d29ea%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A16%3A%22%5B%220%22%2C%22%22%2C2592000%5D%22%3B%7D; _csrf=bf3b0e7d0c48d5fdbb2d37fec7e72924e187dd3a55e2e7a184c9937193e72307a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22rGXYTZeJHJf2nTK08W-Ddb4ycUyBk9mB%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\VanDyke Software\\Clients\\;E:\\Python27\\;E:\\Python27\\Scripts;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\dotnet\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Java\\jdk1.8.0_172\\bin;E:\\android_sdk\\platform-tools;E:\\android_sdk\\tools;E:\\Program Files (x86)\\opencv\\build\\x64\\vc15\\bin;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;E:\\MinGW\\include;E:\\MinGW\\lib;E:\\Python;E:\\Program Files\\Git\\cmd;C:\\Users\\Peng\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files\\Java\\jdk1.8.0_172\\bin;;E:\\Program Files\\Microsoft VS Code\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4 Server at localhost Port 8080</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'E:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/xampp/htdocs/basic/web/index.php'
+    'REMOTE_PORT' => '57094'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=buy%2Findex'
+    'REQUEST_URI' => '/basic/web/index.php?r=buy%2Findex'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1558858851.298
+    'REQUEST_TIME' => 1558858851
+]
+2019-05-26 10:20:55 [::1][0][6g4bemui76a1aa6m0034fkt3op][error][yii\base\ErrorException:64] yii\base\ErrorException: yii\BaseYii::main(): Failed opening required 'alipay/wappay/buildermodel/AlipayTradeWapPayContentBuilder.php' (include_path='E:\xampp\php\PEAR') in E:\xampp\htdocs\basic\controllers\BuyController.php:24
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2019-05-26 10:20:55 [::1][0][6g4bemui76a1aa6m0034fkt3op][info][application] $_GET = [
+    'r' => 'buy/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Phpstorm-669499eb' => 'd4c24652-d7f0-4aa9-96f5-594c93671c41'
+    'PHPSESSID' => '6g4bemui76a1aa6m0034fkt3op'
+    '_identity' => '37f51e3538ffd1113b047306da0ea7a02f6a6d0457d5015980ab41b4e740d29ea:2:{i:0;s:9:\"_identity\";i:1;s:16:\"[\"0\",\"\",2592000]\";}'
+    '_csrf' => 'bf3b0e7d0c48d5fdbb2d37fec7e72924e187dd3a55e2e7a184c9937193e72307a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"rGXYTZeJHJf2nTK08W-Ddb4ycUyBk9mB\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '0'
+    'userId' => '0'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://localhost:8080/basic/web/index.php'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'Phpstorm-669499eb=d4c24652-d7f0-4aa9-96f5-594c93671c41; PHPSESSID=6g4bemui76a1aa6m0034fkt3op; _identity=37f51e3538ffd1113b047306da0ea7a02f6a6d0457d5015980ab41b4e740d29ea%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A16%3A%22%5B%220%22%2C%22%22%2C2592000%5D%22%3B%7D; _csrf=bf3b0e7d0c48d5fdbb2d37fec7e72924e187dd3a55e2e7a184c9937193e72307a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22rGXYTZeJHJf2nTK08W-Ddb4ycUyBk9mB%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\VanDyke Software\\Clients\\;E:\\Python27\\;E:\\Python27\\Scripts;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\dotnet\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Java\\jdk1.8.0_172\\bin;E:\\android_sdk\\platform-tools;E:\\android_sdk\\tools;E:\\Program Files (x86)\\opencv\\build\\x64\\vc15\\bin;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;E:\\MinGW\\include;E:\\MinGW\\lib;E:\\Python;E:\\Program Files\\Git\\cmd;C:\\Users\\Peng\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files\\Java\\jdk1.8.0_172\\bin;;E:\\Program Files\\Microsoft VS Code\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4 Server at localhost Port 8080</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'E:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/xampp/htdocs/basic/web/index.php'
+    'REMOTE_PORT' => '57113'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=buy%2Findex'
+    'REQUEST_URI' => '/basic/web/index.php?r=buy%2Findex'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1558858855.471
+    'REQUEST_TIME' => 1558858855
+]
