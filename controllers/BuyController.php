@@ -217,6 +217,7 @@ class BuyController extends Controller
 
         //实例化builder
         $alipay = new \AlipayTradeWapPayContentBuilder();
+        $alipay->setOutTradeNo(date("Ymdhis"));
         $alipay->setTotalAmount(0.01);
         $alipay->setSubject('智能药品售货机预约购药');
         $alipay->setBody('药品');
