@@ -84,7 +84,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'label' => '订单编号',
                 'enableSorting' => false,
                 'value' => function($model) {
-                    return $model->cp_id;
+                    return $model->ca_id;
                 },
                 'headerOptions' => ['style' => 'text-align:center', 'width' => '40'],
                 'contentOptions' => ['style' => 'text-align:center', 'width' => '40'],
