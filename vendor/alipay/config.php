@@ -31,10 +31,10 @@ lkDYAlncYyyoltGwtfFhv0ees5f+MD+FgZmUJx9KUuLGlrXKuINwXSNjOkYo6AS/
 qeALCckShxZUiRYDf89kCCWGp2H3oGApbrWdMIcw0W1CIvOmdfY7ww==",
 		
 		//异步通知地址
-		'notify_url' => "http://工程公网访问地址/alipay.trade.wap.pay-PHP-UTF-8/notify_url.php",
+		'notify_url' => "http://to-group.top/vending/web/index.php?r=buy%2Fsuccess",
 		
 		//同步跳转
-		'return_url' => "http://mitsein.com/alipay.trade.wap.pay-PHP-UTF-8/return_url.php",
+		'return_url' => "http://to-group.top/vending/web/index.php?r=buy%2Fsuccess",
 
 		//编码格式
 		'charset' => "UTF-8",
