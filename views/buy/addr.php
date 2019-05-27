@@ -86,11 +86,13 @@ $this->params['breadcrumbs'][] = $this->title;
                     $customerAppointment->ca_id = CustomerAppointment::getMaxID() + 1;
                     $customerAppointment->c_id = $_SESSION['userId'];
                     $customerAppointment->m_id = $model->cc_medicine;
-                    $customerAppointment->ca_time =
+                    $customerAppointment->ca_time = "111111";
                     $customerAppointment->status = "Not_paid";
                     $customerAppointment->num = $model->cc_num;
                     $customerAppointment->img = $medicine->img;
-                    $customerAppointment->save();
+                    if($customerAppointment->save()) {
+                        return 1;
+                    }
                     return $model->cc_num;
                 },
                 'headerOptions' => ['style' => 'text-align:center', 'width' => '50'],
