@@ -22,7 +22,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <br/>
     <form action="./index.php?r=buy/purchase" method="post">
-        <input type="text" name="search_cp" placeholder="搜索订单" style="font-size: medium"/>
+        <input type="text" name="search_cp" placeholder="输入订单号" style="font-size: medium"/>
         <input type="submit" value="搜索" class="btn btn-primary" />
     </form>
     <br/>
@@ -31,13 +31,6 @@ $this->params['breadcrumbs'][] = $this->title;
         'dataProvider' => $purchaseDataProvider,
         //'filterModel' => $searchModel,
         'columns' => [
-            [
-                'class' => 'yii\grid\SerialColumn',
-                'headerOptions' => ['style' => 'text-align:center', 'width' => '20'],
-                'contentOptions' => ['style' => 'text-align:center', 'width' => '20'],
-            ],
-
-
             [
                 'label' => '订单编号',
                 'enableSorting' => false,
@@ -52,13 +45,17 @@ $this->params['breadcrumbs'][] = $this->title;
                 'enableSorting' => false,
                 'value' => function($model) {
                     $medicine = \app\models\Medicine::findOne(['m_id' => $model->m_id]);
-                    return $medicine->name.'×'.$model->num;
+                    return $medicine->name.' ×  '.$model->num;
                 },
                 'headerOptions' => ['style' => 'text-align:center', 'width' => '140'],
                 'contentOptions' => ['style' => 'text-align:center', 'width' => '140'],
             ],
             //'m_id',
-            'cp_time',
+            [
+                'attribute' => 'cp_time',
+                'headerOptions' => ['style' => 'text-align:center'],
+                'contentOptions' => ['style' => 'text-align:center'],
+            ],
             'status',
             //'v_id',
             //'num',
@@ -74,37 +71,46 @@ $this->params['breadcrumbs'][] = $this->title;
         //'filterModel' => $searchModel,
         'columns' => [
             [
-                'class' => 'yii\grid\SerialColumn',
-                'headerOptions' => ['style' => 'text-align:center', 'width' => '20'],
-                'contentOptions' => ['style' => 'text-align:center', 'width' => '20'],
-            ],
-
-
-            [
-                'label' => '订单编号',
-                'enableSorting' => false,
-                'value' => function($model) {
-                    return $model->ca_id;
-                },
-                'headerOptions' => ['style' => 'text-align:center', 'width' => '40'],
-                'contentOptions' => ['style' => 'text-align:center', 'width' => '40'],
-            ],
-            [
-                'label' => '购买药品',
+                'label' => '订单信息',
                 'enableSorting' => false,
                 'value' => function($model) {
                     $medicine = \app\models\Medicine::findOne(['m_id' => $model->m_id]);
-                    return $medicine->name.'×'.$model->num;
+                    return $model->ca_order . "\n" . $medicine->name.' × '.$model->num;
                 },
-                'headerOptions' => ['style' => 'text-align:center', 'width' => '140'],
-                'contentOptions' => ['style' => 'text-align:center', 'width' => '140'],
+                'headerOptions' => ['style' => 'text-align:center; font-size: xx-small; vertical-align: middle'],
+                'contentOptions' => ['style' => 'text-align:center; font-size: xx-small; vertical-align: middle'],
             ],
             //'m_id',
-            'ca_time',
-            'status',
+            [
+                'attribute' => 'ca_time',
+                'headerOptions' => ['style' => 'text-align:center; font-size: xx-small; vertical-align: middle'],
+                'contentOptions' => ['style' => 'text-align:center; font-size: xx-small; vertical-align: middle'],
+            ],
+            [
+                'attribute' => 'status',
+                'enableSorting' => false,
+                'value' => function($model) {
+                    switch ($model->status) {
+                        case 0:
+                            return '未支付';
+                        case 1:
+                            return '已支付';
+                        case 2:
+                            return '已取货';
+                        default:
+                            return "错误！";
+                    }
+                },
+                'headerOptions' => ['style' => 'text-align:center; font-size: xx-small; vertical-align: middle; width: 60px'],
+                'contentOptions' => ['style' => 'text-align:center; font-size: xx-small; vertical-align: middle; width: 60px'],
+            ],
             //'v_id',
             //'num',
-            'deadline',
+            [
+                'attribute' => 'deadline',
+                'headerOptions' => ['style' => 'text-align:center; font-size: xx-small; vertical-align: middle'],
+                'contentOptions' => ['style' => 'text-align:center; font-size: xx-small; vertical-align: middle'],
+            ],
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

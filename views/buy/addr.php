@@ -26,6 +26,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <p>
         <?= Html::a('返回', ['cart'], ['class' => 'btn btn-primary']) ?>
     </p>
+    <h3>订单已提交，请在15分钟时间内完成支付！</h3>
     <h1><strong style="font-size: large">您的购买信息</strong></h1>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
@@ -89,6 +90,12 @@ $this->params['breadcrumbs'][] = $this->title;
             //'cc_num',
         ],
     ]); ?>
+
+    <footer class="footer" style="height: 80px">
+        <p class="pull-left" style="margin-left: 20px; margin-top:10px; color: #496f89;">合计：￥
+            <?php echo number_format(\app\models\BuyStatus::$totalAmount, 2); ?>
+        </p>
+    </footer>
 
     <?php
         if(\app\models\BuyStatus::$hasRx == true && \app\models\BuyStatus::$isUploaded == false) {

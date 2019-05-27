@@ -2,9 +2,9 @@
 
 namespace app\models;
 
+use app\models\CustomerAppointment;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\CustomerAppointment;
 
 /**
  * CustomerAppointmentSearch represents the model behind the search form of `app\models\CustomerAppointment`.
@@ -18,7 +18,7 @@ class CustomerAppointmentSearch extends CustomerAppointment
     {
         return [
             [['ca_id', 'c_id', 'm_id', 'status', 'v_id', 'num', 'pa_id'], 'integer'],
-            [['ca_time', 'deadline', 'img'], 'safe'],
+            [['ca_order', 'ca_time', 'deadline', 'img'], 'safe'],
         ];
     }
 
@@ -69,7 +69,8 @@ class CustomerAppointmentSearch extends CustomerAppointment
             'pa_id' => $this->pa_id,
         ]);
 
-        $query->andFilterWhere(['like', 'img', $this->img]);
+        $query->andFilterWhere(['like', 'ca_order', $this->ca_order])
+            ->andFilterWhere(['like', 'img', $this->img]);
 
         return $dataProvider;
     }
@@ -84,13 +85,7 @@ class CustomerAppointmentSearch extends CustomerAppointment
         ]);
 
         // grid filtering conditions
-        $query->orFilterWhere([
-            'ca_id' => $param,
-            'ca_time' => $param,
-            'status' => $param,
-        ]);
-
-        //$query->andFilterWhere(['like', 'img', $this->img]);
+        $query->orFilterWhere(['like', 'ca_id', $param]);
 
         return $dataProvider;
     }

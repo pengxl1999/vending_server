@@ -15,13 +15,13 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="medicine-index">
 
-    <h1><strong style="font-size: large"><?= Html::encode($this->title) ?></strong></h1>
+    <h3><strong><?= Html::encode($this->title) ?></strong></h3>
+    <br/>
     <?php //echo $this->render('_search', ['model' => $searchModel]); ?>
 
-    <br/>
     <form action="./index.php?r=buy/index" method="post">
-        <input type="text" name="search_med" placeholder="搜索药品" style="font-size: medium"/>
-        <input type="submit" value="搜索" class="btn btn-primary" />
+        <input type="text" name="search_med" placeholder="搜索药品" style="font-size: small"/>
+        <input type="submit" value="搜索" class="btn btn-primary" style="font-size: x-small"/>
     </form>
 
     <br/>
@@ -40,16 +40,16 @@ $this->params['breadcrumbs'][] = $this->title;
                 'value' => function($model) {
                     return Html::img('images/medicine/'.$model->img, ['alt' => $model->name, 'width' => '80']);
                 },
-                'headerOptions' => ['style' => 'text-align:center', 'width' => '80'],
-                'contentOptions' => ['align' => 'center', 'width' => '80'],
+                'headerOptions' => ['style' => 'text-align:center; font-size: xx-small; vertical-align: middle; width: 80px'],
+                'contentOptions' => ['style' => 'vertical-align: middle; width: 80px', 'align' => 'center'],
             ],
             //'img',
             [
                 'header' => "名称",
                 'class' => 'yii\grid\ActionColumn',
                 'template'=> '{name}',
-                'headerOptions' => ['style' => 'text-align:center', 'width' => '150'],
-                'contentOptions' => ['align' => 'center'],
+                'headerOptions' => ['style' => 'text-align:center; font-size: xx-small; vertical-align: middle; width: 150px'],
+                'contentOptions' => ['style' => 'text-align:center; font-size: xx-small; vertical-align: middle; width: 150px'],
                 'buttons' => [
                     'name' => function ($url, $model) {
                         //$_SESSION['medId'] = $model->m_id;
@@ -81,8 +81,8 @@ $this->params['breadcrumbs'][] = $this->title;
                 'value' => function($model) {
                     return $model->money;
                 },
-                'headerOptions' => ['style' => 'text-align:center'],
-                'contentOptions' => ['align' => 'center'],
+                'headerOptions' => ['style' => 'text-align:center; font-size: xx-small; vertical-align: middle'],
+                'contentOptions' => ['style' => 'text-align:center; font-size: xx-small; vertical-align: middle'],
             ],
             //'money',
 
@@ -91,8 +91,8 @@ $this->params['breadcrumbs'][] = $this->title;
                 'header' => "购买",
                 'class' => 'yii\grid\ActionColumn',
                 'template'=> '{buyNow}{addToCart}',
-                'headerOptions' => ['style' => 'text-align:center'],
-                'contentOptions' => ['align' => 'center'],
+                'headerOptions' => ['style' => 'text-align:center; font-size: xx-small; vertical-align: middle'],
+                'contentOptions' => ['align' => 'center', 'style' => 'vertical-align: middle'],
                 'buttons' => [
                     'buyNow' => function ($url, $model) {
                         //$_SESSION['medId'] = $model->m_id;

@@ -105,7 +105,7 @@ class BuyController extends Controller
             $appointmentDataProvider = $appointmentSearchModel->searchByParams($search);
         } else {
             $purchaseDataProvider = $purchaseSearchModel->search(Yii::$app->request->queryParams);
-            $appointmentDataProvider = $appointmentSearchModel->searchByParams(Yii::$app->request->queryParams);
+            $appointmentDataProvider = $appointmentSearchModel->search(Yii::$app->request->queryParams);
         }
 
         return $this->render('purchase', [
@@ -241,7 +241,8 @@ class BuyController extends Controller
 
         //实例化builder
         $alipay = new \AlipayTradeWapPayContentBuilder();
-        $alipay->setOutTradeNo(date("Ymdhis"));
+        date_default_timezone_set("Asia/Shanghai");
+        $alipay->setOutTradeNo(date("YmdHis") . $_SESSION['userId']);
         $alipay->setTotalAmount($mMoney);
         $alipay->setSubject('智能药品售货机预约购药');
         $alipay->setBody('药品');
@@ -314,14 +315,19 @@ class BuyController extends Controller
 
     public function createOrder($dataProvider)
     {
+        date_default_timezone_set("Asia/Shanghai");
+        $date = date("Y-m-d H:i:s");
+        $order = date("YmdHis") . $_SESSION['userId'];
         /*添加预约信息，可在我的订单中查看*/
         foreach ($dataProvider->models as $model) {
             $customerAppointment = new CustomerAppointment();
             $customerAppointment->ca_id = CustomerAppointment::getMaxID() + 1;
+            $customerAppointment->ca_order = $order;
             $customerAppointment->c_id = $_SESSION['userId'];
             $customerAppointment->m_id = $model->cc_medicine;
-            $customerAppointment->ca_time = "111111";
-            $customerAppointment->status = "Not_paid";
+            $customerAppointment->ca_time = $date;
+            $customerAppointment->deadline = date("Y-m-d H:i:s", strtotime($date. "+2 day"));
+            $customerAppointment->status = 0;
             $customerAppointment->num = $model->cc_num;
             if(!$customerAppointment->save()) {
                 return false;

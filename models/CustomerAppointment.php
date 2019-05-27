@@ -8,6 +8,7 @@ use Yii;
  * This is the model class for table "customer_appointment".
  *
  * @property int $ca_id
+ * @property string $ca_order
  * @property int $c_id
  * @property int $m_id
  * @property string $ca_time
@@ -42,6 +43,7 @@ class CustomerAppointment extends \yii\db\ActiveRecord
             [['c_id', 'm_id'], 'required'],
             [['c_id', 'm_id', 'status', 'v_id', 'num', 'pa_id'], 'integer'],
             [['ca_time', 'deadline'], 'safe'],
+            [['ca_order'], 'string', 'max' => 32],
             [['img'], 'string', 'max' => 255],
             [['c_id'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['c_id' => 'id']],
             [['m_id'], 'exist', 'skipOnError' => true, 'targetClass' => Medicine::className(), 'targetAttribute' => ['m_id' => 'm_id']],
@@ -56,16 +58,17 @@ class CustomerAppointment extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'ca_id' => '订单编号',
-            'c_id' => '用户',
-            'm_id' => '药品ID',
+            'ca_id' => 'Ca ID',
+            'ca_order' => '订单编号',
+            'c_id' => 'C ID',
+            'm_id' => 'M ID',
             'ca_time' => '下单时间',
             'status' => '状态',
-            'v_id' => '售货机ID',
+            'v_id' => 'V ID',
             'deadline' => '取货截止时间',
-            'num' => '数量',
-            'img' => '图片',
-            'pa_id' => '药师ID',
+            'num' => 'Num',
+            'img' => 'Img',
+            'pa_id' => 'Pa ID',
         ];
     }
 
