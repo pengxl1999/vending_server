@@ -77,8 +77,8 @@ $this->params['breadcrumbs'][] = $this->title;
                 'label' => '数量',
                 'enableSorting' => false,
                 'value' => function($model) {
-                    $medicine = \app\models\Medicine::findOne(['m_id' => $model->cc_medicine]);
-                    \app\models\BuyStatus::$totalAmount += $medicine->money * $model->cc_num;
+//                    $medicine = \app\models\Medicine::findOne(['m_id' => $model->cc_medicine]);
+//                    \app\models\BuyStatus::$totalAmount += $medicine->money * $model->cc_num;
                     return $model->cc_num;
                 },
                 'headerOptions' => ['style' => 'text-align:center', 'width' => '50'],
@@ -148,7 +148,7 @@ $this->params['breadcrumbs'][] = $this->title;
 </div>
 
 <footer class="footer" style="height: 80px">
-    <?= Html::a('支付', ['pay'], ['class' => 'btn btn-default pull-right',
+    <?= Html::a('支付', ['pay', 'mMoney' => $mMoney], ['class' => 'btn btn-default pull-right',
         'style' => 'margin-right:20px;']); ?>
 </footer>
 

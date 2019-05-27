@@ -213,12 +213,17 @@ class BuyController extends Controller
         ]);
     }
 
-    public function actionPay() {
+    public function actionPay($mMoney) {
+
+        if($mMoney == 0) {
+            echo "Fatal Error!";
+            return;
+        }
 
         //实例化builder
         $alipay = new \AlipayTradeWapPayContentBuilder();
         $alipay->setOutTradeNo(date("Ymdhis"));
-        $alipay->setTotalAmount(BuyStatus::$totalAmount);
+        $alipay->setTotalAmount($mMoney);
         $alipay->setSubject('智能药品售货机预约购药');
         $alipay->setBody('药品');
 
