@@ -112,7 +112,7 @@ class BuyController extends Controller
             'purchaseSearchModel' => $purchaseSearchModel,
             'purchaseDataProvider' => $purcaseDataProvider,
             'appointmentSearchModel' => $appointmentSearchModel,
-            'appointmentProvider' => $appointmentDataProvider,
+            'appointmentDataProvider' => $appointmentDataProvider,
         ]);
     }
 
