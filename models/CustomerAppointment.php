@@ -56,16 +56,16 @@ class CustomerAppointment extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'ca_id' => 'Ca ID',
-            'c_id' => 'C ID',
-            'm_id' => 'M ID',
-            'ca_time' => 'Ca Time',
-            'status' => 'Status',
-            'v_id' => 'V ID',
-            'deadline' => 'Deadline',
-            'num' => 'Num',
-            'img' => 'Img',
-            'pa_id' => 'Pa ID',
+            'ca_id' => '订单编号',
+            'c_id' => '用户',
+            'm_id' => '药品ID',
+            'ca_time' => '下单时间',
+            'status' => '状态',
+            'v_id' => '售货机ID',
+            'deadline' => '取货截止时间',
+            'num' => '数量',
+            'img' => '图片',
+            'pa_id' => '药师ID',
         ];
     }
 
@@ -99,5 +99,9 @@ class CustomerAppointment extends \yii\db\ActiveRecord
     public function getPa()
     {
         return $this->hasOne(PharmacistAppointment::className(), ['pa_id' => 'pa_id']);
+    }
+
+    public static function getMaxID() {
+        return CustomerAppointment::find()->max('ca_id');
     }
 }

@@ -8,7 +8,8 @@ use yii\web\View;
 
 /* @var $this yii\web\View */
 /* @var $searchModel app\models\CustomerPurchaseSearch */
-/* @var $dataProvider yii\data\ActiveDataProvider */
+/* @var $purchaseDataProvider yii\data\ActiveDataProvider */
+/* @var $appointmentDataProvider yii\data\ActiveDataProvider */
 
 $this->title = '我的订单';
 $this->params['breadcrumbs'][] = $this->title;
@@ -27,7 +28,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <br/>
 
     <?= GridView::widget([
-        'dataProvider' => $dataProvider,
+        'dataProvider' => $purchaseDataProvider,
         //'filterModel' => $searchModel,
         'columns' => [
             [
@@ -63,6 +64,47 @@ $this->params['breadcrumbs'][] = $this->title;
             //'num',
             //'img',
             //'pa_id',
+
+            ['class' => 'yii\grid\ActionColumn'],
+        ],
+    ]); ?>
+
+    <?= GridView::widget([
+        'dataProvider' => $appointmentDataProvider,
+        //'filterModel' => $searchModel,
+        'columns' => [
+            [
+                'class' => 'yii\grid\SerialColumn',
+                'headerOptions' => ['style' => 'text-align:center', 'width' => '20'],
+                'contentOptions' => ['style' => 'text-align:center', 'width' => '20'],
+            ],
+
+
+            [
+                'label' => '订单编号',
+                'enableSorting' => false,
+                'value' => function($model) {
+                    return $model->cp_id;
+                },
+                'headerOptions' => ['style' => 'text-align:center', 'width' => '40'],
+                'contentOptions' => ['style' => 'text-align:center', 'width' => '40'],
+            ],
+            [
+                'label' => '购买药品',
+                'enableSorting' => false,
+                'value' => function($model) {
+                    $medicine = \app\models\Medicine::findOne(['m_id' => $model->m_id]);
+                    return $medicine->name.'×'.$model->num;
+                },
+                'headerOptions' => ['style' => 'text-align:center', 'width' => '140'],
+                'contentOptions' => ['style' => 'text-align:center', 'width' => '140'],
+            ],
+            //'m_id',
+            'ca_time',
+            'status',
+            //'v_id',
+            //'num',
+            'deadline',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

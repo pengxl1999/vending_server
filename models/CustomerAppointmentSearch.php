@@ -73,4 +73,25 @@ class CustomerAppointmentSearch extends CustomerAppointment
 
         return $dataProvider;
     }
+
+    public function searchByParams($param) {
+        $query = CustomerPurchase::find();
+
+        // add conditions that should always apply here
+
+        $dataProvider = new ActiveDataProvider([
+            'query' => $query,
+        ]);
+
+        // grid filtering conditions
+        $query->orFilterWhere([
+            'ca_id' => $param,
+            'ca_time' => $param,
+            'status' => $param,
+        ]);
+
+        //$query->andFilterWhere(['like', 'img', $this->img]);
+
+        return $dataProvider;
+    }
 }

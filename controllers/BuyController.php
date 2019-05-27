@@ -4,6 +4,8 @@
 namespace app\controllers;
 
 use AlipayTradeService;
+use app\models\CustomerAppointment;
+use app\models\CustomerAppointmentSearch;
 use app\models\CustomerCar;
 use app\models\CustomerCarSearch;
 use app\models\CustomerPurchase;
@@ -93,19 +95,24 @@ class BuyController extends Controller
             return $this->redirect('./index.php?r=site/login');
         }
 
-        $searchModel = new CustomerPurchaseSearch();
+        $purchaseSearchModel = new CustomerPurchaseSearch();    //线下购买
+        $appointmentSearchModel = new CustomerAppointmentSearch();      //预约购买
 
         $post = Yii::$app->request->post();
         if(isset($post['search_cp'])) {
             $search = $post['search_cp'];
-            $dataProvider = $searchModel->searchByParams($search);
+            $purcaseDataProvider = $purchaseSearchModel->searchByParams($search);
+            $appointmentProvider = $appointmentSearchModel->searchByParams($search);
         } else {
-            $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+            $purcaseDataProvider = $purchaseSearchModel->search(Yii::$app->request->queryParams);
+            $appointmentProvider = $appointmentSearchModel->searchByParams(Yii::$app->request->queryParams);
         }
 
         return $this->render('purchase', [
-            'searchModel' => $searchModel,
-            'dataProvider' => $dataProvider,
+            'purchaseSearchModel' => $purchaseSearchModel,
+            'purchaseDataProvider' => $purcaseDataProvider,
+            'appointmentSearchModel' => $appointmentSearchModel,
+            'appointmentProvider' => $appointmentProvider,
         ]);
     }
 
@@ -205,6 +212,7 @@ class BuyController extends Controller
         }
         $searchModel = new VemSearch();
         $dataProvider1 = $searchModel->search(Yii::$app->request->queryParams);     //售货机信息provider
+
         return $this->render('addr', [
             'mMoney' => $mMoney,
             'dataProvider' => $dataProvider,
@@ -242,6 +250,10 @@ class BuyController extends Controller
         var_dump($result);
     }
 
+    /**
+     * 支付宝支付成功返回页面
+     * @throws \Exception
+     */
     public function return_url() {
 
         $config = Yii::$app->params['alipay'];
@@ -257,12 +269,10 @@ class BuyController extends Controller
         4、验证app_id是否为该商户本身。
         */
         if($result) {//验证成功
-            /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
             //请在这里加上商户的业务逻辑程序代码
 
             $this->redirect(['success']);
 
-            /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         }
         else {
             //验证失败
