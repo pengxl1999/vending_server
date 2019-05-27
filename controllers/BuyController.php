@@ -101,16 +101,16 @@ class BuyController extends Controller
         $post = Yii::$app->request->post();
         if(isset($post['search_cp'])) {
             $search = $post['search_cp'];
-            $purcaseDataProvider = $purchaseSearchModel->searchByParams($search);
+            $purchaseDataProvider = $purchaseSearchModel->searchByParams($search);
             $appointmentDataProvider = $appointmentSearchModel->searchByParams($search);
         } else {
-            $purcaseDataProvider = $purchaseSearchModel->search(Yii::$app->request->queryParams);
+            $purchaseDataProvider = $purchaseSearchModel->search(Yii::$app->request->queryParams);
             $appointmentDataProvider = $appointmentSearchModel->searchByParams(Yii::$app->request->queryParams);
         }
 
         return $this->render('purchase', [
             'purchaseSearchModel' => $purchaseSearchModel,
-            'purchaseDataProvider' => $purcaseDataProvider,
+            'purchaseDataProvider' => $purchaseDataProvider,
             'appointmentSearchModel' => $appointmentSearchModel,
             'appointmentDataProvider' => $appointmentDataProvider,
         ]);
