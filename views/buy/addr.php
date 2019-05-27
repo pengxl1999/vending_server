@@ -55,7 +55,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     $medicine = \app\models\Medicine::findOne(['m_id' => $model->cc_medicine]);
                     $medicineTypeId = $medicine->type;
                     if($medicineTypeId == 1) {
-                        \app\models\BuyStatus::$hasRx[$_SESSION['userId']] = true;
+                        \app\models\BuyStatus::$hasRx = true;
                     }
                     return $medicine->name;
                 },
@@ -78,7 +78,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'enableSorting' => false,
                 'value' => function($model) {
                     $medicine = \app\models\Medicine::findOne(['m_id' => $model->cc_medicine]);
-                    \app\models\BuyStatus::$totalAmount[$_SESSION['userId']] += $medicine->money * $model->cc_num;
+                    \app\models\BuyStatus::$totalAmount += $medicine->money * $model->cc_num;
                     return $model->cc_num;
                 },
                 'headerOptions' => ['style' => 'text-align:center', 'width' => '50'],
@@ -89,7 +89,7 @@ $this->params['breadcrumbs'][] = $this->title;
     ]); ?>
 
     <?php
-        if(\app\models\BuyStatus::$hasRx[$_SESSION['userId']] == true && \app\models\BuyStatus::$isUploaded[$_SESSION['userId']] == false) {
+        if(\app\models\BuyStatus::$hasRx == true && \app\models\BuyStatus::$isUploaded == false) {
             echo '
                 <div>
                     <p>您的订单中包含处方药，请上传处方！</p>
@@ -97,7 +97,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 </div>
                 ';
         }
-        else if(\app\models\BuyStatus::$hasRx[$_SESSION['userId']] == true && \app\models\BuyStatus::$isUploaded[$_SESSION['userId']] == true){
+        else if(\app\models\BuyStatus::$hasRx == true && \app\models\BuyStatus::$isUploaded == true){
             echo '
                 <div>
                     <p>处方图片上传成功！下单成功后，请前往“我的订单”页面查看审核状态</p>

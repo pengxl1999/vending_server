@@ -70,7 +70,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'enableSorting' => false,
                 'value' => function($model) {
                     $medicine = \app\models\Medicine::findOne(['m_id' => $model->cc_medicine]);
-                    \app\models\BuyStatus::$totalAmount[$_SESSION['userId']] += $medicine->money * $model->cc_num;
+                    \app\models\BuyStatus::$totalAmount += $medicine->money * $model->cc_num;
                     return $model->cc_num;
                 },
                 'headerOptions' => ['style' => 'text-align:center'],
@@ -120,8 +120,8 @@ $this->params['breadcrumbs'][] = $this->title;
 
 <footer class="footer" style="height: 80px">
     <p class="pull-left" style="margin-left: 20px; margin-top:10px; color: #496f89;">合计：￥
-        <?php echo number_format(\app\models\BuyStatus::$totalAmount[$_SESSION['userId']], 2); ?>
+        <?php echo number_format(\app\models\BuyStatus::$totalAmount, 2); ?>
     </p>
-    <?= Html::a('去结算', ['buy/addr', 'cart' => -1, 'mMoney' => \app\models\BuyStatus::$totalAmount[$_SESSION['userId']]], ['class' => 'btn btn-default pull-right',
+    <?= Html::a('去结算', ['buy/addr', 'cart' => -1, 'mMoney' => \app\models\BuyStatus::$totalAmount], ['class' => 'btn btn-default pull-right',
         'style' => 'margin-right:20px;']); ?>
 </footer>

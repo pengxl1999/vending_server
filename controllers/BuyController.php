@@ -64,7 +64,7 @@ class BuyController extends Controller
             return $this->redirect('./index.php?r=site/login');
         }
 
-        BuyStatus::$hasRx[$_SESSION['userId']] = false;
+        BuyStatus::$hasRx = false;
         if($medId !== -1) {
             $this->addMedToCart($medId);
         }
@@ -122,7 +122,7 @@ class BuyController extends Controller
         if(Yii::$app->user->isGuest) {
             return $this->redirect('./index.php?r=site/login');
         }
-        BuyStatus::$totalAmount[$_SESSION['userId']] = 0;
+        BuyStatus::$totalAmount = 0;
         //self::$isUploaded = false;
         if($operation !== -1) {
             switch ($operation) {
@@ -194,8 +194,8 @@ class BuyController extends Controller
         if($mMoney == 0) {     //总金额为0，不进行操作
             return $this->redirect(['cart']);
         }
-        BuyStatus::$isUploaded[$_SESSION['userId']] = $isUploaded;
-        BuyStatus::$totalAmount[$_SESSION['userId']] = 0;
+        BuyStatus::$isUploaded = $isUploaded;
+        BuyStatus::$totalAmount = 0;
         if($cart == -1) {
             $searchModel = new CustomerCarSearch();
             $dataProvider = $searchModel->searchByUser($_SESSION['userId']);    //购买信息provider
@@ -218,7 +218,7 @@ class BuyController extends Controller
         //实例化builder
         $alipay = new \AlipayTradeWapPayContentBuilder();
         $alipay->setOutTradeNo(date("Ymdhis"));
-        $alipay->setTotalAmount(0.01);
+        $alipay->setTotalAmount(BuyStatus::$totalAmount);
         $alipay->setSubject('智能药品售货机预约购药');
         $alipay->setBody('药品');
 
