@@ -213,6 +213,11 @@ class BuyController extends Controller
         ]);
     }
 
+    /**
+     * 接入支付宝
+     * @param $mMoney
+     * @throws \Exception
+     */
     public function actionPay($mMoney) {
 
         if($mMoney == 0) {
@@ -234,6 +239,10 @@ class BuyController extends Controller
         //支付
         $result = $service->wapPay($alipay, $config['return_url'], $config['notify_url']);
         var_dump($result);
+    }
+
+    public function actionSuccess() {
+        return $this->render('success');
     }
 
     /**
