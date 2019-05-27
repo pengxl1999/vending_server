@@ -75,7 +75,7 @@ class CustomerAppointmentSearch extends CustomerAppointment
     }
 
     public function searchByParams($param) {
-        $query = CustomerPurchase::find();
+        $query = CustomerAppointment::find();
 
         // add conditions that should always apply here
 
