@@ -79,20 +79,8 @@ $this->params['breadcrumbs'][] = $this->title;
                 'label' => '数量',
                 'enableSorting' => false,
                 'value' => function($model) {
-                    $medicine = \app\models\Medicine::findOne(['m_id' => $model->cc_medicine]);
+//                    $medicine = \app\models\Medicine::findOne(['m_id' => $model->cc_medicine]);
 //                    \app\models\BuyStatus::$totalAmount += $medicine->money * $model->cc_num;
-                    /*添加预约信息，可在我的订单中查看*/
-                    $customerAppointment = new CustomerAppointment();
-                    $customerAppointment->ca_id = CustomerAppointment::getMaxID() + 1;
-                    $customerAppointment->c_id = $_SESSION['userId'];
-                    $customerAppointment->m_id = $model->cc_medicine;
-                    $customerAppointment->ca_time = "111111";
-                    $customerAppointment->status = "Not_paid";
-                    $customerAppointment->num = $model->cc_num;
-                    $customerAppointment->img = $medicine->img;
-                    if($customerAppointment->save()) {
-                        return 1;
-                    }
                     return $model->cc_num;
                 },
                 'headerOptions' => ['style' => 'text-align:center', 'width' => '50'],

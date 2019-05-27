@@ -210,6 +210,11 @@ class BuyController extends Controller
             $searchModel = new CustomerCarSearch();
             $dataProvider = $searchModel->searchById($cart);
         }
+
+        if(!$this->createOrder($dataProvider)) {
+            //$this->redirect(['index']);       应加入错误页面！
+        }
+
         $searchModel = new VemSearch();
         $dataProvider1 = $searchModel->search(Yii::$app->request->queryParams);     //售货机信息provider
 
@@ -304,5 +309,23 @@ class BuyController extends Controller
             $cart['cc_num'] = 1;
             $cart->save();
         }
+    }
+
+    public function createOrder($dataProvider)
+    {
+        /*添加预约信息，可在我的订单中查看*/
+        foreach ($dataProvider->models as $model) {
+            $customerAppointment = new CustomerAppointment();
+            $customerAppointment->ca_id = CustomerAppointment::getMaxID() + 1;
+            $customerAppointment->c_id = $_SESSION['userId'];
+            $customerAppointment->m_id = $model->cc_medicine;
+            $customerAppointment->ca_time = "111111";
+            $customerAppointment->status = "Not_paid";
+            $customerAppointment->num = $model->cc_num;
+            if(!$customerAppointment->save()) {
+                return false;
+            }
+        }
+        return true;
     }
 }
