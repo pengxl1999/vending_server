@@ -23,7 +23,6 @@ use app\models\BuyStatus;
 
 require "../vendor/alipay/wappay/buildermodel/AlipayTradeWapPayContentBuilder.php";
 require "../vendor/alipay/wappay/service/AlipayTradeService.php";
-require "../vendor/alipay/config.php";
 
 class BuyController extends Controller
 {
@@ -231,13 +230,14 @@ class BuyController extends Controller
         $alipay->setTotalAmount($mMoney);
         $alipay->setSubject('智能药品售货机预约购药');
         $alipay->setBody('药品');
+        $alipay->setTimeExpress("1m");
 
         //获取config
         $config = Yii::$app->params['alipay'];
         //实例化service
         $service = new \AlipayTradeService($config);
         //支付
-        $result = $service->wapPay($alipay, $config['return_url'], $config['notify_url']);
+        $result = $service->wapPay($alipay, $config['return_url'],$config['notify_url']);
         var_dump($result);
     }
 
