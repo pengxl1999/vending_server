@@ -212,7 +212,8 @@ class BuyController extends Controller
         }
 
         if(!$this->createOrder($dataProvider)) {
-            //$this->redirect(['index']);       应加入错误页面！
+            //      应加入错误页面！
+            return $this->redirect(['index']);
         }
 
         $searchModel = new VemSearch();
