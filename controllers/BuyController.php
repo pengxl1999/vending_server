@@ -323,10 +323,16 @@ class BuyController extends Controller
         }
     }
 
+    /**
+     * 支付成功界面
+     * @param $out_trade_no
+     * @return string
+     */
     public function actionSuccess($out_trade_no) {
         $appointments = CustomerAppointment::findAll(['ca_order' => $out_trade_no]);
         foreach ($appointments as $appointment) {
-            $appointment->status = 1;
+            $appointment->status = AppointmentStatus::$ALREADY_PAID;
+            $appointment->save();
         }
         return $this->render('success', ['order' => $out_trade_no]);
     }
