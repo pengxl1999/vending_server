@@ -317,7 +317,7 @@ class BuyController extends Controller
 
             $out_trade_no = htmlspecialchars($_GET['out_trade_no']);
 
-            $this->redirect("./index.php?r=buy/success&order=1");
+            $this->redirect("./index.php?r=buy/success");
 
         }
         else {
@@ -326,7 +326,7 @@ class BuyController extends Controller
         }
     }
 
-    public function actionSuccess($order) {
+    public function actionSuccess($order = 1) {
         $appointment = CustomerAppointment::findOne(['ca_id' => $order]);
         $appointment->status = AppointmentStatus::$ALREADY_PAID;
         return $this->render('success', ['order' => $order]);
