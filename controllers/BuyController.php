@@ -326,7 +326,7 @@ class BuyController extends Controller
     public function actionSuccess($out_trade_no) {
         $appointments = CustomerAppointment::findAll(['ca_order' => $out_trade_no]);
         foreach ($appointments as $appointment) {
-            $appointment->status = AppointmentStatus::$ALREADY_PAID;
+            $appointment->status = 1;
         }
         return $this->render('success', ['order' => $out_trade_no]);
     }
