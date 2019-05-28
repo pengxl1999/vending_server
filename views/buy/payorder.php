@@ -13,6 +13,7 @@ use yii\web\View;
 use yii\widgets\DetailView;
 
 /* @var $mMoney */
+/* @var $order */
 /* @var $appointmentProvider yii\data\ActiveDataProvider */
 /* @var $vemProvider yii\data\ActiveDataProvider */
 /* @var $searchModel app\models\VemSearch */

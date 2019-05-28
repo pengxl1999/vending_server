@@ -244,7 +244,7 @@ class BuyController extends Controller
      */
     public function actionPayorder($order) {
 
-        BuyStatus::$curOrder = $order;
+        $_SESSION['curOrder'] = $order;
         $searchModel = new CustomerAppointmentSearch();
         $appointmentProvider = $searchModel->searchByParams($order, $_SESSION['userId']);
 
@@ -271,7 +271,6 @@ class BuyController extends Controller
      * @throws \Exception
      */
     public function actionPay($mMoney) {
-
         if($mMoney == 0) {
             echo "Fatal Error!";
             return;
@@ -280,7 +279,7 @@ class BuyController extends Controller
         //实例化builder
         $alipay = new \AlipayTradeWapPayContentBuilder();
         //date_default_timezone_set("Asia/Shanghai");
-        $alipay->setOutTradeNo(BuyStatus::$curOrder);
+        $alipay->setOutTradeNo($_SESSION['curOrder']);
         $alipay->setTotalAmount($mMoney);
         $alipay->setSubject('智能药品售货机预约购药');
         $alipay->setBody('药品');
@@ -365,7 +364,7 @@ class BuyController extends Controller
         date_default_timezone_set("Asia/Shanghai");
         $date = date("Y-m-d H:i:s");
         $order = date("YmdHis") . $_SESSION['userId'];
-        BuyStatus::$curOrder = $order;
+        $_SESSION['curOrder'] = $order;
         /*添加预约信息，可在我的订单中查看*/
         foreach ($dataProvider->models as $model) {
             $customerAppointment = new CustomerAppointment();

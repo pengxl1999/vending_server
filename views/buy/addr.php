@@ -13,6 +13,7 @@ use yii\web\View;
 use yii\widgets\DetailView;
 
 /* @var $mMoney */
+/* @var $order */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 /* @var $dataProvider1 yii\data\ActiveDataProvider */
 /* @var $searchModel app\models\VemSearch */
@@ -27,7 +28,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <p>
         <?= Html::a('返回', ['cart'], ['class' => 'btn btn-primary']) ?>
     </p>
-    <h3>订单已提交，请在15分钟时间内完成支付！</h3>
+    <h4>订单已提交，请在15分钟时间内完成支付！</h4>
     <h1><strong style="font-size: large">您的购买信息</strong></h1>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
