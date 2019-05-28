@@ -315,9 +315,8 @@ class BuyController extends Controller
         if($result) {//验证成功
             //请在这里加上商户的业务逻辑程序代码
 
-            if(isset($_GET['out_trade_no'])) {
-                $this->redirect('./index.php?r=buy/success&order='. htmlspecialchars($_GET['out_trade_no']));
-            }
+            echo $arr['out_trade_no'];
+            $this->redirect(['index']);
 
         }
         else {
