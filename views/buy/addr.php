@@ -28,6 +28,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <p>
         <?= Html::a('返回', ['cart'], ['class' => 'btn btn-primary']) ?>
     </p>
+    <br/>
     <h4>订单已提交，请在15分钟时间内完成支付！</h4>
     <h1><strong style="font-size: large">您的购买信息</strong></h1>
     <?= GridView::widget([
