@@ -148,16 +148,6 @@ AppAsset::register($this);
 
 </div>
 
-<script>
-    function checkPermission() {
-        var hasRx = <?php echo \app\models\BuyStatus::$hasRx ?>;
-        var isUploaded = <?php echo \app\models\BuyStatus::$isUploaded ?>
-        if(hasRx && !isUploaded) {
-            alert("请上传处方照片！");
-        }
-    }
-</script>
-
 <?php $this->endBody() ?>
 </body>
 </html>

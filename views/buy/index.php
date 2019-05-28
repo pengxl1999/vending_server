@@ -34,7 +34,6 @@ $this->params['breadcrumbs'][] = $this->title;
         ],
         'columns' => [
             //['class' => 'yii\grid\SerialColumn'],
-
             //'m_id',
             [
                 'label' => '图片',

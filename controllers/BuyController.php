@@ -3,6 +3,7 @@
 
 namespace app\controllers;
 
+use app\models\AppointmentStatus;
 use app\models\CustomerAppointment;
 use app\models\CustomerAppointmentSearch;
 use app\models\CustomerCar;
@@ -198,7 +199,7 @@ class BuyController extends Controller
     }
 
     /**
-     * 支付页面
+     * 确认支付页面
      * @param $cart
      * @param $mMoney
      * @param bool $isUploaded
@@ -236,8 +237,14 @@ class BuyController extends Controller
         ]);
     }
 
+    /**
+     * 根据订单号购买
+     * @param $order
+     * @return string
+     */
     public function actionPayorder($order) {
 
+        BuyStatus::$curOrder = $order;
         $searchModel = new CustomerAppointmentSearch();
         $appointmentProvider = $searchModel->searchByParams($order, $_SESSION['userId']);
 
@@ -272,8 +279,8 @@ class BuyController extends Controller
 
         //实例化builder
         $alipay = new \AlipayTradeWapPayContentBuilder();
-        date_default_timezone_set("Asia/Shanghai");
-        $alipay->setOutTradeNo(date("YmdHis") . $_SESSION['userId']);
+        //date_default_timezone_set("Asia/Shanghai");
+        $alipay->setOutTradeNo(BuyStatus::$curOrder);
         $alipay->setTotalAmount($mMoney);
         $alipay->setSubject('智能药品售货机预约购药');
         $alipay->setBody('药品');
@@ -309,7 +316,7 @@ class BuyController extends Controller
         if($result) {//验证成功
             //请在这里加上商户的业务逻辑程序代码
 
-            $this->redirect(['success']);
+            $this->redirect(['success', 'order' => $arr['out_trade_no']]);
 
         }
         else {
@@ -318,8 +325,10 @@ class BuyController extends Controller
         }
     }
 
-    public function actionSuccess() {
-        return $this->render('success');
+    public function actionSuccess($order) {
+        $appointment = CustomerAppointment::findOne(['ca_id' => $order]);
+        $appointment->status = AppointmentStatus::$ALREADY_PAID;
+        return $this->render('success', ['order' => $order]);
     }
 
     /**
@@ -356,6 +365,7 @@ class BuyController extends Controller
         date_default_timezone_set("Asia/Shanghai");
         $date = date("Y-m-d H:i:s");
         $order = date("YmdHis") . $_SESSION['userId'];
+        BuyStatus::$curOrder = $order;
         /*添加预约信息，可在我的订单中查看*/
         foreach ($dataProvider->models as $model) {
             $customerAppointment = new CustomerAppointment();
