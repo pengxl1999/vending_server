@@ -399,8 +399,9 @@ class BuyController extends Controller
     public function checkOrder($appointments) {
         foreach ($appointments as $appointment) {
             date_default_timezone_set("Asia/Shanghai");
-            if(floor((strtotime(date("Y-m-d H:i:s")) - date_timestamp_get(date_create($appointment->ca_time))) % 86400 / 60) > 15) {
-               $appointment->status = 3;
+            if(floor((strtotime(date("Y-m-d H:i:s")) - date_timestamp_get(date_create($appointment->ca_time))) % 86400 / 60) > 15
+                && $appointment->status == AppointmentStatus::$NOT_PAID) {
+               $appointment->status = AppointmentStatus::$TIME_OUT;
             }
         }
     }

@@ -36,8 +36,8 @@ $this->params['breadcrumbs'][] = $this->title;
         'template' => "<div class=\"col-lg-offset-1 col-lg-3\">{input} {label}</div>\n<div class=\"col-lg-8\">{error}</div>",
     ]) ?>
 
-    <div class="form-group">
-        <div class="col-lg-offset-1 col-md-offset-1 col-sm-offset-2 col-xs-offset-2">
+    <div class="form-group" style="text-align: center;">
+        <div>
             <?= Html::submitButton('登录', ['class' => 'btn btn-primary', 'style' => 'width:100px' ,'name' => 'login-button',
                 'onclick'=>"var _time= get_time();document.getElementById('pass').value=hex_md5(document.getElementById('pass').value,_time)"]) ?>
             <?= Html::a('注册', ['create'], ['class' => 'btn btn-success', 'style' => 'width:100px; margin-left:15px']) ?>
