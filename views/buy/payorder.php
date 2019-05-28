@@ -31,6 +31,9 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= GridView::widget([
         'dataProvider' => $appointmentProvider,
         //'filterModel' => $searchModel,
+        'pager' => [
+            'maxButtonCount' => 7,
+        ],
         'options' => ['id' => 'grid'],
         'columns' => [
             [

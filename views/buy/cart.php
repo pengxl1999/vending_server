@@ -26,6 +26,9 @@ $this->params['breadcrumbs'][] = $this->title;
         'dataProvider' => $dataProvider,
         //'filterModel' => $searchModel,
         'options' => ['id' => 'grid'],
+        'pager' => [
+            'maxButtonCount' => 7,
+        ],
         'columns' => [
             //'cc_id',
             //'c_id',

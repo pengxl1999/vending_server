@@ -32,6 +32,9 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         //'filterModel' => $searchModel,
+        'pager' => [
+            'maxButtonCount' => 7,
+        ],
         'options' => ['id' => 'grid'],
         'columns' => [
             [
@@ -119,6 +122,9 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= GridView::widget([
         'dataProvider' => $dataProvider1,
         'filterModel' => $searchModel,
+        'pager' => [
+            'maxButtonCount' => 7,
+        ],
         'columns' => [
             [
                 'class' => 'yii\grid\SerialColumn',
