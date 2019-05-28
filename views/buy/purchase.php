@@ -8,7 +8,6 @@ use yii\web\View;
 
 /* @var $this yii\web\View */
 /* @var $searchModel app\models\CustomerPurchaseSearch */
-/* @var $purchaseDataProvider yii\data\ActiveDataProvider */
 /* @var $appointmentDataProvider yii\data\ActiveDataProvider */
 
 $this->title = '我的订单';
@@ -28,45 +27,6 @@ $this->params['breadcrumbs'][] = $this->title;
     <br/>
 
     <?= GridView::widget([
-        'dataProvider' => $purchaseDataProvider,
-        //'filterModel' => $searchModel,
-        'columns' => [
-            [
-                'label' => '订单编号',
-                'enableSorting' => false,
-                'value' => function($model) {
-                    return $model->cp_id;
-                },
-                'headerOptions' => ['style' => 'text-align:center', 'width' => '40'],
-                'contentOptions' => ['style' => 'text-align:center', 'width' => '40'],
-            ],
-            [
-                'label' => '购买药品',
-                'enableSorting' => false,
-                'value' => function($model) {
-                    $medicine = \app\models\Medicine::findOne(['m_id' => $model->m_id]);
-                    return $medicine->name.' ×  '.$model->num;
-                },
-                'headerOptions' => ['style' => 'text-align:center', 'width' => '140'],
-                'contentOptions' => ['style' => 'text-align:center', 'width' => '140'],
-            ],
-            //'m_id',
-            [
-                'attribute' => 'cp_time',
-                'headerOptions' => ['style' => 'text-align:center'],
-                'contentOptions' => ['style' => 'text-align:center'],
-            ],
-            'status',
-            //'v_id',
-            //'num',
-            //'img',
-            //'pa_id',
-
-            ['class' => 'yii\grid\ActionColumn'],
-        ],
-    ]); ?>
-
-    <?= GridView::widget([
         'dataProvider' => $appointmentDataProvider,
         //'filterModel' => $searchModel,
         'columns' => [
@@ -77,8 +37,8 @@ $this->params['breadcrumbs'][] = $this->title;
                     $medicine = \app\models\Medicine::findOne(['m_id' => $model->m_id]);
                     return $model->ca_order . "\n" . $medicine->name.' × '.$model->num;
                 },
-                'headerOptions' => ['style' => 'text-align:center; font-size: xx-small; vertical-align: middle'],
-                'contentOptions' => ['style' => 'text-align:center; font-size: xx-small; vertical-align: middle'],
+                'headerOptions' => ['style' => 'text-align:center; font-size: xx-small; vertical-align: middle; width: 100px'],
+                'contentOptions' => ['style' => 'text-align:center; font-size: xx-small; vertical-align: middle; width: 100px'],
             ],
             //'m_id',
             [
@@ -116,7 +76,54 @@ $this->params['breadcrumbs'][] = $this->title;
                 'contentOptions' => ['style' => 'text-align:center; font-size: xx-small; vertical-align: middle'],
             ],
 
-            ['class' => 'yii\grid\ActionColumn'],
+            [
+                'header' => '选项',
+                'class' => 'yii\grid\ActionColumn',
+                'template'=> '{pay}{cancel}',
+                'headerOptions' => ['style' => 'text-align:center; font-size: x-small; vertical-align: middle; width: 60px'],
+                'contentOptions' => ['style' => 'vertical-align: center', 'align' => 'center'],
+                'buttons' => [
+                    'pay' => function ($url, $model) {
+                        //$_SESSION['medId'] = $model->m_id;
+                        switch ($model->status) {
+                            case \app\models\AppointmentStatus::$NOT_PAID:
+                                return Html::a('付款', ['buy/payorder', 'order' => $model->ca_order],
+                                    ['class' => "btn btn-sm btn-success",
+                                        'style' => 'font-size:xx-small']);
+                            case \app\models\AppointmentStatus::$ALREADY_PAID:
+                                return null;
+                            case \app\models\AppointmentStatus::$ALREADY_FINISHED:
+                                return null;
+                            case \app\models\AppointmentStatus::$TIME_OUT:
+                                return null;
+                            case \app\models\AppointmentStatus::$CHECKING:
+                                return null;
+                            default:
+                                return "错误！";
+                        }
+
+                    },
+                    'cancel' => function ($url, $model) {
+                        switch ($model->status) {
+                            case \app\models\AppointmentStatus::$NOT_PAID:
+                                return Html::a('取消', ['buy/purchase', 'cancel' => $model->ca_order],
+                                    ['class' => "btn btn-sm btn-danger", 'style' => 'font-size:xx-small; margin-top: 5px']);
+                            case \app\models\AppointmentStatus::$ALREADY_PAID:
+                                return null;
+                            case \app\models\AppointmentStatus::$ALREADY_FINISHED:
+                                return null;
+                            case \app\models\AppointmentStatus::$TIME_OUT:
+                                return Html::a('删除', ['buy/purchase', 'cancel' => $model->ca_order],
+                                    ['class' => "btn btn-sm btn-danger", 'style' => 'font-size:xx-small; margin-top: 5px']);
+                            case \app\models\AppointmentStatus::$CHECKING:
+                                return Html::a('取消', ['buy/purchase', 'cancel' => $model->ca_order],
+                                    ['class' => "btn btn-sm btn-danger", 'style' => 'font-size:xx-small; margin-top: 5px']);
+                            default:
+                                return "错误！";
+                        }
+                    },
+                ],
+            ],
         ],
     ]); ?>
 

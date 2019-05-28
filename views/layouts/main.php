@@ -122,6 +122,30 @@ AppAsset::register($this);
     }
     ?>
 
+    <?php
+    if(Yii::$app->controller->getRoute() === 'buy/payorder' && (!\app\models\BuyStatus::$hasRx || \app\models\BuyStatus::$isUploaded)) {
+        echo '
+            <div class="footer" style="position: fixed; bottom: 0;height: 80px; width: 100%" >
+                <p class="pull-left" style="margin-left: 30px; margin-top:10px; color: #496f89; font-size: small">合计：￥' .
+            number_format(\app\models\BuyStatus::$totalAmount, 2) .
+            '</p>' .
+            Html::a('支付', ['pay', 'mMoney' => \app\models\BuyStatus::$totalAmount], ['class' => 'btn btn-default pull-right',
+                'style' => 'margin-right: 30px; font-size: small', 'onclick' => 'checkPermission']) .
+            '</div>'
+        ;
+    }
+    else if(Yii::$app->controller->getRoute() === 'buy/payorder'){
+        echo '
+            <div class="footer" style="position: fixed; bottom: 0;height: 80px; width: 100%" >
+                <p class="pull-left" style="margin-left: 30px; margin-top:10px; color: #496f89; font-size: small">合计：￥' .
+            number_format(\app\models\BuyStatus::$totalAmount, 2) .
+            '</p>
+                <p style="font-size: small; margin-right: 30px; margin-top: 10px" class="pull-right">请上传处方照片</p>
+            </div>'
+        ;
+    }
+    ?>
+
 </div>
 
 <script>

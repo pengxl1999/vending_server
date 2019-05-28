@@ -87,31 +87,37 @@ class BuyController extends Controller
 
     /**
      * 我的订单
-     * @return string
+     * @param int $cancel
+     * @return string|Response
+     * @throws \Throwable
+     * @throws \yii\db\StaleObjectException
      */
-    public function actionPurchase() {
+    public function actionPurchase($cancel = 0) {
         if(Yii::$app->user->isGuest) {
             return $this->redirect('./index.php?r=site/login');
         }
 
-        $purchaseSearchModel = new CustomerPurchaseSearch();    //线下购买
         $appointmentSearchModel = new CustomerAppointmentSearch();      //预约购买
+
+        if($cancel !== 0) {     //取消订单
+            $appointmentDataProvider = $appointmentSearchModel->searchByParams($cancel, $_SESSION['userId']);
+            foreach($appointmentDataProvider->models as $item) {
+                $appointment = CustomerAppointment::findOne(['ca_id' => $item->ca_id]);
+                $appointment->delete();
+            }
+        }
 
         $post = Yii::$app->request->post();
         if(isset($post['search_cp'])) {
             $search = $post['search_cp'];
-            $purchaseDataProvider = $purchaseSearchModel->searchByParams($search, $_SESSION['userId']);
             $appointmentDataProvider = $appointmentSearchModel->searchByParams($search, $_SESSION['userId']);
         } else {
-            $purchaseDataProvider = $purchaseSearchModel->search(Yii::$app->request->queryParams, $_SESSION['userId']);
             $appointmentDataProvider = $appointmentSearchModel->search(Yii::$app->request->queryParams, $_SESSION['userId']);
         }
 
         $this->checkOrder($appointmentDataProvider->models);
 
         return $this->render('purchase', [
-            'purchaseSearchModel' => $purchaseSearchModel,
-            'purchaseDataProvider' => $purchaseDataProvider,
             'appointmentSearchModel' => $appointmentSearchModel,
             'appointmentDataProvider' => $appointmentDataProvider,
         ]);
@@ -192,7 +198,7 @@ class BuyController extends Controller
     }
 
     /**
-     * 选择地址
+     * 支付页面
      * @param $cart
      * @param $mMoney
      * @param bool $isUploaded
@@ -200,7 +206,7 @@ class BuyController extends Controller
      * @throws \Throwable
      * @throws \yii\db\StaleObjectException
      */
-    public function actionAddr($cart, $mMoney, $isUploaded = false) {     //支付页面， cart == -1 ? 全部购买 : 只购买cart
+    public function actionAddr($cart, $mMoney, $isUploaded = false) {     //cart == -1 全部购买    cart == else根据具体cart购买
         if($mMoney == 0) {     //总金额为0，不进行操作
             return $this->redirect(['cart']);
         }
@@ -227,6 +233,28 @@ class BuyController extends Controller
             'dataProvider' => $dataProvider,
             'dataProvider1' => $dataProvider1,
             'searchModel' => $searchModel,
+        ]);
+    }
+
+    public function actionPayorder($order) {
+
+        $searchModel = new CustomerAppointmentSearch();
+        $appointmentProvider = $searchModel->searchByParams($order, $_SESSION['userId']);
+
+        $mMoney = 0;
+        foreach($appointmentProvider->models as $appointment) {
+            $medicine = Medicine::findOne(['m_id' => $appointment->m_id]);
+            $mMoney += $medicine->money * $appointment->num;
+        }
+
+        $searchModel = new VemSearch();
+        $vemProvider = $searchModel->search(Yii::$app->request->queryParams);     //售货机信息provider
+
+        return $this->render('payorder', [
+            'mMoney' => $mMoney,
+            'searchModel' => $searchModel,
+            'appointmentProvider' => $appointmentProvider,
+            'vemProvider' => $vemProvider,
         ]);
     }
 
