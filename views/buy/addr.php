@@ -40,8 +40,8 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             [
                 'class' => 'yii\grid\SerialColumn',
-                'headerOptions' => ['style' => 'text-align:center', 'width' => '20'],
-                'contentOptions' => ['style' => 'text-align:center', 'width' => '20'],
+                'headerOptions' => ['style' => 'text-align:center; font-size: x-small; vertical-align: middle; width: 20px'],
+                'contentOptions' => ['style' => 'text-align:center; font-size: x-small; vertical-align: middle; width: 20px'],
             ],
             //'cc_id',
             //'c_id',
@@ -53,8 +53,8 @@ $this->params['breadcrumbs'][] = $this->title;
                     $medicine = \app\models\Medicine::findOne(['m_id' => $model->cc_medicine]);
                     return Html::img('images/medicine/'.$medicine->img, ['alt' => $medicine->name, 'width' => '80']);
                 },
-                'headerOptions' => ['style' => 'text-align:center', 'width' => '80'],
-                'contentOptions' => ['align' => 'center'],
+                'headerOptions' => ['style' => 'text-align:center; font-size: x-small; vertical-align: middle; width: 80px'],
+                'contentOptions' => ['style' => 'font-size: x-small; vertical-align: middle; width: 80px', 'align' => 'center'],
             ],
             [
                 'label' => '药品名称',
@@ -67,8 +67,8 @@ $this->params['breadcrumbs'][] = $this->title;
                     }
                     return $medicine->name;
                 },
-                'headerOptions' => ['style' => 'text-align:center', 'width' => '200'],
-                'contentOptions' => ['align' => 'center', 'width' => '200'],
+                'headerOptions' => ['style' => 'text-align:center; font-size: x-small; vertical-align: middle; width: 200px'],
+                'contentOptions' => ['style' => 'text-align:center; font-size: x-small; vertical-align: middle; width: 200px'],
             ],
             [
                 'label' => '价格',
@@ -77,8 +77,8 @@ $this->params['breadcrumbs'][] = $this->title;
                     $medicine = \app\models\Medicine::findOne(['m_id' => $model->cc_medicine]);
                     return $medicine->money;
                 },
-                'headerOptions' => ['style' => 'text-align:center'],
-                'contentOptions' => ['style' => 'text-align:center'],
+                'headerOptions' => ['style' => 'text-align:center; font-size: x-small; vertical-align: middle'],
+                'contentOptions' => ['style' => 'text-align:center; font-size: x-small; vertical-align: middle'],
             ],
             //'cc_medicine',
             [
@@ -89,8 +89,8 @@ $this->params['breadcrumbs'][] = $this->title;
 //                    \app\models\BuyStatus::$totalAmount += $medicine->money * $model->cc_num;
                     return $model->cc_num;
                 },
-                'headerOptions' => ['style' => 'text-align:center', 'width' => '50'],
-                'contentOptions' => ['style' => 'text-align:center', 'width' => '50'],
+                'headerOptions' => ['style' => 'text-align:center; font-size: x-small; vertical-align: middle; width: 50px'],
+                'contentOptions' => ['style' => 'text-align:center; font-size: x-small; vertical-align: middle; width: 50px'],
             ],
             //'cc_num',
         ],
@@ -129,29 +129,29 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             [
                 'class' => 'yii\grid\SerialColumn',
-                'headerOptions' => ['style' => 'text-align:center', 'width' => '30'],
-                'contentOptions' => ['style' => 'text-align:center', 'width' => '30'],
+                'headerOptions' => ['style' => 'text-align:center; font-size: x-small; vertical-align: middle; width: 30px'],
+                'contentOptions' => ['style' => 'text-align:center; font-size: x-small; vertical-align: middle; width: 30px'],
             ],
 
             //'vem_id',
             [
                 'header' => '药店名称',
                 'attribute' => 'vem_name',
-                'headerOptions' => ['style' => 'text-align:center', 'width' => '120'],
-                'contentOptions' => ['style' => 'text-align:center', 'width' => '120'],
+                'headerOptions' => ['style' => 'text-align:center; font-size: x-small; vertical-align: middle; width: 120px'],
+                'contentOptions' => ['style' => 'text-align:center; font-size: x-small; vertical-align: middle; width: 120px'],
             ],
             [
                 'header' => '地址',
                 'attribute' => 'vem_location',
-                'headerOptions' => ['style' => 'text-align:center'],
-                'contentOptions' => ['style' => 'text-align:center'],
+                'headerOptions' => ['style' => 'text-align:center; font-size: x-small; vertical-align: middle'],
+                'contentOptions' => ['style' => 'text-align:center; font-size: x-small; vertical-align: middle'],
             ],
             //'vem_type',
 
             [
                 'header' => '操作',
-                'headerOptions' => ['style' => 'text-align:center', 'width' => '30'],
-                'contentOptions' => ['style' => 'text-align:center', 'width' => '30'],
+                'headerOptions' => ['style' => 'text-align:center; font-size: x-small; vertical-align: middle; width: 30px'],
+                'contentOptions' => ['style' => 'text-align:center; font-size: x-small; vertical-align: middle; width: 30px'],
                 'class' => 'yii\grid\ActionColumn'
             ],
         ],
