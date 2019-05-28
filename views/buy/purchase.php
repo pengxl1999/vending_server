@@ -68,8 +68,8 @@ $this->params['breadcrumbs'][] = $this->title;
                             return "错误！";
                     }
                 },
-                'headerOptions' => ['style' => 'text-align:center; font-size: x-small; vertical-align: middle; width: 40px'],
-                'contentOptions' => ['style' => 'text-align:center; font-size: x-small; vertical-align: middle; width: 40px'],
+                'headerOptions' => ['style' => 'text-align:center; font-size: x-small; vertical-align: middle; width: 50px'],
+                'contentOptions' => ['style' => 'text-align:center; font-size: x-small; vertical-align: middle; width: 50px'],
             ],
             //'v_id',
             //'num',
