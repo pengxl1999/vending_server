@@ -314,11 +314,7 @@ class BuyController extends Controller
         */
         if($result) {//验证成功
             //请在这里加上商户的业务逻辑程序代码
-
-            $out_trade_no = htmlspecialchars($_GET['out_trade_no']);
-            echo $out_trade_no;
-
-            //$this->redirect("./index.php?r=buy/success");
+            
 
         }
         else {
@@ -327,10 +323,10 @@ class BuyController extends Controller
         }
     }
 
-    public function actionSuccess($order = 1) {
-        $appointment = CustomerAppointment::findOne(['ca_id' => $order]);
+    public function actionSuccess($out_trade_no) {
+        $appointment = CustomerAppointment::findOne(['ca_id' => $out_trade_no]);
         $appointment->status = AppointmentStatus::$ALREADY_PAID;
-        return $this->render('success', ['order' => $order]);
+        return $this->render('success', ['order' => $out_trade_no]);
     }
 
     /**
