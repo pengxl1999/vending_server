@@ -40,14 +40,14 @@ $this->params['breadcrumbs'][] = $this->title;
                     $medicine = \app\models\Medicine::findOne(['m_id' => $model->m_id]);
                     return $model->ca_order . "\n" . $medicine->name.' × '.$model->num;
                 },
-                'headerOptions' => ['style' => 'text-align:center; font-size: xx-small; vertical-align: middle; width: 100px'],
-                'contentOptions' => ['style' => 'text-align:center; font-size: xx-small; vertical-align: middle; width: 100px'],
+                'headerOptions' => ['style' => 'text-align:center; font-size: x-small; vertical-align: middle; width: 100px'],
+                'contentOptions' => ['style' => 'text-align:center; font-size: x-small; vertical-align: middle; width: 100px'],
             ],
             //'m_id',
             [
                 'attribute' => 'ca_time',
-                'headerOptions' => ['style' => 'text-align:center; font-size: xx-small; vertical-align: middle'],
-                'contentOptions' => ['style' => 'text-align:center; font-size: xx-small; vertical-align: middle'],
+                'headerOptions' => ['style' => 'text-align:center; font-size: x-small; vertical-align: middle'],
+                'contentOptions' => ['style' => 'text-align:center; font-size: x-small; vertical-align: middle'],
             ],
             [
                 'attribute' => 'status',
@@ -68,15 +68,15 @@ $this->params['breadcrumbs'][] = $this->title;
                             return "错误！";
                     }
                 },
-                'headerOptions' => ['style' => 'text-align:center; font-size: xx-small; vertical-align: middle; width: 60px'],
-                'contentOptions' => ['style' => 'text-align:center; font-size: xx-small; vertical-align: middle; width: 60px'],
+                'headerOptions' => ['style' => 'text-align:center; font-size: x-small; vertical-align: middle; width: 60px'],
+                'contentOptions' => ['style' => 'text-align:center; font-size: x-small; vertical-align: middle; width: 60px'],
             ],
             //'v_id',
             //'num',
             [
                 'attribute' => 'deadline',
-                'headerOptions' => ['style' => 'text-align:center; font-size: xx-small; vertical-align: middle'],
-                'contentOptions' => ['style' => 'text-align:center; font-size: xx-small; vertical-align: middle'],
+                'headerOptions' => ['style' => 'text-align:center; font-size: x-small; vertical-align: middle'],
+                'contentOptions' => ['style' => 'text-align:center; font-size: x-small; vertical-align: middle'],
             ],
 
             [
