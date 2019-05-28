@@ -3,7 +3,6 @@
 
 namespace app\controllers;
 
-use AlipayTradeService;
 use app\models\CustomerAppointment;
 use app\models\CustomerAppointmentSearch;
 use app\models\CustomerCar;
@@ -198,6 +197,8 @@ class BuyController extends Controller
      * @param $mMoney
      * @param bool $isUploaded
      * @return string|Response
+     * @throws \Throwable
+     * @throws \yii\db\StaleObjectException
      */
     public function actionAddr($cart, $mMoney, $isUploaded = false) {     //支付页面， cart == -1 ? 全部购买 : 只购买cart
         if($mMoney == 0) {     //总金额为0，不进行操作
@@ -347,6 +348,10 @@ class BuyController extends Controller
         return true;
     }
 
+    /**
+     * 检查是否超时
+     * @param $appointments
+     */
     public function checkOrder($appointments) {
         foreach ($appointments as $appointment) {
             date_default_timezone_set("Asia/Shanghai");

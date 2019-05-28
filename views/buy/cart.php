@@ -37,8 +37,8 @@ $this->params['breadcrumbs'][] = $this->title;
                     $medicine = \app\models\Medicine::findOne(['m_id' => $model->cc_medicine]);
                     return Html::img('images/medicine/'.$medicine->img, ['alt' => $medicine->name, 'width' => 80]);
                 },
-                'headerOptions' => ['style' => 'text-align:center; font-size: xx-small; vertical-align: middle'],
-                'contentOptions' => ['style' => 'vertical-align: middle; font-size: xx-small', 'align' => 'center'],
+                'headerOptions' => ['style' => 'text-align:center; font-size: x-small; vertical-align: middle'],
+                'contentOptions' => ['style' => 'vertical-align: middle; font-size: x-small', 'align' => 'center'],
             ],
             [
                 'label' => '药品名称',
@@ -47,8 +47,8 @@ $this->params['breadcrumbs'][] = $this->title;
                     $medicine = \app\models\Medicine::findOne(['m_id' => $model->cc_medicine]);
                     return $medicine->name;
                 },
-                'headerOptions' => ['style' => 'text-align:center; font-size: xx-small; vertical-align: middle; width: 150px'],
-                'contentOptions' => ['style' => 'text-align:center; font-size: xx-small; vertical-align: middle; width: 150px'],
+                'headerOptions' => ['style' => 'text-align:center; font-size: x-small; vertical-align: middle; width: 150px'],
+                'contentOptions' => ['style' => 'text-align:center; font-size: x-small; vertical-align: middle; width: 150px'],
             ],
             [
                 'label' => '价格',
@@ -57,8 +57,8 @@ $this->params['breadcrumbs'][] = $this->title;
                     $medicine = \app\models\Medicine::findOne(['m_id' => $model->cc_medicine]);
                     return $medicine->money;
                 },
-                'headerOptions' => ['style' => 'text-align:center; font-size: xx-small; vertical-align: middle'],
-                'contentOptions' => ['style' => 'text-align:center; font-size: xx-small; vertical-align: middle'],
+                'headerOptions' => ['style' => 'text-align:center; font-size: x-small; vertical-align: middle'],
+                'contentOptions' => ['style' => 'text-align:center; font-size: x-small; vertical-align: middle'],
             ],
             //'cc_medicine',
             [
@@ -69,8 +69,8 @@ $this->params['breadcrumbs'][] = $this->title;
                     \app\models\BuyStatus::$totalAmount += $medicine->money * $model->cc_num;
                     return $model->cc_num;
                 },
-                'headerOptions' => ['style' => 'text-align:center; font-size: xx-small; vertical-align: middle; width: 45px'],
-                'contentOptions' => ['style' => 'text-align:center; font-size: xx-small; vertical-align: middle; width: 45px'],
+                'headerOptions' => ['style' => 'text-align:center; font-size: x-small; vertical-align: middle; width: 45px'],
+                'contentOptions' => ['style' => 'text-align:center; font-size: x-small; vertical-align: middle; width: 45px'],
             ],
             //'cc_num',
 
@@ -78,7 +78,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'header' => '选项',
                 'class' => 'yii\grid\ActionColumn',
                 'template'=> '{add}{sub}{delete}{buy}',
-                'headerOptions' => ['style' => 'text-align:center; font-size: xx-small; vertical-align: middle; width: 160px'],
+                'headerOptions' => ['style' => 'text-align:center; font-size: x-small; vertical-align: middle; width: 160px'],
                 'contentOptions' => ['style' => 'vertical-align: center', 'align' => 'center'],
                 'buttons' => [
                     'add' => function ($url, $model) {
