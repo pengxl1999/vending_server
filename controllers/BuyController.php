@@ -318,7 +318,9 @@ class BuyController extends Controller
     /**
      * 创建订单
      * @param $dataProvider
-     * @return bool 是否创建成功
+     * @return bool 返回是否成功
+     * @throws \Throwable
+     * @throws \yii\db\StaleObjectException
      */
     public function createOrder($dataProvider)
     {
@@ -339,6 +341,8 @@ class BuyController extends Controller
             if(!$customerAppointment->save()) {
                 return false;
             }
+            $cart = CustomerCar::findOne(['cc_id' => $model->cc_id]);
+            $cart->delete();
         }
         return true;
     }
