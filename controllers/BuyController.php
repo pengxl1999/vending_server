@@ -314,7 +314,7 @@ class BuyController extends Controller
         */
         if($result) {//验证成功
             //请在这里加上商户的业务逻辑程序代码
-            
+
 
         }
         else {
@@ -324,7 +324,7 @@ class BuyController extends Controller
     }
 
     public function actionSuccess($out_trade_no) {
-        $appointment = CustomerAppointment::findOne(['ca_id' => $out_trade_no]);
+        $appointment = CustomerAppointment::findOne(['ca_order' => $out_trade_no]);
         $appointment->status = AppointmentStatus::$ALREADY_PAID;
         return $this->render('success', ['order' => $out_trade_no]);
     }
