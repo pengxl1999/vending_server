@@ -20,6 +20,7 @@ use yii\widgets\DetailView;
 $this->title = '选择取货地点';
 $this->params['breadcrumbs'][] = ['label' => '我的购物车', 'url' => ['cart']];
 $this->params['breadcrumbs'][] = $this->title;
+\app\models\BuyStatus::$totalAmount = $mMoney;
 ?>
 
 <div>
@@ -91,12 +92,6 @@ $this->params['breadcrumbs'][] = $this->title;
         ],
     ]); ?>
 
-    <footer class="footer" style="height: 80px">
-        <p class="pull-left" style="margin-left: 20px; margin-top:10px; color: #496f89;">合计：￥
-            <?php echo number_format(\app\models\BuyStatus::$totalAmount, 2); ?>
-        </p>
-    </footer>
-
     <?php
         if(\app\models\BuyStatus::$hasRx == true && \app\models\BuyStatus::$isUploaded == false) {
             echo '
@@ -155,11 +150,6 @@ $this->params['breadcrumbs'][] = $this->title;
         ],
     ]); ?>
 </div>
-
-<footer class="footer" style="height: 80px">
-    <?= Html::a('支付', ['pay', 'mMoney' => $mMoney], ['class' => 'btn btn-default pull-right',
-        'style' => 'margin-right:20px;']); ?>
-</footer>
 
 <script>
     /**

@@ -54,7 +54,7 @@ class Medicine extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['m_id', 'guarantee', 'cert', 'money'], 'required'],
+            [['m_id'], 'required'],
             [['m_id', 'type', 'number', 'guarantee', 'fomulation', 'brand', 'manufacturer'], 'integer'],
             [['money'], 'number'],
             [['name', 'commodity_name', 'common_name', 'other_name', 'english_name', 'composition', 'img'], 'string', 'max' => 255],

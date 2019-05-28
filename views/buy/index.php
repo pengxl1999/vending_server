@@ -15,7 +15,7 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="medicine-index">
 
-    <h3><strong><?= Html::encode($this->title) ?></strong></h3>
+    <h1><strong style="font-size: large"><?= Html::encode($this->title) ?></strong></h1>
     <br/>
     <?php //echo $this->render('_search', ['model' => $searchModel]); ?>
 
@@ -41,7 +41,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     return Html::img('images/medicine/'.$model->img, ['alt' => $model->name, 'width' => '80']);
                 },
                 'headerOptions' => ['style' => 'text-align:center; font-size: xx-small; vertical-align: middle; width: 80px'],
-                'contentOptions' => ['style' => 'vertical-align: middle; width: 80px', 'align' => 'center'],
+                'contentOptions' => ['style' => 'vertical-align: middle; font-size: xx-small; width: 80px', 'align' => 'center'],
             ],
             //'img',
             [

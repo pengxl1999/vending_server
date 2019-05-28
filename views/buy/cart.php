@@ -17,7 +17,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <p>
         <?= Html::a('继续购买', ['index'], ['class' => 'btn btn-primary']) ?>
     </p>
-    <h3><strong><?= Html::encode($this->title) ?></strong></h3>
+    <h1><strong style="font-size: large"><?= Html::encode($this->title) ?></strong></h1>
 
     <br/>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
@@ -38,7 +38,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     return Html::img('images/medicine/'.$medicine->img, ['alt' => $medicine->name, 'width' => 80]);
                 },
                 'headerOptions' => ['style' => 'text-align:center; font-size: xx-small; vertical-align: middle'],
-                'contentOptions' => ['style' => 'vertical-align: middle', 'align' => 'center'],
+                'contentOptions' => ['style' => 'vertical-align: middle; font-size: xx-small', 'align' => 'center'],
             ],
             [
                 'label' => '药品名称',
@@ -114,10 +114,3 @@ $this->params['breadcrumbs'][] = $this->title;
 
 </div>
 
-<footer class="footer" style="position: absolute; bottom: 0;height: 80px">
-    <p class="pull-left" style="margin-left: 20px; margin-top:10px; color: #496f89;">合计：￥
-        <?php echo number_format(\app\models\BuyStatus::$totalAmount, 2); ?>
-    </p>
-    <?= Html::a('提交订单', ['buy/addr', 'cart' => -1, 'mMoney' => \app\models\BuyStatus::$totalAmount], ['class' => 'btn btn-default pull-right',
-        'style' => 'margin-right:20px;']); ?>
-</footer>

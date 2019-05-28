@@ -38,7 +38,7 @@ class CustomerPurchaseSearch extends CustomerPurchase
      *
      * @return ActiveDataProvider
      */
-    public function search($params)
+    public function search($params, $userId)
     {
         $query = CustomerPurchase::find();
 
@@ -59,7 +59,7 @@ class CustomerPurchaseSearch extends CustomerPurchase
         // grid filtering conditions
         $query->andFilterWhere([
             'cp_id' => $this->cp_id,
-            'c_id' => $this->c_id,
+            'c_id' => $userId,
             'm_id' => $this->m_id,
             'cp_time' => $this->cp_time,
             'status' => $this->status,
@@ -74,7 +74,13 @@ class CustomerPurchaseSearch extends CustomerPurchase
         return $dataProvider;
     }
 
-    public function searchByParams($param) {
+    /**
+     * 根据订单号查找
+     * @param $param
+     * @param $userId
+     * @return ActiveDataProvider
+     */
+    public function searchByParams($param, $userId) {
         $query = CustomerPurchase::find();
 
         // add conditions that should always apply here
@@ -84,9 +90,9 @@ class CustomerPurchaseSearch extends CustomerPurchase
         ]);
 
         // grid filtering conditions
-        $query->orFilterWhere([
-            'cp_id' => $param,
-            //'c_id' => $this->c_id,
+        $query->andFilterWhere([
+            'cp_order' => $param,
+            'c_id' => $userId,
             //'m_id' ,
 
 

@@ -29,7 +29,7 @@ class MedicineBrand extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['mb_id', 'mb_name'], 'required'],
+            [['mb_id'], 'required'],
             [['mb_id'], 'integer'],
             [['mb_name'], 'string', 'max' => 255],
             [['mb_img'], 'string', 'max' => 16],

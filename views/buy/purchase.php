@@ -91,12 +91,16 @@ $this->params['breadcrumbs'][] = $this->title;
                 'enableSorting' => false,
                 'value' => function($model) {
                     switch ($model->status) {
-                        case 0:
+                        case \app\models\AppointmentStatus::$NOT_PAID:
                             return '未支付';
-                        case 1:
+                        case \app\models\AppointmentStatus::$ALREADY_PAID:
                             return '已支付';
-                        case 2:
-                            return '已取货';
+                        case \app\models\AppointmentStatus::$ALREADY_FINISHED:
+                            return '已完成';
+                        case \app\models\AppointmentStatus::$TIME_OUT:
+                            return '已超时';
+                        case \app\models\AppointmentStatus::$CHECKING:
+                            return '待审核';
                         default:
                             return "错误！";
                     }

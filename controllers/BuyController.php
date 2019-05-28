@@ -101,12 +101,14 @@ class BuyController extends Controller
         $post = Yii::$app->request->post();
         if(isset($post['search_cp'])) {
             $search = $post['search_cp'];
-            $purchaseDataProvider = $purchaseSearchModel->searchByParams($search);
-            $appointmentDataProvider = $appointmentSearchModel->searchByParams($search);
+            $purchaseDataProvider = $purchaseSearchModel->searchByParams($search, $_SESSION['userId']);
+            $appointmentDataProvider = $appointmentSearchModel->searchByParams($search, $_SESSION['userId']);
         } else {
-            $purchaseDataProvider = $purchaseSearchModel->search(Yii::$app->request->queryParams);
-            $appointmentDataProvider = $appointmentSearchModel->search(Yii::$app->request->queryParams);
+            $purchaseDataProvider = $purchaseSearchModel->search(Yii::$app->request->queryParams, $_SESSION['userId']);
+            $appointmentDataProvider = $appointmentSearchModel->search(Yii::$app->request->queryParams, $_SESSION['userId']);
         }
+
+        $this->checkOrder($appointmentDataProvider->models);
 
         return $this->render('purchase', [
             'purchaseSearchModel' => $purchaseSearchModel,
@@ -313,6 +315,11 @@ class BuyController extends Controller
         }
     }
 
+    /**
+     * 创建订单
+     * @param $dataProvider
+     * @return bool 是否创建成功
+     */
     public function createOrder($dataProvider)
     {
         date_default_timezone_set("Asia/Shanghai");
@@ -334,5 +341,14 @@ class BuyController extends Controller
             }
         }
         return true;
+    }
+
+    public function checkOrder($appointments) {
+        foreach ($appointments as $appointment) {
+            date_default_timezone_set("Asia/Shanghai");
+            if(floor((strtotime(date("Y-m-d H:i:s")) - date_timestamp_get(date_create($appointment->ca_time))) % 86400 / 60) > 15) {
+               $appointment->status = 3;
+            }
+        }
     }
 }

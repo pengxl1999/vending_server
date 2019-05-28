@@ -28,7 +28,7 @@ class MedicineMan extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['mm_id', 'mm_name'], 'required'],
+            [['mm_id'], 'required'],
             [['mm_id'], 'integer'],
             [['mm_name'], 'string', 'max' => 255],
             [['mm_id'], 'unique'],

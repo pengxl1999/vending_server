@@ -38,7 +38,7 @@ class CustomerAppointmentSearch extends CustomerAppointment
      *
      * @return ActiveDataProvider
      */
-    public function search($params)
+    public function search($params, $userId)
     {
         $query = CustomerAppointment::find();
 
@@ -59,7 +59,7 @@ class CustomerAppointmentSearch extends CustomerAppointment
         // grid filtering conditions
         $query->andFilterWhere([
             'ca_id' => $this->ca_id,
-            'c_id' => $this->c_id,
+            'c_id' => $userId,
             'm_id' => $this->m_id,
             'ca_time' => $this->ca_time,
             'status' => $this->status,
@@ -75,7 +75,13 @@ class CustomerAppointmentSearch extends CustomerAppointment
         return $dataProvider;
     }
 
-    public function searchByParams($param) {
+    /**
+     * 根据订单号查找
+     * @param $param
+     * @param $userId
+     * @return ActiveDataProvider
+     */
+    public function searchByParams($param, $userId) {
         $query = CustomerAppointment::find();
 
         // add conditions that should always apply here
@@ -85,7 +91,7 @@ class CustomerAppointmentSearch extends CustomerAppointment
         ]);
 
         // grid filtering conditions
-        $query->orFilterWhere(['like', 'ca_id', $param]);
+        $query->andFilterWhere(['ca_order' => $param, 'c_id' => $userId]);
 
         return $dataProvider;
     }
