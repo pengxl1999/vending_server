@@ -282,10 +282,11 @@ class BuyController extends Controller
     /**
      * 接入支付宝
      * @param $mMoney
+     * @param $order
      * @throws \Exception
      */
-    public function actionPay($mMoney) {
-        if($mMoney == 0) {
+    public function actionPay($mMoney, $order = -1) {
+        if($mMoney == 0 || $order == -1) {
             echo "Fatal Error!";
             return;
         }
@@ -293,11 +294,11 @@ class BuyController extends Controller
         //实例化builder
         $alipay = new \AlipayTradeWapPayContentBuilder();
         //date_default_timezone_set("Asia/Shanghai");
-        $alipay->setOutTradeNo($_SESSION['curOrder']);
+        $alipay->setOutTradeNo($order);
         $alipay->setTotalAmount($mMoney);
         $alipay->setSubject('智能药品售货机预约购药');
         $alipay->setBody('药品');
-        $alipay->setTimeExpress("1m");
+        $alipay->setTimeExpress("15m");
 
         //获取config
         $config = Yii::$app->params['alipay'];

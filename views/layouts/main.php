@@ -105,7 +105,7 @@ AppAsset::register($this);
                 <p class="pull-left" style="margin-left: 30px; margin-top:10px; color: #496f89; font-size: small">合计：￥' .
                     number_format(\app\models\BuyStatus::$totalAmount, 2) .
                 '</p>' .
-                Html::a('支付', ['pay', 'mMoney' => \app\models\BuyStatus::$totalAmount], ['class' => 'btn btn-default pull-right',
+                Html::a('支付', ['pay', 'mMoney' => \app\models\BuyStatus::$totalAmount, 'order' => $_SESSION['curOrder']], ['class' => 'btn btn-default pull-right',
                     'style' => 'margin-right: 30px; font-size: small', 'onclick' => 'checkPermission']) .
             '</div>'
         ;
@@ -129,7 +129,7 @@ AppAsset::register($this);
                 <p class="pull-left" style="margin-left: 30px; margin-top:10px; color: #496f89; font-size: small">合计：￥' .
             number_format(\app\models\BuyStatus::$totalAmount, 2) .
             '</p>' .
-            Html::a('支付', ['pay', 'mMoney' => \app\models\BuyStatus::$totalAmount], ['class' => 'btn btn-default pull-right',
+            Html::a('支付', ['pay', 'mMoney' => \app\models\BuyStatus::$totalAmount, 'order' => $_SESSION['curOrder']], ['class' => 'btn btn-default pull-right',
                 'style' => 'margin-right: 30px; font-size: small', 'onclick' => 'checkPermission']) .
             '</div>'
         ;
