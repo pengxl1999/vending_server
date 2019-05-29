@@ -221,7 +221,8 @@ class BuyController extends Controller
             $dataProvider = $searchModel->searchById($cart);
         }
 
-        if(!$this->createOrder($dataProvider)) {
+        $order = $this->createOrder($dataProvider);
+        if($order === -1) {
             //      应加入错误页面！
             return $this->redirect(['index']);
         }
@@ -231,7 +232,7 @@ class BuyController extends Controller
 
         return $this->render('addr', [
             'mMoney' => $mMoney,
-            'order' => $_SESSION['curOrder'],
+            'order' => $order,
             'dataProvider' => $dataProvider,
             'dataProvider1' => $dataProvider1,
             'searchModel' => $searchModel,
@@ -377,7 +378,6 @@ class BuyController extends Controller
         date_default_timezone_set("Asia/Shanghai");
         $date = date("Y-m-d H:i:s");
         $order = date("YmdHis") . $_SESSION['userId'];
-        $_SESSION['curOrder'] = $order;
         /*添加预约信息，可在我的订单中查看*/
         foreach ($dataProvider->models as $model) {
             $customerAppointment = new CustomerAppointment();
@@ -390,12 +390,12 @@ class BuyController extends Controller
             $customerAppointment->status = 0;
             $customerAppointment->num = $model->cc_num;
             if(!$customerAppointment->save()) {
-                return false;
+                return -1;
             }
             $cart = CustomerCar::findOne(['cc_id' => $model->cc_id]);
             $cart->delete();
         }
-        return true;
+        return $order;
     }
 
     /**
