@@ -297,7 +297,7 @@ class BuyController extends Controller
         $alipay->setTotalAmount($mMoney);
         $alipay->setSubject('智能药品售货机预约购药');
         $alipay->setBody('药品');
-        $alipay->setTimeExpress("15m");
+        $alipay->setTimeExpress("1m");
 
         //获取config
         $config = Yii::$app->params['alipay'];
