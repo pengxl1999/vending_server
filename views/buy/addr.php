@@ -166,7 +166,7 @@ $this->params['breadcrumbs'][] = $this->title;
      */
     function getResultFromAndroid(isSuccess, order) {
         if(isSuccess) {
-            window.location.href = "./index.php?r=buy/payorder&order="+order+"&isUploaded=true";
+            window.location.href = "./index.php?r=buy/purchase&checking=" + order;
         }
         else {
             alert('上传失败！请重新上传！');

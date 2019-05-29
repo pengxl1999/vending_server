@@ -89,11 +89,12 @@ class BuyController extends Controller
     /**
      * 我的订单
      * @param int $cancel
+     * @param bool $checking
      * @return string|Response
      * @throws \Throwable
      * @throws \yii\db\StaleObjectException
      */
-    public function actionPurchase($cancel = 0) {
+    public function actionPurchase($cancel = 0, $checking = 0) {
         if(Yii::$app->user->isGuest) {
             return $this->redirect('./index.php?r=site/login');
         }
@@ -105,6 +106,15 @@ class BuyController extends Controller
             foreach($appointmentDataProvider->models as $item) {
                 $appointment = CustomerAppointment::findOne(['ca_id' => $item->ca_id]);
                 $appointment->delete();
+            }
+        }
+
+        if($checking !== 0) {
+            $appointmentDataProvider = $appointmentSearchModel->searchByParams($checking, $_SESSION['userId']);
+            foreach($appointmentDataProvider->models as $item) {
+                $appointment = CustomerAppointment::findOne(['ca_id' => $item->ca_id]);
+                $appointment->status = AppointmentStatus::$CHECKING;
+                $appointment->save();
             }
         }
 
@@ -213,7 +223,6 @@ class BuyController extends Controller
         }
         BuyStatus::$isUploaded = $isUploaded;
         BuyStatus::$totalAmount = 0;
-        BuyStatus::$isChecking = false;
         if($cart == -1) {
             $searchModel = new CustomerCarSearch();
             $dataProvider = $searchModel->searchByUser($_SESSION['userId']);    //购买信息provider
@@ -246,25 +255,14 @@ class BuyController extends Controller
      * @param bool $isUploaded
      * @return string
      */
-    public function actionPayorder($order, $isUploaded = false) {
+    public function actionPayorder($order) {
 
         $_SESSION['curOrder'] = $order;
-        BuyStatus::$isUploaded = $isUploaded;
-        BuyStatus::$isChecking = false;
         $searchModel = new CustomerAppointmentSearch();
         $appointmentProvider = $searchModel->searchByParams($order, $_SESSION['userId']);
 
         $mMoney = 0;
         foreach($appointmentProvider->models as $appointment) {
-            if($isUploaded) {       //是否已经上传处方照片
-                $appointmentObj = CustomerAppointment::findOne(['ca_id' => $appointment->ca_id]);
-                $appointmentObj->status = AppointmentStatus::$CHECKING;
-                $appointmentObj->save();
-            }
-            if($appointment->status == AppointmentStatus::$CHECKING) {
-                BuyStatus::$isUploaded = true;
-                BuyStatus::$isChecking = true;
-            }
             $medicine = Medicine::findOne(['m_id' => $appointment->m_id]);
             $mMoney += $medicine->money * $appointment->num;
         }
