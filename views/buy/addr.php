@@ -102,7 +102,8 @@ $this->params['breadcrumbs'][] = $this->title;
             echo '
                 <div>
                     <p>您的订单中包含处方药，请上传处方！</p>
-                    <a class="btn btn-default" onclick="window.android.getImageForBuying()">上传图片</a>
+                    <a class="btn btn-default" onclick="window.android.getImageForBuying('.
+                        $order . ')">上传图片</a>
                 </div>
                 ';
         }
@@ -163,9 +164,9 @@ $this->params['breadcrumbs'][] = $this->title;
     /**
      * Android反馈信息，检测是否上传成功
      */
-    function getResultFromAndroid(isSuccess) {
+    function getResultFromAndroid(isSuccess, order) {
         if(isSuccess) {
-            window.location.href += '&isUploaded=true';
+            window.location.href = "./index.php?r=buy/payorder&order="+order+"&isUploaded=true";
         }
         else {
             alert('上传失败！请重新上传！');

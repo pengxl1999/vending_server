@@ -231,6 +231,7 @@ class BuyController extends Controller
 
         return $this->render('addr', [
             'mMoney' => $mMoney,
+            'order' => $_SESSION['curOrder'],
             'dataProvider' => $dataProvider,
             'dataProvider1' => $dataProvider1,
             'searchModel' => $searchModel,
@@ -240,16 +241,21 @@ class BuyController extends Controller
     /**
      * 根据订单号购买
      * @param $order
+     * @param bool $isUploaded
      * @return string
      */
-    public function actionPayorder($order) {
+    public function actionPayorder($order, $isUploaded = false) {
 
         $_SESSION['curOrder'] = $order;
+        BuyStatus::$isUploaded = $isUploaded;
         $searchModel = new CustomerAppointmentSearch();
         $appointmentProvider = $searchModel->searchByParams($order, $_SESSION['userId']);
 
         $mMoney = 0;
         foreach($appointmentProvider->models as $appointment) {
+            if($isUploaded) {
+                $appointment->status = AppointmentStatus::$CHECKING;
+            }
             $medicine = Medicine::findOne(['m_id' => $appointment->m_id]);
             $mMoney += $medicine->money * $appointment->num;
         }
