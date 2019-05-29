@@ -255,7 +255,9 @@ class BuyController extends Controller
         $mMoney = 0;
         foreach($appointmentProvider->models as $appointment) {
             if($isUploaded) {
-                $appointment->status = AppointmentStatus::$CHECKING;
+                $appointmentObj = CustomerAppointment::findOne(['ca_id' => $appointment->ca_id]);
+                $appointmentObj->status = AppointmentStatus::$CHECKING;
+                $appointmentObj->save();
             }
             $medicine = Medicine::findOne(['m_id' => $appointment->m_id]);
             $mMoney += $medicine->money * $appointment->num;

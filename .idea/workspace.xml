@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0c26af8a-ea14-46e8-b49b-092b940b5c83" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/views/buy/addr.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/buy/addr.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/BuyController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/BuyController.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -77,11 +77,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/controllers/BuyController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="228" lean-forward="true" selection-start-line="228" selection-end-line="228" />
+            <state relative-caret-position="588">
+              <caret line="259" column="40" selection-start-line="259" selection-start-column="40" selection-end-line="259" selection-end-column="40" />
               <folding>
                 <element signature="e#36#69#0#PHP" expanded="true" />
               </folding>
@@ -89,10 +89,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/buy/addr.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="438">
+            <state relative-caret-position="-732">
               <caret line="107" column="18" lean-forward="true" selection-start-line="107" selection-start-column="18" selection-end-line="107" selection-end-column="18" />
               <folding>
                 <element signature="e#6#30#0#PHP" expanded="true" />
@@ -206,8 +206,8 @@
       <find>curOrder</find>
       <find>redirect</find>
       <find>getResultFrom</find>
-      <find>window</find>
       <find>addr</find>
+      <find>window</find>
     </findStrings>
     <replaceStrings>
       <replace>or</replace>
@@ -269,8 +269,8 @@
         <option value="$PROJECT_DIR$/views/buy/purchase.php" />
         <option value="$PROJECT_DIR$/views/site/index.php" />
         <option value="$PROJECT_DIR$/views/site/login.php" />
-        <option value="$PROJECT_DIR$/controllers/BuyController.php" />
         <option value="$PROJECT_DIR$/views/buy/addr.php" />
+        <option value="$PROJECT_DIR$/controllers/BuyController.php" />
       </list>
     </option>
   </component>
@@ -500,12 +500,12 @@
       <workItem from="1558958951859" duration="35075000" />
       <workItem from="1559046815206" duration="4926000" />
       <workItem from="1559051949511" duration="580000" />
-      <workItem from="1559112482930" duration="2982000" />
+      <workItem from="1559112482930" duration="3268000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="229838000" />
+    <option name="totallyTimeSpent" value="230124000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1688" y="16" width="1696" height="1026" extended-state="6" />
@@ -911,16 +911,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/BuyController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="228" lean-forward="true" selection-start-line="228" selection-end-line="228" />
-          <folding>
-            <element signature="e#36#69#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/AppointmentStatus.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -937,11 +927,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/buy/addr.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
+        <state relative-caret-position="-732">
           <caret line="107" column="18" lean-forward="true" selection-start-line="107" selection-start-column="18" selection-end-line="107" selection-end-column="18" />
           <folding>
             <element signature="e#6#30#0#PHP" expanded="true" />
             <element signature="e#32#67#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/BuyController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="588">
+          <caret line="259" column="40" selection-start-line="259" selection-start-column="40" selection-end-line="259" selection-end-column="40" />
+          <folding>
+            <element signature="e#36#69#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
