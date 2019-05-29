@@ -123,7 +123,17 @@ AppAsset::register($this);
     ?>
 
     <?php
-    if(Yii::$app->controller->getRoute() === 'buy/payorder' && (!\app\models\BuyStatus::$hasRx || \app\models\BuyStatus::$isUploaded)) {
+    if(Yii::$app->controller->getRoute() === 'buy/payorder' && \app\models\BuyStatus::$isChecking){
+        echo '
+            <div class="footer" style="z-index: 888; position: fixed; bottom: 0;height: 80px; width: 100%" >
+                <p class="pull-left" style="margin-left: 30px; margin-top:10px; color: #496f89; font-size: small">合计：￥' .
+            number_format(\app\models\BuyStatus::$totalAmount, 2) .
+            '</p>
+                <p style="font-size: small; margin-right: 30px; margin-top: 10px" class="pull-right">待审核</p>
+            </div>'
+        ;
+    }
+    else if(Yii::$app->controller->getRoute() === 'buy/payorder' && (!\app\models\BuyStatus::$hasRx || \app\models\BuyStatus::$isUploaded)) {
         echo '
             <div class="footer" style="z-index: 888; position: fixed; bottom: 0;height: 80px; width: 100%" >
                 <p class="pull-left" style="margin-left: 30px; margin-top:10px; color: #496f89; font-size: small">合计：￥' .

@@ -213,6 +213,7 @@ class BuyController extends Controller
         }
         BuyStatus::$isUploaded = $isUploaded;
         BuyStatus::$totalAmount = 0;
+        BuyStatus::$isChecking = false;
         if($cart == -1) {
             $searchModel = new CustomerCarSearch();
             $dataProvider = $searchModel->searchByUser($_SESSION['userId']);    //购买信息provider
@@ -249,15 +250,20 @@ class BuyController extends Controller
 
         $_SESSION['curOrder'] = $order;
         BuyStatus::$isUploaded = $isUploaded;
+        BuyStatus::$isChecking = false;
         $searchModel = new CustomerAppointmentSearch();
         $appointmentProvider = $searchModel->searchByParams($order, $_SESSION['userId']);
 
         $mMoney = 0;
         foreach($appointmentProvider->models as $appointment) {
-            if($isUploaded) {
+            if($isUploaded) {       //是否已经上传处方照片
                 $appointmentObj = CustomerAppointment::findOne(['ca_id' => $appointment->ca_id]);
                 $appointmentObj->status = AppointmentStatus::$CHECKING;
                 $appointmentObj->save();
+            }
+            if($appointment->status == AppointmentStatus::$CHECKING) {
+                BuyStatus::$isUploaded = true;
+                BuyStatus::$isChecking = true;
             }
             $medicine = Medicine::findOne(['m_id' => $appointment->m_id]);
             $mMoney += $medicine->money * $appointment->num;
