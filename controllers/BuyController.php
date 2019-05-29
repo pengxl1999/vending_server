@@ -232,6 +232,7 @@ class BuyController extends Controller
         }
 
         $order = $this->createOrder($dataProvider);
+        $_SESSION['curOrder'] = $order;
         if($order === -1) {
             //      应加入错误页面！
             return $this->redirect(['index']);

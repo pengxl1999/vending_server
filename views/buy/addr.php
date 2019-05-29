@@ -102,7 +102,7 @@ $this->params['breadcrumbs'][] = $this->title;
             echo '
                 <div>
                     <p>您的订单中包含处方药，请上传处方！</p>
-                    <a class="btn btn-default" onclick="window.android.getImageForBuying(
+                    <a class="btn btn-danger" onclick="window.android.getImageForBuying(
                         \'' . $order . '\')">上传图片</a>
                 </div>
                 ';
