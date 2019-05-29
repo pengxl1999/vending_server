@@ -81,7 +81,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'header' => '选项',
                 'class' => 'yii\grid\ActionColumn',
                 'template'=> '{add}{sub}{delete}{buy}',
-                'headerOptions' => ['style' => 'text-align:center; font-size: x-small; vertical-align: middle; width: 160px'],
+                'headerOptions' => ['style' => 'text-align:center; font-size: x-small; vertical-align: middle; width: 60px'],
                 'contentOptions' => ['style' => 'vertical-align: center', 'align' => 'center'],
                 'buttons' => [
                     'add' => function ($url, $model) {
@@ -94,7 +94,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         //$_SESSION['medId'] = $model->m_id;
                         return Html::a('减少', ['buy/cart', 'medId' => $model->cc_medicine, 'operation' => 1],
                             ['class' => "btn btn-sm btn-primary",
-                            'style' => 'font-size:xx-small; margin-left:5px']);
+                            'style' => 'font-size:xx-small; margin-top:5px']);
                     },
                     'delete' => function ($url, $model) {
                         //$_SESSION['medId'] = $model->m_id;
@@ -107,7 +107,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         $mMoney = $medicine->money * $model->cc_num;
                         return Html::a('购买', ['buy/addr', 'cart' => $model->cc_id, 'mMoney' => $mMoney],
                             ['class' => "btn btn-sm btn-default",
-                                'style' => 'font-size:xx-small; margin-left:5px; margin-top: 5px']);
+                                'style' => 'font-size:xx-small; margin-top: 5px']);
                     },
                 ],
             ],
