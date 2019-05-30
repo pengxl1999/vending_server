@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0c26af8a-ea14-46e8-b49b-092b940b5c83" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/runtime/debug/index.data" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/debug/index.data" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/logs/app.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/buy/purchase.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/buy/purchase.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -80,8 +82,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/buy/purchase.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="585">
-              <caret line="99" column="38" lean-forward="true" selection-start-line="99" selection-start-column="38" selection-end-line="99" selection-end-column="38" />
+            <state relative-caret-position="509">
+              <caret line="97" column="173" selection-start-line="97" selection-start-column="173" selection-end-line="97" selection-end-column="173" />
               <folding>
                 <element signature="e#7#45#0#PHP" expanded="true" />
               </folding>
@@ -102,7 +104,7 @@
         <entry file="file://$PROJECT_DIR$/views/buy/addr.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="480">
-              <caret line="103" column="42" lean-forward="true" selection-start-line="103" selection-start-column="42" selection-end-line="103" selection-end-column="42" />
+              <caret line="103" column="42" selection-start-line="103" selection-start-column="42" selection-end-line="103" selection-end-column="42" />
               <folding>
                 <element signature="e#6#30#0#PHP" expanded="true" />
                 <element signature="e#32#67#0#PHP" expanded="true" />
@@ -124,7 +126,7 @@
         <entry file="file://$PROJECT_DIR$/views/site/login.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="593">
-              <caret line="43" column="14" lean-forward="true" selection-start-line="43" selection-start-column="14" selection-end-line="43" selection-end-column="14" />
+              <caret line="43" column="14" selection-start-line="43" selection-start-column="14" selection-end-line="43" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -490,12 +492,12 @@
       <workItem from="1559046815206" duration="4926000" />
       <workItem from="1559051949511" duration="580000" />
       <workItem from="1559112482930" duration="8829000" />
-      <workItem from="1559190587155" duration="5343000" />
+      <workItem from="1559190587155" duration="6079000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="241028000" />
+    <option name="totallyTimeSpent" value="241764000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1688" y="16" width="1696" height="1026" extended-state="6" />
@@ -907,14 +909,14 @@
     <entry file="file://$PROJECT_DIR$/views/site/login.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="593">
-          <caret line="43" column="14" lean-forward="true" selection-start-line="43" selection-start-column="14" selection-end-line="43" selection-end-column="14" />
+          <caret line="43" column="14" selection-start-line="43" selection-start-column="14" selection-end-line="43" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/buy/addr.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
-          <caret line="103" column="42" lean-forward="true" selection-start-line="103" selection-start-column="42" selection-end-line="103" selection-end-column="42" />
+          <caret line="103" column="42" selection-start-line="103" selection-start-column="42" selection-end-line="103" selection-end-column="42" />
           <folding>
             <element signature="e#6#30#0#PHP" expanded="true" />
             <element signature="e#32#67#0#PHP" expanded="true" />
@@ -931,8 +933,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/buy/purchase.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="99" column="38" lean-forward="true" selection-start-line="99" selection-start-column="38" selection-end-line="99" selection-end-column="38" />
+        <state relative-caret-position="509">
+          <caret line="97" column="173" selection-start-line="97" selection-start-column="173" selection-end-line="97" selection-end-column="173" />
           <folding>
             <element signature="e#7#45#0#PHP" expanded="true" />
           </folding>
