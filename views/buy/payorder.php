@@ -98,17 +98,17 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php
     if(\app\models\BuyStatus::$hasRx == true && \app\models\BuyStatus::$isUploaded == false) {
         echo '
-                <div>
-                    <p>您的订单中包含处方药，请上传处方！</p>
-                    <a class="btn btn-default" onclick="window.android.getImageForBuying()">上传图片</a>
-                </div>
-                ';
+            <div>
+                <p>您的订单中包含处方药，请上传处方！</p>
+                <a class="btn btn-default" onclick="window.android.getImageForBuying()">上传图片</a>
+            </div>
+            ';
     }
     else if(\app\models\BuyStatus::$hasRx == true && \app\models\BuyStatus::$isUploaded == true){
         echo '
-                <div>
-                    <p>处方图片上传成功！下单成功后，请前往“我的订单”页面查看审核状态</p>
-                </div>
+            <div>
+                <p>处方图片上传成功！下单成功后，请前往“我的订单”页面查看审核状态</p>
+            </div>
             ';
     }
     ?>

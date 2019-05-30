@@ -280,7 +280,7 @@ class BuyController extends Controller
     }
 
     /**
-     * 接入支付宝
+     * 接入支付宝进行支付
      * @param $mMoney
      * @param $order
      * @throws \Exception
