@@ -98,11 +98,12 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php
     if(\app\models\BuyStatus::$hasRx == true && \app\models\BuyStatus::$isUploaded == false) {
         echo '
-            <div>
-                <p>您的订单中包含处方药，请上传处方！</p>
-                <a class="btn btn-default" onclick="window.android.getImageForBuying()">上传图片</a>
-            </div>
-            ';
+                <div>
+                    <p>您的订单中包含处方药，请上传处方！</p>
+                    <a class="btn btn-danger" onclick="window.android.getImageForBuying(
+                        \'' . $order . '\')">上传图片</a>
+                </div>
+                ';
     }
     else if(\app\models\BuyStatus::$hasRx == true && \app\models\BuyStatus::$isUploaded == true){
         echo '
@@ -158,9 +159,9 @@ $this->params['breadcrumbs'][] = $this->title;
     /**
      * Android反馈信息，检测是否上传成功
      */
-    function getResultFromAndroid(isSuccess) {
+    function getResultFromAndroid(isSuccess, order) {
         if(isSuccess) {
-            window.location.href += '&isUploaded=true';
+            window.location.href = "./index.php?r=buy/purchase&checking=" + order;
         }
         else {
             alert('上传失败！请重新上传！');
