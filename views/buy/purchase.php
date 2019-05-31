@@ -68,8 +68,8 @@ $this->params['breadcrumbs'][] = $this->title;
                             return "错误！";
                     }
                 },
-                'headerOptions' => ['style' => 'text-align:center; font-size: x-small; vertical-align: middle; width: 50px'],
-                'contentOptions' => ['style' => 'text-align:center; font-size: x-small; vertical-align: middle; width: 50px'],
+                'headerOptions' => ['style' => 'text-align:center; font-size: x-small; vertical-align: middle; width: 45px'],
+                'contentOptions' => ['style' => 'text-align:center; font-size: x-small; vertical-align: middle; width: 45px'],
             ],
             //'v_id',
             //'num',
@@ -84,7 +84,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'class' => 'yii\grid\ActionColumn',
                 'template'=> '{pay}{cancel}',
                 'headerOptions' => ['style' => 'text-align:center; font-size: x-small; vertical-align: middle; width: 60px'],
-                'contentOptions' => ['style' => 'vertical-align: center', 'align' => 'center'],
+                'contentOptions' => ['style' => 'vertical-align: middle', 'align' => 'center'],
                 'buttons' => [
                     'pay' => function ($url, $model) {
                         //$_SESSION['medId'] = $model->m_id;
