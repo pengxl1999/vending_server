@@ -272,6 +272,7 @@ class BuyController extends Controller
         $vemProvider = $searchModel->search(Yii::$app->request->queryParams);     //售货机信息provider
 
         return $this->render('payorder', [
+            'order' => $order,
             'mMoney' => $mMoney,
             'searchModel' => $searchModel,
             'appointmentProvider' => $appointmentProvider,
