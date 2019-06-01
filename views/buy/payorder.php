@@ -158,9 +158,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                 ['class' => 'btn btn-sm btn-success', 'style' => 'font-size: x-small']);
                         }
                         else if($model->vem_id == \app\models\BuyStatus::$vemChosen) {
-                            return '
-                                <p style="font-size: x-small; text-align: center; vertical-align: middle">已选择</p>
-                            ';
+                            return Html::textarea("str", "已选择", ['style' => 'font-size: x-small; text-align: center; vertical-align: middle']);
                         }
                         else {
                             return Html::a('选择', ['payorder', 'order' => $_SESSION['curOrder'], 'vem' => $model->vem_id],

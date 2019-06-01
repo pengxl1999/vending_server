@@ -104,12 +104,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/buy/payorder.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
-              <caret line="161" column="104" selection-start-line="161" selection-start-column="104" selection-end-line="161" selection-end-column="104" />
+            <state relative-caret-position="408">
+              <caret line="160" column="143" selection-start-line="160" selection-start-column="143" selection-end-line="160" selection-end-column="143" />
               <folding>
                 <element signature="e#6#30#0#PHP" expanded="true" />
                 <element signature="e#32#67#0#PHP" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -505,12 +504,12 @@
       <workItem from="1559051949511" duration="580000" />
       <workItem from="1559112482930" duration="8829000" />
       <workItem from="1559190587155" duration="8120000" />
-      <workItem from="1559292983413" duration="7723000" />
+      <workItem from="1559292983413" duration="7916000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="251528000" />
+    <option name="totallyTimeSpent" value="251721000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1688" y="16" width="1696" height="1026" extended-state="6" />
@@ -947,12 +946,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/buy/payorder.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="161" column="104" selection-start-line="161" selection-start-column="104" selection-end-line="161" selection-end-column="104" />
+        <state relative-caret-position="408">
+          <caret line="160" column="143" selection-start-line="160" selection-start-column="143" selection-end-line="160" selection-end-column="143" />
           <folding>
             <element signature="e#6#30#0#PHP" expanded="true" />
             <element signature="e#32#67#0#PHP" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
