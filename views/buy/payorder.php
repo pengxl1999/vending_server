@@ -164,7 +164,6 @@ $this->params['breadcrumbs'][] = $this->title;
                             return Html::a('选择', ['payorder', 'order' => $_SESSION['curOrder'], 'vem' => $model->vem_id],
                                 ['class' => 'btn btn-sm btn-success', 'style' => 'font-size: x-small']);
                         }
-                        return null;
                     }
                 ]
             ],
