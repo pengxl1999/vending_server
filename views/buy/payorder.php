@@ -126,22 +126,22 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             [
                 'class' => 'yii\grid\SerialColumn',
-                'headerOptions' => ['style' => 'text-align:center', 'width' => '30'],
-                'contentOptions' => ['style' => 'text-align:center', 'width' => '30'],
+                'headerOptions' => ['style' => 'text-align:center; font-size: x-small; vertical-align: middle; width: 30px'],
+                'contentOptions' => ['style' => 'text-align:center; font-size: x-small; vertical-align: middle; width: 30px'],
             ],
 
             //'vem_id',
             [
                 'header' => '药店名称',
                 'attribute' => 'vem_name',
-                'headerOptions' => ['style' => 'text-align:center', 'width' => '120'],
-                'contentOptions' => ['style' => 'text-align:center', 'width' => '120'],
+                'headerOptions' => ['style' => 'text-align:center; font-size: x-small; vertical-align: middle; width: 120px'],
+                'contentOptions' => ['style' => 'text-align:center; font-size: x-small; vertical-align: middle; width: 120px'],
             ],
             [
                 'header' => '地址',
                 'attribute' => 'vem_location',
-                'headerOptions' => ['style' => 'text-align:center'],
-                'contentOptions' => ['style' => 'text-align:center'],
+                'headerOptions' => ['style' => 'text-align:center; font-size: x-small; vertical-align: middle'],
+                'contentOptions' => ['style' => 'text-align:center; font-size: x-small; vertical-align: middle'],
             ],
             //'vem_type',
 
