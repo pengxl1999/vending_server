@@ -253,19 +253,29 @@ class BuyController extends Controller
     /**
      * 根据订单号购买
      * @param $order
-     * @param bool $isUploaded
+     * @param $vem
      * @return string
      */
-    public function actionPayorder($order) {
+    public function actionPayorder($order, $vem = 0) {
 
         $_SESSION['curOrder'] = $order;
+        $mMoney = 0;
+
+        BuyStatus::$vemChosen = $vem;
+
         $searchModel = new CustomerAppointmentSearch();
         $appointmentProvider = $searchModel->searchByParams($order, $_SESSION['userId']);
 
-        $mMoney = 0;
         foreach($appointmentProvider->models as $appointment) {
             $medicine = Medicine::findOne(['m_id' => $appointment->m_id]);
             $mMoney += $medicine->money * $appointment->num;
+            if(BuyStatus::$vemChosen !== 0) {
+                $appointment->v_id = BuyStatus::$vemChosen;
+                $appointment->save();
+            }
+            else if($appointment->v_id !== 0) {
+                BuyStatus::$vemChosen = $appointment->v_id;
+            }
         }
 
         $searchModel = new VemSearch();

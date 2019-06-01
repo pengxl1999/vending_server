@@ -99,15 +99,14 @@ AppAsset::register($this);
     ?>
 
     <?php
-    if(Yii::$app->controller->getRoute() === 'buy/addr' && (!\app\models\BuyStatus::$hasRx || \app\models\BuyStatus::$isUploaded)) {
+    if(Yii::$app->controller->getRoute() === 'buy/addr' && (\app\models\BuyStatus::$hasRx && !\app\models\BuyStatus::$isUploaded)) {
         echo '
             <div class="footer" style="z-index: 888; position: fixed; bottom: 0;height: 80px; width: 100%" >
                 <p class="pull-left" style="margin-left: 30px; margin-top:10px; color: #496f89; font-size: small">合计：￥' .
-                    number_format(\app\models\BuyStatus::$totalAmount, 2) .
-                '</p>' .
-                Html::a('支付', ['pay', 'mMoney' => \app\models\BuyStatus::$totalAmount, 'order' => $_SESSION['curOrder']], ['class' => 'btn btn-default pull-right',
-                    'style' => 'margin-right: 30px; font-size: small', 'onclick' => 'checkPermission']) .
-            '</div>'
+            number_format(\app\models\BuyStatus::$totalAmount, 2) .
+            '</p>
+                <p style="font-size: small; margin-right: 30px; margin-top: 10px" class="pull-right">请上传处方照片</p>
+            </div>'
         ;
     }
     else if(Yii::$app->controller->getRoute() === 'buy/addr'){
@@ -115,15 +114,15 @@ AppAsset::register($this);
             <div class="footer" style="z-index: 888; position: fixed; bottom: 0;height: 80px; width: 100%" >
                 <p class="pull-left" style="margin-left: 30px; margin-top:10px; color: #496f89; font-size: small">合计：￥' .
             number_format(\app\models\BuyStatus::$totalAmount, 2) .
-                '</p>
-                <p style="font-size: small; margin-right: 30px; margin-top: 10px" class="pull-right">请上传处方照片</p>
+            '</p>
+                <p style="font-size: small; margin-right: 30px; margin-top: 10px" class="pull-right">请选择收货地点</p>
             </div>'
         ;
     }
     ?>
 
     <?php
-    if(Yii::$app->controller->getRoute() === 'buy/payorder' && (!\app\models\BuyStatus::$hasRx || \app\models\BuyStatus::$isUploaded)) {
+    if(Yii::$app->controller->getRoute() === 'buy/payorder' && (!\app\models\BuyStatus::$hasRx || \app\models\BuyStatus::$isUploaded) && \app\models\BuyStatus::$vemChosen !== 0) {
         echo '
             <div class="footer" style="z-index: 888; position: fixed; bottom: 0;height: 80px; width: 100%" >
                 <p class="pull-left" style="margin-left: 30px; margin-top:10px; color: #496f89; font-size: small">合计：￥' .
@@ -134,13 +133,23 @@ AppAsset::register($this);
             '</div>'
         ;
     }
-    else if(Yii::$app->controller->getRoute() === 'buy/payorder'){
+    else if(Yii::$app->controller->getRoute() === 'buy/payorder' && (\app\models\BuyStatus::$hasRx && !\app\models\BuyStatus::$isUploaded)){
         echo '
             <div class="footer" style="z-index: 888; position: fixed; bottom: 0;height: 80px; width: 100%" >
                 <p class="pull-left" style="margin-left: 30px; margin-top:10px; color: #496f89; font-size: small">合计：￥' .
             number_format(\app\models\BuyStatus::$totalAmount, 2) .
             '</p>
                 <p style="font-size: small; margin-right: 30px; margin-top: 10px" class="pull-right">请上传处方照片</p>
+            </div>'
+        ;
+    }
+    else if(Yii::$app->controller->getRoute() === 'buy/payorder'){
+        echo '
+            <div class="footer" style="z-index: 888; position: fixed; bottom: 0;height: 80px; width: 100%" >
+                <p class="pull-left" style="margin-left: 30px; margin-top:10px; color: #496f89; font-size: small">合计：￥' .
+            number_format(\app\models\BuyStatus::$totalAmount, 2) .
+            '</p>
+                <p style="font-size: small; margin-right: 30px; margin-top: 10px" class="pull-right">请选择收货地点</p>
             </div>'
         ;
     }

@@ -147,9 +147,26 @@ $this->params['breadcrumbs'][] = $this->title;
 
             [
                 'header' => '操作',
-                'headerOptions' => ['style' => 'text-align:center', 'width' => '30'],
-                'contentOptions' => ['style' => 'text-align:center', 'width' => '30'],
-                'class' => 'yii\grid\ActionColumn'
+                'headerOptions' => ['style' => 'text-align:center; font-size: x-small; vertical-align: middle; width: 60px'],
+                'contentOptions' => ['style' => 'text-align:center; vertical-align: middle; width: 60px'],
+                'class' => 'yii\grid\ActionColumn',
+                'template' => '{choose}',
+                'buttons' => [
+                    'choose' => function($url, $model) {
+                        if(\app\models\BuyStatus::$vemChosen == 0) {
+                            return Html::a('选择', ['payorder', 'order' => $_SESSION['curOrder'], 'vem' => $model->vem_id],
+                                ['class' => 'btn btn-sm btn-success', 'style' => 'font-size: x-small']);
+                        }
+                        else if($model->vem_id == \app\models\BuyStatus::$vemChosen) {
+                            return '已选择';
+                        }
+                        else {
+                            return Html::a('选择', ['payorder', 'order' => $_SESSION['curOrder'], 'vem' => $model->vem_id],
+                                ['class' => 'btn btn-sm btn-success', 'style' => 'font-size: x-small']);
+                        }
+                        return null;
+                    }
+                ]
             ],
         ],
     ]); ?>

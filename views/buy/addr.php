@@ -153,12 +153,23 @@ $this->params['breadcrumbs'][] = $this->title;
             [
                 'header' => '操作',
                 'headerOptions' => ['style' => 'text-align:center; font-size: x-small; vertical-align: middle; width: 30px'],
-                'contentOptions' => ['style' => 'text-align:center; font-size: x-small; vertical-align: middle; width: 30px'],
-                'class' => 'yii\grid\ActionColumn'
+                'contentOptions' => ['style' => 'text-align:center; vertical-align: middle; width: 30px'],
+                'class' => 'yii\grid\ActionColumn',
+                'template' => '{choose}',
+                'buttons' => [
+                    'choose' => function($url, $model) {
+                        return Html::a('选择', ['payorder', 'order' => $_SESSION['curOrder'], 'vem' => $model->vem_id],
+                            ['class' => 'btn btn-sm btn-success', 'style' => 'font-size: x-small']);
+                    }
+                ]
             ],
         ],
     ]); ?>
 </div>
+
+<form class="hidden" id="vem_form" action="./index.php?r=buy/payorder" method="post">
+    <input type="text" id="vem_id"/>
+</form>
 
 <script>
     /**
@@ -172,4 +183,5 @@ $this->params['breadcrumbs'][] = $this->title;
             alert('上传失败！请重新上传！');
         }
     }
+
 </script>
