@@ -104,8 +104,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/buy/payorder.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
-              <caret line="41" column="125" selection-start-line="41" selection-start-column="125" selection-end-line="41" selection-end-column="125" />
+            <state relative-caret-position="528">
+              <caret line="161" column="104" selection-start-line="161" selection-start-column="104" selection-end-line="161" selection-end-column="104" />
               <folding>
                 <element signature="e#6#30#0#PHP" expanded="true" />
                 <element signature="e#32#67#0#PHP" expanded="true" />
@@ -505,12 +505,12 @@
       <workItem from="1559051949511" duration="580000" />
       <workItem from="1559112482930" duration="8829000" />
       <workItem from="1559190587155" duration="8120000" />
-      <workItem from="1559292983413" duration="7638000" />
+      <workItem from="1559292983413" duration="7723000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="251443000" />
+    <option name="totallyTimeSpent" value="251528000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1688" y="16" width="1696" height="1026" extended-state="6" />
@@ -947,8 +947,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/buy/payorder.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="41" column="125" selection-start-line="41" selection-start-column="125" selection-end-line="41" selection-end-column="125" />
+        <state relative-caret-position="528">
+          <caret line="161" column="104" selection-start-line="161" selection-start-column="104" selection-end-line="161" selection-end-column="104" />
           <folding>
             <element signature="e#6#30#0#PHP" expanded="true" />
             <element signature="e#32#67#0#PHP" expanded="true" />

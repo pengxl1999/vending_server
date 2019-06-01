@@ -159,7 +159,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         }
                         else if($model->vem_id == \app\models\BuyStatus::$vemChosen) {
                             return '
-                                <p style="font-size: x-small">已选择</p>
+                                <p style="font-size: x-small; text-align: center; vertical-align: middle">已选择</p>
                             ';
                         }
                         else {
