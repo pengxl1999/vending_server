@@ -39,8 +39,8 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             [
                 'class' => 'yii\grid\SerialColumn',
-                'headerOptions' => ['style' => 'text-align:center', 'width' => '20'],
-                'contentOptions' => ['style' => 'text-align:center', 'width' => '20'],
+                'headerOptions' => ['style' => 'text-align:center; font-size: x-small; vertical-align: middle; width: 20px'],
+                'contentOptions' => ['style' => 'text-align:center; font-size: x-small; vertical-align: middle; width: 20px'],
             ],
             //'cc_id',
             //'c_id',
@@ -52,8 +52,8 @@ $this->params['breadcrumbs'][] = $this->title;
                     $medicine = \app\models\Medicine::findOne(['m_id' => $model->m_id]);
                     return Html::img('images/medicine/'.$medicine->img, ['alt' => $medicine->name, 'width' => '80']);
                 },
-                'headerOptions' => ['style' => 'text-align:center', 'width' => '80'],
-                'contentOptions' => ['align' => 'center'],
+                'headerOptions' => ['style' => 'text-align:center; font-size: x-small; vertical-align: middle; width: 80px'],
+                'contentOptions' => ['style' => 'font-size: x-small; vertical-align: middle; width: 80px', 'align' => 'center'],
             ],
             [
                 'label' => '药品名称',
@@ -66,8 +66,8 @@ $this->params['breadcrumbs'][] = $this->title;
                     }
                     return $medicine->name;
                 },
-                'headerOptions' => ['style' => 'text-align:center', 'width' => '200'],
-                'contentOptions' => ['align' => 'center', 'width' => '200'],
+                'headerOptions' => ['style' => 'text-align:center; font-size: x-small; vertical-align: middle; width: 200px'],
+                'contentOptions' => ['style' => 'text-align:center; font-size: x-small; vertical-align: middle; width: 200px'],
             ],
             [
                 'label' => '价格',
@@ -76,8 +76,8 @@ $this->params['breadcrumbs'][] = $this->title;
                     $medicine = \app\models\Medicine::findOne(['m_id' => $model->m_id]);
                     return $medicine->money;
                 },
-                'headerOptions' => ['style' => 'text-align:center'],
-                'contentOptions' => ['style' => 'text-align:center'],
+                'headerOptions' => ['style' => 'text-align:center; font-size: x-small; vertical-align: middle'],
+                'contentOptions' => ['style' => 'text-align:center; font-size: x-small; vertical-align: middle'],
             ],
             //'cc_medicine',
             [
@@ -88,8 +88,8 @@ $this->params['breadcrumbs'][] = $this->title;
 //                    \app\models\BuyStatus::$totalAmount += $medicine->money * $model->cc_num;
                     return $model->num;
                 },
-                'headerOptions' => ['style' => 'text-align:center', 'width' => '50'],
-                'contentOptions' => ['style' => 'text-align:center', 'width' => '50'],
+                'headerOptions' => ['style' => 'text-align:center; font-size: x-small; vertical-align: middle; width: 50px'],
+                'contentOptions' => ['style' => 'text-align:center; font-size: x-small; vertical-align: middle; width: 50px'],
             ],
             //'cc_num',
         ],
@@ -158,7 +158,9 @@ $this->params['breadcrumbs'][] = $this->title;
                                 ['class' => 'btn btn-sm btn-success', 'style' => 'font-size: x-small']);
                         }
                         else if($model->vem_id == \app\models\BuyStatus::$vemChosen) {
-                            return '已选择';
+                            return '
+                                <p style="font-size: x-small">已选择</p>
+                            ';
                         }
                         else {
                             return Html::a('选择', ['payorder', 'order' => $_SESSION['curOrder'], 'vem' => $model->vem_id],
