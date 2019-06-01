@@ -95,7 +95,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                         'style' => 'font-size:xx-small']);
                             case \app\models\AppointmentStatus::$ALREADY_PAID:
                                 return Html::a('取货码', null, ['class' => "btn btn-sm btn-success",
-                                    'style' => 'font-size:xx-small', 'onclick' => "window.android.createQRCode('".$model->ca_order."',".$model->m_id.",".$model->num.")"]);
+                                    'style' => 'font-size:xx-small', 'onclick' => "window.android.createQRCode('".$model->ca_order."',".$model->m_id.",".$model->num.",". $model->v_id .")"]);
                             case \app\models\AppointmentStatus::$ALREADY_FINISHED:
                                 return null;
                             case \app\models\AppointmentStatus::$TIME_OUT:
