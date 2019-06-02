@@ -25,6 +25,7 @@ use app\models\LoginForm;
 use app\models\BuyStatus;
 
 require "../vendor/alipay/wappay/buildermodel/AlipayTradeWapPayContentBuilder.php";
+require "../vendor/alipay/wappay/buildermodel/AlipayTradeRefundContentBuilder.php";
 require "../vendor/alipay/wappay/service/AlipayTradeService.php";
 
 class BuyController extends Controller
