@@ -343,15 +343,15 @@ class BuyController extends Controller
             $this->redirect(['index']);
         }
 
-        $alipay = new \AlipayTradeRefundContentBuilder();
-        $alipay->setOutTradeNo($order);
-        $alipay->setRefundAmount($refundAmount);
-        $alipay->setRefundReason("预约退款");
+        $refund = new \AlipayTradeRefundContentBuilder();
+        $refund->setOutTradeNo($order);
+        $refund->setRefundAmount($refundAmount);
+        $refund->setRefundReason("预约退款");
 
         $config = Yii::$app->params['refund'];
         $service = new \AlipayTradeService($config);
-        $result = $service->Refund($alipay);
-        var_dump($result);
+        $result = $service->Refund($refund);
+        return $this->render('refund', $result);
     }
 
     /**
@@ -429,10 +429,6 @@ class BuyController extends Controller
             echo "fail";	//请不要修改或删除
 
         }
-    }
-
-    public function actionRefundsuccess() {
-        return $this->render('refundsuccess');
     }
 
     /**
