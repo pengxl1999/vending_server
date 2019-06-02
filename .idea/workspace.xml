@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0c26af8a-ea14-46e8-b49b-092b940b5c83" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/runtime/debug/index.data" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/debug/index.data" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/buy/payorder.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/buy/payorder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/buy/purchase.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/buy/purchase.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -116,8 +114,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/buy/purchase.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="735">
-              <caret line="156" column="20" lean-forward="true" selection-start-line="156" selection-start-column="20" selection-end-line="156" selection-end-column="20" />
+            <state relative-caret-position="495">
+              <caret line="160" column="26" selection-start-line="160" selection-start-column="26" selection-end-line="160" selection-end-column="26" />
               <folding>
                 <element signature="e#7#45#0#PHP" expanded="true" />
                 <element signature="n#style#0;n#strong#0;n#h1#0;n#div#0;n#!!top" expanded="true" />
@@ -479,12 +477,12 @@
       <workItem from="1559112482930" duration="8829000" />
       <workItem from="1559190587155" duration="8120000" />
       <workItem from="1559292983413" duration="11006000" />
-      <workItem from="1559445833688" duration="21044000" />
+      <workItem from="1559445833688" duration="21333000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="275855000" />
+    <option name="totallyTimeSpent" value="276144000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1688" y="16" width="1696" height="1026" extended-state="6" />
@@ -939,8 +937,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/buy/purchase.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="156" column="20" lean-forward="true" selection-start-line="156" selection-start-column="20" selection-end-line="156" selection-end-column="20" />
+        <state relative-caret-position="495">
+          <caret line="160" column="26" selection-start-line="160" selection-start-column="26" selection-end-line="160" selection-end-column="26" />
           <folding>
             <element signature="e#7#45#0#PHP" expanded="true" />
             <element signature="n#style#0;n#strong#0;n#h1#0;n#div#0;n#!!top" expanded="true" />
