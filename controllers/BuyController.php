@@ -437,7 +437,7 @@ class BuyController extends Controller
             }
             echo strtotime(date("Y-m-d H:i:s"));
             echo "\n";
-            echo date_timestamp_get(date_create($appointment->deadline);
+            echo date_timestamp_get(date_create($appointment->deadline));
             echo "\n";
             if(strtotime(date("Y-m-d H:i:s")) > date_timestamp_get(date_create($appointment->deadline))
                 && $appointment->status == AppointmentStatus::$ALREADY_PAID) {
