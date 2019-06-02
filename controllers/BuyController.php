@@ -397,6 +397,40 @@ class BuyController extends Controller
         return $this->render('success', ['order' => $out_trade_no]);
     }
 
+    public function notify_url() {
+
+        $config = Yii::$app->params['refund'];
+
+        $arr=$_POST;
+        $alipaySevice = new AlipayTradeService($config);
+        $alipaySevice->writeLog(var_export($_POST,true));
+        $result = $alipaySevice->check($arr);
+
+        /* 实际验证过程建议商户添加以下校验。
+        1、商户需要验证该通知数据中的out_trade_no是否为商户系统中创建的订单号，
+        2、判断total_amount是否确实为该订单的实际金额（即商户订单创建时的金额），
+        3、校验通知中的seller_id（或者seller_email) 是否为out_trade_no这笔单据的对应的操作方（有的时候，一个商户可能有多个seller_id/seller_email）
+        4、验证app_id是否为该商户本身。
+        */
+        if($result) {//验证成功
+            /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            //请在这里加上商户的业务逻辑程序代
+
+
+            //——请根据您的业务逻辑来编写程序（以下代码仅作参考）——
+
+            //获取支付宝的通知返回参数，可参考技术文档中服务器异步通知参数列表
+
+
+            echo "success";		//请不要修改或删除
+
+        }else {
+            //验证失败
+            echo "fail";	//请不要修改或删除
+
+        }
+    }
+
     public function actionRefundsuccess() {
         return $this->render('refundsuccess');
     }
