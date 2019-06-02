@@ -348,7 +348,7 @@ class BuyController extends Controller
         $alipay->setRefundAmount($refundAmount);
         $alipay->setRefundReason("预约退款");
 
-        $config = Yii::$app->params['alipay'];
+        $config = Yii::$app->params['refund'];
         $service = new \AlipayTradeService($config);
         $result = $service->Refund($alipay);
         var_dump($result);
@@ -395,6 +395,10 @@ class BuyController extends Controller
             $appointment->save();
         }
         return $this->render('success', ['order' => $out_trade_no]);
+    }
+
+    public function actionRefundsuccess() {
+        return $this->render('refundsuccess');
     }
 
     /**
