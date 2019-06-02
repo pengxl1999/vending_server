@@ -245,16 +245,7 @@ class BuyController extends Controller
             return $this->redirect(['index']);
         }
 
-        $searchModel = new VemSearch();
-        $dataProvider1 = $searchModel->search(Yii::$app->request->queryParams);     //售货机信息provider
-
-        return $this->render('addr', [
-            'mMoney' => $mMoney,
-            'order' => $order,
-            'dataProvider' => $dataProvider,
-            'dataProvider1' => $dataProvider1,
-            'searchModel' => $searchModel,
-        ]);
+        return $this->redirect(['payorder', 'order' => $order]);
     }
 
     /**
