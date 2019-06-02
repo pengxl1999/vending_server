@@ -122,7 +122,8 @@ $this->params['breadcrumbs'][] = $this->title;
                                     ['class' => "btn btn-sm btn-danger"
                                         , 'style' => 'font-size:xx-small; margin-top: 5px']);
                             case \app\models\AppointmentStatus::$ALREADY_PAID:
-                                return null;
+                                return Html::a('退款', ['buy/refund', 'order' => $model->ca_order],
+                                    ['class' => "btn btn-sm btn-danger", 'style' => 'font-size:xx-small; margin-top: 5px']);
                             case \app\models\AppointmentStatus::$ALREADY_FINISHED:
                                 return null;
                             case \app\models\AppointmentStatus::$TIME_OUT:
@@ -132,7 +133,8 @@ $this->params['breadcrumbs'][] = $this->title;
                                 return Html::a('取消', ['buy/purchase', 'cancel' => $model->ca_order],
                                     ['class' => "btn btn-sm btn-danger", 'style' => 'font-size:xx-small; margin-top: 5px']);
                             case \app\models\AppointmentStatus::$DEADLINE_EXCEED:
-                                return null;        //退款
+                                return Html::a('退款', ['buy/refund', 'order' => $model->ca_order],
+                                    ['class' => "btn btn-sm btn-danger", 'style' => 'font-size:xx-small; margin-top: 5px']);
                             default:
                                 return "错误！";
                         }

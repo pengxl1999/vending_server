@@ -18,6 +18,7 @@ use Yii;
  * @property int $num
  * @property string $img
  * @property int $pa_id
+ * @property string $money
  *
  * @property User $c
  * @property Medicine $m
@@ -43,6 +44,7 @@ class CustomerAppointment extends \yii\db\ActiveRecord
             [['c_id', 'm_id'], 'required'],
             [['c_id', 'm_id', 'status', 'v_id', 'num', 'pa_id'], 'integer'],
             [['ca_time', 'deadline'], 'safe'],
+            [['money'], 'number'],
             [['ca_order'], 'string', 'max' => 32],
             [['img'], 'string', 'max' => 255],
             [['c_id'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['c_id' => 'id']],
@@ -69,6 +71,7 @@ class CustomerAppointment extends \yii\db\ActiveRecord
             'num' => '数量',
             'img' => 'Img',
             'pa_id' => 'Pa ID',
+            'money' => 'Money',
         ];
     }
 
@@ -104,7 +107,8 @@ class CustomerAppointment extends \yii\db\ActiveRecord
         return $this->hasOne(PharmacistAppointment::className(), ['pa_id' => 'pa_id']);
     }
 
-    public static function getMaxID() {
+    public static function getMaxID()
+    {
         return CustomerAppointment::find()->max('ca_id');
     }
 }

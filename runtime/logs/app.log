@@ -25206,3 +25206,200 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1559462129.384
     'REQUEST_TIME' => 1559462129
 ]
+2019-06-02 16:53:09 [::1][0][k98lsvrfsjeibmnqrksit9a9df][error][Error] Error: Call to undefined method app\models\CustomerAppointment::getMaxID() in E:\xampp\htdocs\basic\controllers\BuyController.php:413
+Stack trace:
+#0 E:\xampp\htdocs\basic\controllers\BuyController.php(240): app\controllers\BuyController->createOrder(Object(yii\data\ActiveDataProvider))
+#1 [internal function]: app\controllers\BuyController->actionAddr('-1', '10', false)
+#2 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('addr', Array)
+#5 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('buy/addr', Array)
+#6 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 E:\xampp\htdocs\basic\web\index.php(12): yii\base\Application->run()
+#8 {main}
+2019-06-02 16:53:08 [::1][0][k98lsvrfsjeibmnqrksit9a9df][info][application] $_GET = [
+    'r' => 'buy/addr'
+    'cart' => '-1'
+    'mMoney' => '10'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Phpstorm-669499eb' => 'd4c24652-d7f0-4aa9-96f5-594c93671c41'
+    '_identity' => 'bafcae2801332795a28f7679205fd393554cb3c4be5d247a8fe8663d1f8e5ba4a:2:{i:0;s:9:\"_identity\";i:1;s:14:\"[0,\"\",2592000]\";}'
+    'PHPSESSID' => 'k98lsvrfsjeibmnqrksit9a9df'
+    '_csrf' => '7a1b688787508f99bbb760042ba14a75812a0b447a95f3873a4c265060d0228da:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"DqJkuKQ_-Bbz-VEtjUVDgRfHvULEASpN\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 0
+    'userId' => '0'
+    'curOrder' => '201906021542260'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://localhost:8080/basic/web/index.php?r=buy%2Fcart&medId=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'Phpstorm-669499eb=d4c24652-d7f0-4aa9-96f5-594c93671c41; _identity=bafcae2801332795a28f7679205fd393554cb3c4be5d247a8fe8663d1f8e5ba4a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A14%3A%22%5B0%2C%22%22%2C2592000%5D%22%3B%7D; PHPSESSID=k98lsvrfsjeibmnqrksit9a9df; _csrf=7a1b688787508f99bbb760042ba14a75812a0b447a95f3873a4c265060d0228da%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22DqJkuKQ_-Bbz-VEtjUVDgRfHvULEASpN%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\VanDyke Software\\Clients\\;E:\\Python27\\;E:\\Python27\\Scripts;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\dotnet\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Java\\jdk1.8.0_172\\bin;E:\\android_sdk\\platform-tools;E:\\android_sdk\\tools;E:\\Program Files (x86)\\opencv\\build\\x64\\vc15\\bin;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;E:\\MinGW\\include;E:\\MinGW\\lib;E:\\Python;E:\\Program Files\\Git\\cmd;C:\\Users\\Peng\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files\\Java\\jdk1.8.0_172\\bin;;E:\\Program Files\\Microsoft VS Code\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4 Server at localhost Port 8080</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'E:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/xampp/htdocs/basic/web/index.php'
+    'REMOTE_PORT' => '60413'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=buy%2Faddr&cart=-1&mMoney=10'
+    'REQUEST_URI' => '/basic/web/index.php?r=buy%2Faddr&cart=-1&mMoney=10'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1559465588.797
+    'REQUEST_TIME' => 1559465588
+]
+2019-06-02 16:53:44 [::1][0][k98lsvrfsjeibmnqrksit9a9df][error][yii\db\Exception] PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id' in 'field list' in E:\xampp\htdocs\basic\vendor\yiisoft\yii2\db\Command.php:1290
+Stack trace:
+#0 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\db\Command.php(1290): PDOStatement->execute()
+#1 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\db\Command.php(1158): yii\db\Command->internalExecute('SELECT MAX(id) ...')
+#2 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\db\Command.php(425): yii\db\Command->queryInternal('fetchColumn', 0)
+#3 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\db\Query.php(463): yii\db\Command->queryScalar()
+#4 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\db\ActiveQuery.php(352): yii\db\Query->queryScalar('MAX(id)', Object(yii\db\Connection))
+#5 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\db\Query.php(407): yii\db\ActiveQuery->queryScalar('MAX(id)', Object(yii\db\Connection))
+#6 E:\xampp\htdocs\basic\models\CustomerAppointment.php(112): yii\db\Query->max('id')
+#7 E:\xampp\htdocs\basic\controllers\BuyController.php(413): app\models\CustomerAppointment::getMaxID()
+#8 E:\xampp\htdocs\basic\controllers\BuyController.php(240): app\controllers\BuyController->createOrder(Object(yii\data\ActiveDataProvider))
+#9 [internal function]: app\controllers\BuyController->actionAddr('-1', '20', false)
+#10 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#11 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#12 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('addr', Array)
+#13 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('buy/addr', Array)
+#14 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#15 E:\xampp\htdocs\basic\web\index.php(12): yii\base\Application->run()
+#16 {main}
+
+Next yii\db\Exception: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id' in 'field list'
+The SQL being executed was: SELECT MAX(id) FROM `customer_appointment` in E:\xampp\htdocs\basic\vendor\yiisoft\yii2\db\Schema.php:664
+Stack trace:
+#0 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\db\Command.php(1295): yii\db\Schema->convertException(Object(PDOException), 'SELECT MAX(id) ...')
+#1 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\db\Command.php(1158): yii\db\Command->internalExecute('SELECT MAX(id) ...')
+#2 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\db\Command.php(425): yii\db\Command->queryInternal('fetchColumn', 0)
+#3 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\db\Query.php(463): yii\db\Command->queryScalar()
+#4 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\db\ActiveQuery.php(352): yii\db\Query->queryScalar('MAX(id)', Object(yii\db\Connection))
+#5 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\db\Query.php(407): yii\db\ActiveQuery->queryScalar('MAX(id)', Object(yii\db\Connection))
+#6 E:\xampp\htdocs\basic\models\CustomerAppointment.php(112): yii\db\Query->max('id')
+#7 E:\xampp\htdocs\basic\controllers\BuyController.php(413): app\models\CustomerAppointment::getMaxID()
+#8 E:\xampp\htdocs\basic\controllers\BuyController.php(240): app\controllers\BuyController->createOrder(Object(yii\data\ActiveDataProvider))
+#9 [internal function]: app\controllers\BuyController->actionAddr('-1', '20', false)
+#10 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#11 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#12 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('addr', Array)
+#13 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('buy/addr', Array)
+#14 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#15 E:\xampp\htdocs\basic\web\index.php(12): yii\base\Application->run()
+#16 {main}
+Additional Information:
+Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'id' in 'field list'
+)
+
+2019-06-02 16:53:44 [::1][0][k98lsvrfsjeibmnqrksit9a9df][info][application] $_GET = [
+    'r' => 'buy/addr'
+    'cart' => '-1'
+    'mMoney' => '20'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Phpstorm-669499eb' => 'd4c24652-d7f0-4aa9-96f5-594c93671c41'
+    '_identity' => 'bafcae2801332795a28f7679205fd393554cb3c4be5d247a8fe8663d1f8e5ba4a:2:{i:0;s:9:\"_identity\";i:1;s:14:\"[0,\"\",2592000]\";}'
+    'PHPSESSID' => 'k98lsvrfsjeibmnqrksit9a9df'
+    '_csrf' => '7a1b688787508f99bbb760042ba14a75812a0b447a95f3873a4c265060d0228da:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"DqJkuKQ_-Bbz-VEtjUVDgRfHvULEASpN\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 0
+    'userId' => '0'
+    'curOrder' => '201906021542260'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://localhost:8080/basic/web/index.php?r=buy%2Fcart&medId=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'Phpstorm-669499eb=d4c24652-d7f0-4aa9-96f5-594c93671c41; _identity=bafcae2801332795a28f7679205fd393554cb3c4be5d247a8fe8663d1f8e5ba4a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A14%3A%22%5B0%2C%22%22%2C2592000%5D%22%3B%7D; PHPSESSID=k98lsvrfsjeibmnqrksit9a9df; _csrf=7a1b688787508f99bbb760042ba14a75812a0b447a95f3873a4c265060d0228da%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22DqJkuKQ_-Bbz-VEtjUVDgRfHvULEASpN%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\VanDyke Software\\Clients\\;E:\\Python27\\;E:\\Python27\\Scripts;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\dotnet\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Java\\jdk1.8.0_172\\bin;E:\\android_sdk\\platform-tools;E:\\android_sdk\\tools;E:\\Program Files (x86)\\opencv\\build\\x64\\vc15\\bin;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;E:\\MinGW\\include;E:\\MinGW\\lib;E:\\Python;E:\\Program Files\\Git\\cmd;C:\\Users\\Peng\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files\\Java\\jdk1.8.0_172\\bin;;E:\\Program Files\\Microsoft VS Code\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4 Server at localhost Port 8080</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'E:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/xampp/htdocs/basic/web/index.php'
+    'REMOTE_PORT' => '60511'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=buy%2Faddr&cart=-1&mMoney=20'
+    'REQUEST_URI' => '/basic/web/index.php?r=buy%2Faddr&cart=-1&mMoney=20'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1559465624.393
+    'REQUEST_TIME' => 1559465624
+]

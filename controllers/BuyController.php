@@ -327,6 +327,29 @@ class BuyController extends Controller
     }
 
     /**
+     * 支付宝退款
+     * @param $order
+     * @throws \Exception
+     */
+    public function actionRefund($order) {
+        $refundAmount = 0;
+        $appointments = CustomerAppointment::findAll(['ca_order' => $order]);
+        foreach ($appointments as $appointment) {
+            $refundAmount += $appointment->money;
+        }
+
+        $alipay = new \AlipayTradeRefundContentBuilder();
+        $alipay->setOutTradeNo($order);
+        $alipay->setRefundAmount($refundAmount);
+        $alipay->setRefundReason("预约退款");
+
+        $config = Yii::$app->params['alipay'];
+        $service = new \AlipayTradeService($config);
+        $result = $service->Refund($alipay);
+        var_dump($result);
+    }
+
+    /**
      * 支付宝支付成功返回页面
      * @throws \Exception
      */
@@ -414,6 +437,10 @@ class BuyController extends Controller
             $customerAppointment->deadline = date("Y-m-d H:i:s", strtotime($date. "+2 day"));
             $customerAppointment->status = 0;
             $customerAppointment->num = $model->cc_num;
+
+            $medicine = Medicine::findOne(['m_id' => $model->cc_medicine]);
+            $customerAppointment->money = $medicine->money * $model->cc_num;
+
             if(!$customerAppointment->save()) {
                 return -1;
             }

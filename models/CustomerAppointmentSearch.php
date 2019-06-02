@@ -19,6 +19,7 @@ class CustomerAppointmentSearch extends CustomerAppointment
         return [
             [['ca_id', 'c_id', 'm_id', 'status', 'v_id', 'num', 'pa_id'], 'integer'],
             [['ca_order', 'ca_time', 'deadline', 'img'], 'safe'],
+            [['money'], 'number'],
         ];
     }
 
@@ -67,6 +68,7 @@ class CustomerAppointmentSearch extends CustomerAppointment
             'deadline' => $this->deadline,
             'num' => $this->num,
             'pa_id' => $this->pa_id,
+            'money' => $this->money,
         ]);
 
         $query->andFilterWhere(['like', 'ca_order', $this->ca_order])
