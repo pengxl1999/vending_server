@@ -354,6 +354,9 @@ class BuyController extends Controller
         $result = $service->Refund($refund);
         $resultCode = $result->code;
         if(!empty($resultCode) && $resultCode == 10000) {
+            foreach ($appointments as $appointment) {
+                $appointment->delete();
+            }
             return $this->render('refund', [
                 'success' => true,
             ]);
