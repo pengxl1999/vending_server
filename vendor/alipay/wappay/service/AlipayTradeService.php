@@ -101,7 +101,7 @@ class AlipayTradeService {
 		$aop->format= $this->format;
 		$aop->signType=$this->signtype;
 		// 开启页面信息输出
-		$aop->debugInfo=true;
+		$aop->debugInfo=false;
 		if($ispage)
 		{
 			$result = $aop->pageExecute($request,"post");
