@@ -101,7 +101,6 @@ class AlipayTradeService {
 		$aop->format= $this->format;
 		$aop->signType=$this->signtype;
 		// 开启页面信息输出
-		$aop->debugInfo=false;
 		if($ispage)
 		{
 			$result = $aop->pageExecute($request,"post");
@@ -151,7 +150,7 @@ class AlipayTradeService {
 		// 首先调用支付api
 		$response = $this->aopclientRequestExecute ($request);
 		$response = $response->alipay_trade_refund_response;
-		var_dump($response);
+		//var_dump($response);
 		return $response;
 	}
 
