@@ -122,26 +122,26 @@ $this->params['breadcrumbs'][] = $this->title;
                     'cancel' => function ($url, $model) {
                         switch ($model->status) {
                             case \app\models\AppointmentStatus::$NOT_PAID:
-                                return Html::a('取消', ['buy/purchase', 'cancel' => $model->ca_order],
-                                    ['class' => "btn btn-sm btn-danger", 'style' => 'font-size:xx-small; margin-top: 5px', 'onclick' => 'confirmDelete("取消")']);
+                                return Html::a('取消', null,
+                                    ['class' => "btn btn-sm btn-danger", 'style' => 'font-size:xx-small; margin-top: 5px', 'onclick' => 'confirmDelete("取消",'. $model->ca_order . ')']);
                             case \app\models\AppointmentStatus::$ALREADY_PAID:
-                                return Html::a('退款', ['buy/refund', 'order' => $model->ca_order],
-                                    ['class' => "btn btn-sm btn-danger", 'style' => 'font-size:xx-small; margin-top: 5px', 'onclick' => 'confirmDelete("退款")']);
+                                return Html::a('退款', null,
+                                    ['class' => "btn btn-sm btn-danger", 'style' => 'font-size:xx-small; margin-top: 5px', 'onclick' => 'confirmDelete("退款",'. $model->ca_order . ')']);
                             case \app\models\AppointmentStatus::$ALREADY_FINISHED:
-                                return Html::a('删除', ['buy/purchase', 'cancel' => $model->ca_order],
-                                    ['class' => "btn btn-sm btn-danger", 'style' => 'font-size:xx-small; margin-top: 5px', 'onclick' => 'confirmDelete("删除")']);
+                                return Html::a('删除', null,
+                                    ['class' => "btn btn-sm btn-danger", 'style' => 'font-size:xx-small; margin-top: 5px', 'onclick' => 'confirmDelete("删除",'. $model->ca_order . ')']);
                             case \app\models\AppointmentStatus::$TIME_OUT:
-                                return Html::a('删除', ['buy/purchase', 'cancel' => $model->ca_order],
-                                    ['class' => "btn btn-sm btn-danger", 'style' => 'font-size:xx-small; margin-top: 5px', 'onclick' => 'confirmDelete("删除")']);
+                                return Html::a('删除', null,
+                                    ['class' => "btn btn-sm btn-danger", 'style' => 'font-size:xx-small; margin-top: 5px', 'onclick' => 'confirmDelete("删除",'. $model->ca_order . ')']);
                             case \app\models\AppointmentStatus::$CHECKING:
-                                return Html::a('取消', ['buy/purchase', 'cancel' => $model->ca_order],
-                                    ['class' => "btn btn-sm btn-danger", 'style' => 'font-size:xx-small; margin-top: 5px', 'onclick' => 'confirmDelete("取消")']);
+                                return Html::a('取消', null,
+                                    ['class' => "btn btn-sm btn-danger", 'style' => 'font-size:xx-small; margin-top: 5px', 'onclick' => 'confirmDelete("取消",'. $model->ca_order . ')']);
                             case \app\models\AppointmentStatus::$DEADLINE_EXCEED:
-                                return Html::a('退款', ['buy/refund', 'order' => $model->ca_order],
-                                    ['class' => "btn btn-sm btn-danger", 'style' => 'font-size:xx-small; margin-top: 5px', 'onclick' => 'confirmDelete("退款")']);
+                                return Html::a('退款', null,
+                                    ['class' => "btn btn-sm btn-danger", 'style' => 'font-size:xx-small; margin-top: 5px', 'onclick' => 'confirmDelete("退款"),'. $model->ca_order . ')']);
                             case \app\models\AppointmentStatus::$ALREADY_REFUND:
-                                return Html::a('删除', ['buy/purchase', 'cancel' => $model->ca_order],
-                                    ['class' => "btn btn-sm btn-danger", 'style' => 'font-size:xx-small; margin-top: 5px', 'onclick' => 'confirmDelete("删除")']);
+                                return Html::a('删除', null,
+                                    ['class' => "btn btn-sm btn-danger", 'style' => 'font-size:xx-small; margin-top: 5px', 'onclick' => 'confirmDelete("删除"),'. $model->ca_order . ')']);
                             default:
                                 return "错误！";
                         }
@@ -152,7 +152,10 @@ $this->params['breadcrumbs'][] = $this->title;
     ]); ?>
 </div>
 <script>
-    function confirmDelete(message) {
-        alert(message);
+    function confirmDelete(message, order) {
+        var result = confirm(message);
+        if(result) {
+            window.location.href = "./index.php?r=buy/purchase&cancel=" + order;
+        }
     }
 </script>

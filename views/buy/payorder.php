@@ -176,8 +176,8 @@ $this->params['breadcrumbs'][] = $this->title;
     /**
      * Android反馈信息，检测是否上传成功
      */
-    function getResultFromAndroid(isSuccess, order) {
-        if(isSuccess) {
+    function getResultFromAndroid(success, order) {
+        if(success) {
             window.location.href = "./index.php?r=buy/purchase&checking=" + order;
         }
         else {
