@@ -71,7 +71,7 @@ class CustomerAppointment extends \yii\db\ActiveRecord
             'num' => '数量',
             'img' => 'Img',
             'pa_id' => 'Pa ID',
-            'money' => 'Money',
+            'money' => '金额',
         ];
     }
 

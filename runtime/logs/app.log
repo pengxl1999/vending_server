@@ -25403,3 +25403,190 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1559465624.393
     'REQUEST_TIME' => 1559465624
 ]
+2019-06-02 14:30:01 [::1][0][k98lsvrfsjeibmnqrksit9a9df][error][yii\base\InvalidConfigException] yii\base\InvalidConfigException: The attribute configuration requires the "attribute" element to determine the value and display label. in E:\xampp\htdocs\basic\vendor\yiisoft\yii2\widgets\DetailView.php:241
+Stack trace:
+#0 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\widgets\DetailView.php(143): yii\widgets\DetailView->normalizeAttributes()
+#1 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\widgets\DetailView->init()
+#2 [internal function]: yii\base\BaseObject->__construct(Array)
+#3 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\di\Container.php(384): ReflectionClass->newInstanceArgs(Array)
+#4 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\di\Container.php(156): yii\di\Container->build('yii\\widgets\\Det...', Array, Array)
+#5 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\BaseYii.php(349): yii\di\Container->get('yii\\widgets\\Det...', Array, Array)
+#6 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Widget.php(137): yii\BaseYii::createObject(Array)
+#7 E:\xampp\htdocs\basic\views\buy\purchasedetail.php(25): yii\base\Widget::widget(Array)
+#8 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\View.php(348): require('E:\\xampp\\htdocs...')
+#9 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('E:\\xampp\\htdocs...', Array)
+#10 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('E:\\xampp\\htdocs...', Array, Object(app\controllers\BuyController))
+#11 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render('purchasedetail', Array, Object(app\controllers\BuyController))
+#12 E:\xampp\htdocs\basic\controllers\BuyController.php(140): yii\base\Controller->render('purchasedetail', Array)
+#13 [internal function]: app\controllers\BuyController->actionPurchasedetail('201905291616500')
+#14 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#15 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#16 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('purchasedetail', Array)
+#17 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('buy/purchasedet...', Array)
+#18 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#19 E:\xampp\htdocs\basic\web\index.php(12): yii\base\Application->run()
+#20 {main}
+2019-06-02 14:30:01 [::1][0][k98lsvrfsjeibmnqrksit9a9df][info][application] $_GET = [
+    'r' => 'buy/purchasedetail'
+    'order' => '201905291616500'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Phpstorm-669499eb' => 'd4c24652-d7f0-4aa9-96f5-594c93671c41'
+    '_identity' => 'bafcae2801332795a28f7679205fd393554cb3c4be5d247a8fe8663d1f8e5ba4a:2:{i:0;s:9:\"_identity\";i:1;s:14:\"[0,\"\",2592000]\";}'
+    'PHPSESSID' => 'k98lsvrfsjeibmnqrksit9a9df'
+    '_csrf' => '7a1b688787508f99bbb760042ba14a75812a0b447a95f3873a4c265060d0228da:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"DqJkuKQ_-Bbz-VEtjUVDgRfHvULEASpN\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 0
+    'userId' => '0'
+    'curOrder' => '201906021654040'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://localhost:8080/basic/web/index.php?r=buy%2Fpurchase'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'Phpstorm-669499eb=d4c24652-d7f0-4aa9-96f5-594c93671c41; _identity=bafcae2801332795a28f7679205fd393554cb3c4be5d247a8fe8663d1f8e5ba4a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A14%3A%22%5B0%2C%22%22%2C2592000%5D%22%3B%7D; PHPSESSID=k98lsvrfsjeibmnqrksit9a9df; _csrf=7a1b688787508f99bbb760042ba14a75812a0b447a95f3873a4c265060d0228da%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22DqJkuKQ_-Bbz-VEtjUVDgRfHvULEASpN%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\VanDyke Software\\Clients\\;E:\\Python27\\;E:\\Python27\\Scripts;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\dotnet\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Java\\jdk1.8.0_172\\bin;E:\\android_sdk\\platform-tools;E:\\android_sdk\\tools;E:\\Program Files (x86)\\opencv\\build\\x64\\vc15\\bin;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;E:\\MinGW\\include;E:\\MinGW\\lib;E:\\Python;E:\\Program Files\\Git\\cmd;C:\\Users\\Peng\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files\\Java\\jdk1.8.0_172\\bin;;E:\\Program Files\\Microsoft VS Code\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4 Server at localhost Port 8080</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'E:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/xampp/htdocs/basic/web/index.php'
+    'REMOTE_PORT' => '57496'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=buy%2Fpurchasedetail&order=201905291616500'
+    'REQUEST_URI' => '/basic/web/index.php?r=buy%2Fpurchasedetail&order=201905291616500'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1559478601.453
+    'REQUEST_TIME' => 1559478601
+]
+2019-06-02 14:35:48 [::1][0][k98lsvrfsjeibmnqrksit9a9df][error][yii\base\ErrorException:8] yii\base\ErrorException: Trying to get property 'vem_location' of non-object in E:\xampp\htdocs\basic\views\buy\purchasedetail.php:65
+Stack trace:
+#0 E:\xampp\htdocs\basic\views\buy\purchasedetail.php(65): yii\base\ErrorHandler->handleError(8, 'Trying to get p...', 'E:\\xampp\\htdocs...', 65, Array)
+#1 [internal function]: yii\base\View->{closure}(Object(app\models\CustomerAppointment), Object(yii\widgets\DetailView))
+#2 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\widgets\DetailView.php(245): call_user_func(Object(Closure), Object(app\models\CustomerAppointment), Object(yii\widgets\DetailView))
+#3 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\widgets\DetailView.php(143): yii\widgets\DetailView->normalizeAttributes()
+#4 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\widgets\DetailView->init()
+#5 [internal function]: yii\base\BaseObject->__construct(Array)
+#6 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\di\Container.php(384): ReflectionClass->newInstanceArgs(Array)
+#7 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\di\Container.php(156): yii\di\Container->build('yii\\widgets\\Det...', Array, Array)
+#8 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\BaseYii.php(349): yii\di\Container->get('yii\\widgets\\Det...', Array, Array)
+#9 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Widget.php(137): yii\BaseYii::createObject(Array)
+#10 E:\xampp\htdocs\basic\views\buy\purchasedetail.php(72): yii\base\Widget::widget(Array)
+#11 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\View.php(348): require('E:\\xampp\\htdocs...')
+#12 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('E:\\xampp\\htdocs...', Array)
+#13 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('E:\\xampp\\htdocs...', Array, Object(app\controllers\BuyController))
+#14 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render('purchasedetail', Array, Object(app\controllers\BuyController))
+#15 E:\xampp\htdocs\basic\controllers\BuyController.php(140): yii\base\Controller->render('purchasedetail', Array)
+#16 [internal function]: app\controllers\BuyController->actionPurchasedetail('201905291616500')
+#17 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#18 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#19 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('purchasedetail', Array)
+#20 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('buy/purchasedet...', Array)
+#21 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 E:\xampp\htdocs\basic\web\index.php(12): yii\base\Application->run()
+#23 {main}
+2019-06-02 14:35:47 [::1][0][k98lsvrfsjeibmnqrksit9a9df][info][application] $_GET = [
+    'r' => 'buy/purchasedetail'
+    'order' => '201905291616500'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Phpstorm-669499eb' => 'd4c24652-d7f0-4aa9-96f5-594c93671c41'
+    '_identity' => 'bafcae2801332795a28f7679205fd393554cb3c4be5d247a8fe8663d1f8e5ba4a:2:{i:0;s:9:\"_identity\";i:1;s:14:\"[0,\"\",2592000]\";}'
+    'PHPSESSID' => 'k98lsvrfsjeibmnqrksit9a9df'
+    '_csrf' => '7a1b688787508f99bbb760042ba14a75812a0b447a95f3873a4c265060d0228da:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"DqJkuKQ_-Bbz-VEtjUVDgRfHvULEASpN\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 0
+    'userId' => '0'
+    'curOrder' => '201906021654040'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://localhost:8080/basic/web/index.php?r=buy%2Fpurchase'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'Phpstorm-669499eb=d4c24652-d7f0-4aa9-96f5-594c93671c41; _identity=bafcae2801332795a28f7679205fd393554cb3c4be5d247a8fe8663d1f8e5ba4a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A14%3A%22%5B0%2C%22%22%2C2592000%5D%22%3B%7D; PHPSESSID=k98lsvrfsjeibmnqrksit9a9df; _csrf=7a1b688787508f99bbb760042ba14a75812a0b447a95f3873a4c265060d0228da%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22DqJkuKQ_-Bbz-VEtjUVDgRfHvULEASpN%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\VanDyke Software\\Clients\\;E:\\Python27\\;E:\\Python27\\Scripts;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\dotnet\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Java\\jdk1.8.0_172\\bin;E:\\android_sdk\\platform-tools;E:\\android_sdk\\tools;E:\\Program Files (x86)\\opencv\\build\\x64\\vc15\\bin;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;E:\\MinGW\\include;E:\\MinGW\\lib;E:\\Python;E:\\Program Files\\Git\\cmd;C:\\Users\\Peng\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files\\Java\\jdk1.8.0_172\\bin;;E:\\Program Files\\Microsoft VS Code\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4 Server at localhost Port 8080</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'E:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/xampp/htdocs/basic/web/index.php'
+    'REMOTE_PORT' => '58261'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=buy%2Fpurchasedetail&order=201905291616500'
+    'REQUEST_URI' => '/basic/web/index.php?r=buy%2Fpurchasedetail&order=201905291616500'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1559478947.385
+    'REQUEST_TIME' => 1559478947
+]
