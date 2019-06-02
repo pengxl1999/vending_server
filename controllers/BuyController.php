@@ -330,6 +330,7 @@ class BuyController extends Controller
     /**
      * 支付宝退款
      * @param $order
+     * @return string
      * @throws \Exception
      */
     public function actionRefund($order) {
@@ -351,7 +352,9 @@ class BuyController extends Controller
         $config = Yii::$app->params['refund'];
         $service = new \AlipayTradeService($config);
         $result = $service->Refund($refund);
-        return $this->render('refund', $result);
+        return $this->render('refund', [
+            'result' => $result
+        ]);
     }
 
     /**
