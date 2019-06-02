@@ -13,4 +13,5 @@ class AppointmentStatus
     public static $CHECKING = 4;    //待审核
     public static $ALREADY_CHECKED = 5;     //已审核
     public static $DEADLINE_EXCEED = 6;     //超出deadline，退款
+    public static $ALREADY_REFUND = 7;      //已退款
 }

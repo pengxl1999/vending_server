@@ -110,6 +110,8 @@ $this->params['breadcrumbs'][] = $this->title;
                                 return null;
                             case \app\models\AppointmentStatus::$DEADLINE_EXCEED:
                                 return null;
+                            case \app\models\AppointmentStatus::$ALREADY_REFUND:
+                                return null;
                             default:
                                 return "错误！";
                         }
@@ -125,7 +127,8 @@ $this->params['breadcrumbs'][] = $this->title;
                                 return Html::a('退款', ['buy/refund', 'order' => $model->ca_order],
                                     ['class' => "btn btn-sm btn-danger", 'style' => 'font-size:xx-small; margin-top: 5px']);
                             case \app\models\AppointmentStatus::$ALREADY_FINISHED:
-                                return null;
+                                return Html::a('删除', ['buy/purchase', 'cancel' => $model->ca_order],
+                                    ['class' => "btn btn-sm btn-danger", 'style' => 'font-size:xx-small; margin-top: 5px']);
                             case \app\models\AppointmentStatus::$TIME_OUT:
                                 return Html::a('删除', ['buy/purchase', 'cancel' => $model->ca_order],
                                     ['class' => "btn btn-sm btn-danger", 'style' => 'font-size:xx-small; margin-top: 5px']);
@@ -134,6 +137,9 @@ $this->params['breadcrumbs'][] = $this->title;
                                     ['class' => "btn btn-sm btn-danger", 'style' => 'font-size:xx-small; margin-top: 5px']);
                             case \app\models\AppointmentStatus::$DEADLINE_EXCEED:
                                 return Html::a('退款', ['buy/refund', 'order' => $model->ca_order],
+                                    ['class' => "btn btn-sm btn-danger", 'style' => 'font-size:xx-small; margin-top: 5px']);
+                            case \app\models\AppointmentStatus::$ALREADY_REFUND:
+                                return Html::a('删除', ['buy/purchase', 'cancel' => $model->ca_order],
                                     ['class' => "btn btn-sm btn-danger", 'style' => 'font-size:xx-small; margin-top: 5px']);
                             default:
                                 return "错误！";

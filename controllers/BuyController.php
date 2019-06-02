@@ -355,7 +355,8 @@ class BuyController extends Controller
         $resultCode = $result->code;
         if(!empty($resultCode) && $resultCode == 10000) {
             foreach ($appointments as $appointment) {
-                $appointment->delete();
+                $appointment->status = AppointmentStatus::$ALREADY_REFUND;
+                $appointment->save();
             }
             return $this->render('refund', [
                 'success' => true,
