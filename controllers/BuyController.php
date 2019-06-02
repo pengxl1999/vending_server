@@ -402,7 +402,7 @@ class BuyController extends Controller
         $config = Yii::$app->params['refund'];
 
         $arr=$_POST;
-        $alipaySevice = new AlipayTradeService($config);
+        $alipaySevice = new \AlipayTradeService($config);
         $alipaySevice->writeLog(var_export($_POST,true));
         $result = $alipaySevice->check($arr);
 
