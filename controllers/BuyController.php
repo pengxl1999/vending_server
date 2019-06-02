@@ -435,7 +435,6 @@ class BuyController extends Controller
                $appointment->status = AppointmentStatus::$TIME_OUT;
                $appointment->save();
             }
-            echo (strtotime(date("Y-m-d H:i:s")) > date_timestamp_get(date_create($appointment->deadline)));
             if(strtotime(date("Y-m-d H:i:s")) > date_timestamp_get(date_create($appointment->deadline))
                 && $appointment->status == AppointmentStatus::$ALREADY_PAID) {
                 $appointment->status = AppointmentStatus::$DEADLINE_EXCEED;
