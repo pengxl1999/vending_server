@@ -339,6 +339,10 @@ class BuyController extends Controller
             $refundAmount += $appointment->money;
         }
 
+        if($refundAmount === 0) {
+            $this->redirect(['index']);
+        }
+
         $alipay = new \AlipayTradeRefundContentBuilder();
         $alipay->setOutTradeNo($order);
         $alipay->setRefundAmount($refundAmount);
