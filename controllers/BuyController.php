@@ -351,7 +351,7 @@ class BuyController extends Controller
 
         $config = Yii::$app->params['alipay'];
         $service = new \AlipayTradeService($config);
-        $service->Refund($refund);
+        $result = $service->Refund($refund);
         return $this->render('refund');
     }
 
@@ -400,11 +400,11 @@ class BuyController extends Controller
 
     public function notify_url() {
 
-        $config = Yii::$app->params['refund'];
+        $config = Yii::$app->params['alipay'];
 
         $arr=$_POST;
         $alipaySevice = new \AlipayTradeService($config);
-        $alipaySevice->writeLog(var_export($_POST,true));
+        //$alipaySevice->writeLog(var_export($_POST,true));
         $result = $alipaySevice->check($arr);
 
         /* 实际验证过程建议商户添加以下校验。
