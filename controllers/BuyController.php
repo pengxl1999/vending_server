@@ -353,7 +353,7 @@ class BuyController extends Controller
         $service = new \AlipayTradeService($config);
         $result = $service->Refund($refund);
         $responseNode = "alipay_trade_refund_response";
-        $resultCode = $result->$responseNode->code;
+        $resultCode = $result->responseNode->code;
         if(!empty($resultCode) && $resultCode == 10000) {
             return $this->render('refund', [
                 'success' => true,
