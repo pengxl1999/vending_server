@@ -4,7 +4,8 @@ $alipay = array(
     'app_id' => "2016093000628163",
 
     //商户私钥，您的原始格式RSA私钥
-    'merchant_private_key' => "MIIEpAIBAAKCAQEAq+pDnmYPhde30YA4rq6zXq5YQGgEcJjnyAasS89Cd6DdXvDJ
+    'merchant_private_key' => "-----BEGIN RSA PRIVATE KEY-----
+MIIEpAIBAAKCAQEAq+pDnmYPhde30YA4rq6zXq5YQGgEcJjnyAasS89Cd6DdXvDJ
 fp1WIIczNVXqE8oQaoNJuTrgnbN/tzPk0BiL4dsqB2efb3fBCRdSsLYFYdpbtIg9
 eXAk4e8SIYQMhEGaNeH8gNuRgYDAhP5g8bi1l5+c1NhE/yJFWoTzX3bmdUlYqE+I
 Bq3vdMHhlCjT2BNfILY4N9IbrMR9+9gsX49rLsca8cdiFOitlz6T07bf8HO4TPsL
@@ -28,7 +29,8 @@ xLSiZS+3axxs+0jw3TfYG1gAW9+ObBLbHXOUOkEvG+zZCdcoF8IrtR9Q90H4s5vk
 bt/FIqX7I6kZscjBYycIY3HXQKepxxt5dRc127R+yXgrC5R9fgI5j1GqM5YxFX2x
 5sKZRHkCgYBZNA8HPtSvI0qeB8/4RryIZ07zPcidOSXQvepgFclAT8nQijORR4y9
 lkDYAlncYyyoltGwtfFhv0ees5f+MD+FgZmUJx9KUuLGlrXKuINwXSNjOkYo6AS/
-qeALCckShxZUiRYDf89kCCWGp2H3oGApbrWdMIcw0W1CIvOmdfY7ww==",
+qeALCckShxZUiRYDf89kCCWGp2H3oGApbrWdMIcw0W1CIvOmdfY7ww==
+-----END RSA PRIVATE KEY-----",
 
     //异步通知地址
     'notify_url' => "http://to-group.top/vending/web/index.php?r=buy%2Fsuccess",
