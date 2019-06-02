@@ -134,6 +134,12 @@ class BuyController extends Controller
         ]);
     }
 
+    public function actionPurchasedetail($order) {
+        return $this->render('purchasedetail', [
+            'model' => CustomerAppointment::findOne(['ca_order' => $order]),
+        ]);
+    }
+
     /**
      * 我的购物车
      * @param int $medId
@@ -202,8 +208,8 @@ class BuyController extends Controller
      * @param $medId
      * @return string
      */
-    public function actionDetail($medId) {
-        return $this->render('detail', [
+    public function actionMedicinedetail($medId) {
+        return $this->render('medicinedetail', [
             'model' => Medicine::findOne($medId),
         ]);
     }
@@ -427,6 +433,12 @@ class BuyController extends Controller
             if(floor((strtotime(date("Y-m-d H:i:s")) - date_timestamp_get(date_create($appointment->ca_time))) % 86400 / 60) > 15
                 && $appointment->status == AppointmentStatus::$NOT_PAID) {
                $appointment->status = AppointmentStatus::$TIME_OUT;
+               $appointment->save();
+            }
+            else if(floor((strtotime(date("Y-m-d H:i:s")) - date_timestamp_get(date_create($appointment->ca_time))) % 86400 / 1440) >= 2
+                && $appointment->status == AppointmentStatus::$ALREADY_PAID) {
+                $appointment->status = AppointmentStatus::$DEADLINE_EXCEED;
+                $appointment->save();
             }
         }
     }

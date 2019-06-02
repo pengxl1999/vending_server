@@ -55,7 +55,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'buttons' => [
                     'name' => function ($url, $model) {
                         //$_SESSION['medId'] = $model->m_id;
-                        return Html::a($model->name, ['buy/detail', 'medId' => $model->m_id]);
+                        return Html::a($model->name, ['buy/medicinedetail', 'medId' => $model->m_id]);
                     },
                 ],
             ],

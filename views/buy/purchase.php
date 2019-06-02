@@ -64,6 +64,8 @@ $this->params['breadcrumbs'][] = $this->title;
                             return '已超时';
                         case \app\models\AppointmentStatus::$CHECKING:
                             return '待审核';
+                        case \app\models\AppointmentStatus::$DEADLINE_EXCEED:
+                            return '收货超出期限';
                         default:
                             return "错误！";
                     }
@@ -82,25 +84,31 @@ $this->params['breadcrumbs'][] = $this->title;
             [
                 'header' => '选项',
                 'class' => 'yii\grid\ActionColumn',
-                'template'=> '{pay}{cancel}',
+                'template'=> '{detail}{pay}{cancel}',
                 'headerOptions' => ['style' => 'text-align:center; font-size: x-small; vertical-align: middle; width: 60px'],
                 'contentOptions' => ['style' => 'vertical-align: middle', 'align' => 'center'],
                 'buttons' => [
+                    'detail' => function ($url, $model) {
+                        return Html::a('详细', ['buy/purchasedetail', 'order' => $model->ca_order],
+                            ['class' => "btn btn-sm btn-primary", 'style' => 'font-size:xx-small']);
+                    },
                     'pay' => function ($url, $model) {
                         //$_SESSION['medId'] = $model->m_id;
                         switch ($model->status) {
                             case \app\models\AppointmentStatus::$NOT_PAID:
                                 return Html::a('付款', ['buy/payorder', 'order' => $model->ca_order],
                                     ['class' => "btn btn-sm btn-success",
-                                        'style' => 'font-size:xx-small']);
+                                        'style' => 'font-size:xx-small; margin-top: 5px']);
                             case \app\models\AppointmentStatus::$ALREADY_PAID:
                                 return Html::a('取货码', null, ['class' => "btn btn-sm btn-success",
-                                    'style' => 'font-size:xx-small', 'onclick' => "window.android.createQRCode('".$model->ca_order."',".$model->m_id.",".$model->num.",". $model->v_id .")"]);
+                                    'style' => 'font-size:xx-small; margin-top: 5px', 'onclick' => "window.android.createQRCode('".$model->ca_order."',".$model->m_id.",".$model->num.",". $model->v_id .")"]);
                             case \app\models\AppointmentStatus::$ALREADY_FINISHED:
                                 return null;
                             case \app\models\AppointmentStatus::$TIME_OUT:
                                 return null;
                             case \app\models\AppointmentStatus::$CHECKING:
+                                return null;
+                            case \app\models\AppointmentStatus::$DEADLINE_EXCEED:
                                 return null;
                             default:
                                 return "错误！";
@@ -111,7 +119,8 @@ $this->params['breadcrumbs'][] = $this->title;
                         switch ($model->status) {
                             case \app\models\AppointmentStatus::$NOT_PAID:
                                 return Html::a('取消', ['buy/purchase', 'cancel' => $model->ca_order],
-                                    ['class' => "btn btn-sm btn-danger", 'style' => 'font-size:xx-small; margin-top: 5px']);
+                                    ['class' => "btn btn-sm btn-danger"
+                                        , 'style' => 'font-size:xx-small; margin-top: 5px']);
                             case \app\models\AppointmentStatus::$ALREADY_PAID:
                                 return null;
                             case \app\models\AppointmentStatus::$ALREADY_FINISHED:
@@ -122,10 +131,12 @@ $this->params['breadcrumbs'][] = $this->title;
                             case \app\models\AppointmentStatus::$CHECKING:
                                 return Html::a('取消', ['buy/purchase', 'cancel' => $model->ca_order],
                                     ['class' => "btn btn-sm btn-danger", 'style' => 'font-size:xx-small; margin-top: 5px']);
+                            case \app\models\AppointmentStatus::$DEADLINE_EXCEED:
+                                return null;        //退款
                             default:
                                 return "错误！";
                         }
-                    },
+                    }
                 ],
             ],
         ],
