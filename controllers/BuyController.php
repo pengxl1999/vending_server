@@ -352,8 +352,7 @@ class BuyController extends Controller
         $config = Yii::$app->params['alipay'];
         $service = new \AlipayTradeService($config);
         $result = $service->Refund($refund);
-        $responseNode = "alipay_trade_refund_response";
-        $resultCode = $result->responseNode->code;
+        $resultCode = $result->code;
         if(!empty($resultCode) && $resultCode == 10000) {
             return $this->render('refund', [
                 'success' => true,
