@@ -360,7 +360,7 @@ class BuyController extends Controller
             ]);
         }
         else {
-            return $this->render('refund', [
+            return $this->render("refund", [
                 'success' => false,
             ]);
         }
