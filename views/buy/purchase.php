@@ -66,6 +66,8 @@ $this->params['breadcrumbs'][] = $this->title;
                             return '待审核';
                         case \app\models\AppointmentStatus::$DEADLINE_EXCEED:
                             return '收货超出期限';
+                        case \app\models\AppointmentStatus::$ALREADY_REFUND:
+                            return '已退款';
                         default:
                             return "错误！";
                     }
