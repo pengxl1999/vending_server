@@ -353,11 +353,12 @@ class BuyController extends Controller
                 'success' => true,
             ]);
         }
-//        else {
-//            return $this->render('refund', [
-//                'success' => false,
-//            ]);
-//        }
+        else {
+            /*return $this->render('refund', [
+                'success' => false,
+            ]);*/
+            echo $resultCode;
+        }
     }
 
     /**
