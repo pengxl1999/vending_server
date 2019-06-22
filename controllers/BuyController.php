@@ -271,7 +271,7 @@ class BuyController extends Controller
                 $appointment->v_id = BuyStatus::$vemChosen;
                 $appointment->save();
             }
-            else if($appointment->v_id !== 0) {
+            else if($appointment->v_id != null) {
                 BuyStatus::$vemChosen = $appointment->v_id;
             }
         }
