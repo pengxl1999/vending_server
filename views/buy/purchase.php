@@ -138,10 +138,10 @@ $this->params['breadcrumbs'][] = $this->title;
                                     ['class' => "btn btn-sm btn-danger", 'style' => 'font-size:xx-small; margin-top: 5px', 'onclick' => 'confirmDelete("取消",'. $model->ca_order . ')']);
                             case \app\models\AppointmentStatus::$DEADLINE_EXCEED:
                                 return Html::a('退款', null,
-                                    ['class' => "btn btn-sm btn-danger", 'style' => 'font-size:xx-small; margin-top: 5px', 'onclick' => 'confirmDelete("退款"),'. $model->ca_order . ')']);
+                                    ['class' => "btn btn-sm btn-danger", 'style' => 'font-size:xx-small; margin-top: 5px', 'onclick' => 'confirmDelete("退款",'. $model->ca_order . ')']);
                             case \app\models\AppointmentStatus::$ALREADY_REFUND:
                                 return Html::a('删除', null,
-                                    ['class' => "btn btn-sm btn-danger", 'style' => 'font-size:xx-small; margin-top: 5px', 'onclick' => 'confirmDelete("删除"),'. $model->ca_order . ')']);
+                                    ['class' => "btn btn-sm btn-danger", 'style' => 'font-size:xx-small; margin-top: 5px', 'onclick' => 'confirmDelete("删除",'. $model->ca_order . ')']);
                             default:
                                 return "错误！";
                         }
@@ -155,7 +155,7 @@ $this->params['breadcrumbs'][] = $this->title;
     function confirmDelete(message, order) {
         var result = confirm(message);
         if(result) {
-            switch (message) {
+            if(message)
                 case "退款":
                     window.location.href = "./index.php?r=buy/refund&order=" + order;
                     break;
