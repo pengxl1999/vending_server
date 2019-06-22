@@ -155,7 +155,7 @@ $this->params['breadcrumbs'][] = $this->title;
     function confirmDelete(message, order) {
         var result = confirm(message);
         if(result) {
-            if(message)
+            switch (message) {
                 case "退款":
                     window.location.href = "./index.php?r=buy/refund&order=" + order;
                     break;
