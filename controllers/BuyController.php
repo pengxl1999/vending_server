@@ -344,7 +344,6 @@ class BuyController extends Controller
         $service = new \AlipayTradeService($config);
         $result = $service->Refund($refund);
         $resultCode = $result->code;
-        $subMsg = $result->sub_msg;
         if(!empty($resultCode) && $resultCode == 10000) {
             foreach ($appointments as $appointment) {
                 $appointment->status = AppointmentStatus::$ALREADY_REFUND;
@@ -358,7 +357,7 @@ class BuyController extends Controller
             /*return $this->render('refund', [
                 'success' => false,
             ]);*/
-            echo $resultCode . "\n". $subMsg;
+            echo $resultCode;
         }
     }
 
