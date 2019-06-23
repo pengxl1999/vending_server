@@ -339,11 +339,10 @@
       <path value="$PROJECT_DIR$/vendor/alipay/aop" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1637" />
-    <option name="y" value="12" />
-    <option name="width" value="1260" />
-    <option name="height" value="758" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="y" value="23" />
+    <option name="width" value="1920" />
+    <option name="height" value="996" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
