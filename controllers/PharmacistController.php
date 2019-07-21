@@ -8,7 +8,6 @@ use app\models\PharmacistSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-
 /**
  * PharmacistController implements the CRUD actions for Pharmacist model.
  */
@@ -107,6 +106,13 @@ class PharmacistController extends Controller
         $this->findModel($id)->delete();
 
         return $this->redirect(['index']);
+    }
+
+    public function actionList() {
+        $dir = dirname(__FILE__) . DIRECTORY_SEPARATOR . '../../prescription';
+        $file = scandir($dir);
+        print_r($file);
+        return $this->render('list');
     }
 
     /**
