@@ -108,6 +108,13 @@ class PharmacistController extends Controller
         return $this->redirect(['index']);
     }
 
+    public function actionList() {
+        $dir = dirname(__FILE__) . DIRECTORY_SEPARATOR . '../../prescription';
+        $file = scandir($dir);
+        print_r($file);
+        return $this->render('list');
+    }
+
     /**
      * Finds the Pharmacist model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
