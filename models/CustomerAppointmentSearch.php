@@ -97,4 +97,22 @@ class CustomerAppointmentSearch extends CustomerAppointment
 
         return $dataProvider;
     }
+
+    public function pharmacistSearch($params) {
+        $query = CustomerAppointment::find();
+
+        // add conditions that should always apply here
+
+        $dataProvider = new ActiveDataProvider([
+            'query' => $query,
+        ]);
+
+        // grid filtering conditions
+        $query->andFilterWhere([
+            'ca_order' => $params,
+            'status' => AppointmentStatus::$CHECKING,
+        ]);
+
+        return $dataProvider;
+    }
 }

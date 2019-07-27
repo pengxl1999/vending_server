@@ -26056,3 +26056,252 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1563700731.815
     'REQUEST_TIME' => 1563700731
 ]
+2019-07-21 14:37:11 [::1][0][fk5m4n5td46dnr3pvk6or20k46][error][yii\base\ErrorException:2] yii\base\ErrorException: scandir(E:\xampp\htdocs\basic\controllers\../../prescription,E:\xampp\htdocs\basic\controllers\../../prescription): ϵͳ�Ҳ���ָ�����ļ��� (code: 2) in E:\xampp\htdocs\basic\controllers\PharmacistController.php:113
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'scandir(E:\\xamp...', 'E:\\xampp\\htdocs...', 113, Array)
+#1 E:\xampp\htdocs\basic\controllers\PharmacistController.php(113): scandir('E:\\xampp\\htdocs...')
+#2 [internal function]: app\controllers\PharmacistController->actionList()
+#3 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#4 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#5 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('list', Array)
+#6 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('pharmacist/list', Array)
+#7 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 E:\xampp\htdocs\basic\web\index.php(12): yii\base\Application->run()
+#9 {main}
+2019-07-21 14:37:11 [::1][0][fk5m4n5td46dnr3pvk6or20k46][info][application] $_GET = [
+    'r' => 'pharmacist/list'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Phpstorm-669499eb' => 'd4c24652-d7f0-4aa9-96f5-594c93671c41'
+    '_identity' => 'bafcae2801332795a28f7679205fd393554cb3c4be5d247a8fe8663d1f8e5ba4a:2:{i:0;s:9:\"_identity\";i:1;s:14:\"[0,\"\",2592000]\";}'
+    'PHPSESSID' => 'fk5m4n5td46dnr3pvk6or20k46'
+    '_csrf' => 'b57e248c1fa82ae0fdd106a73815303d48c8c6a84a6c6cd15c7ba7793315e956a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"IFiGPLpLvfk19z_GBoSlrTsidklbr84O\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 0
+    'userId' => '0'
+    'machine' => 0
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'Phpstorm-669499eb=d4c24652-d7f0-4aa9-96f5-594c93671c41; _identity=bafcae2801332795a28f7679205fd393554cb3c4be5d247a8fe8663d1f8e5ba4a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A14%3A%22%5B0%2C%22%22%2C2592000%5D%22%3B%7D; PHPSESSID=fk5m4n5td46dnr3pvk6or20k46; _csrf=b57e248c1fa82ae0fdd106a73815303d48c8c6a84a6c6cd15c7ba7793315e956a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22IFiGPLpLvfk19z_GBoSlrTsidklbr84O%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\VanDyke Software\\Clients\\;E:\\Python27\\;E:\\Python27\\Scripts;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\dotnet\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Java\\jdk1.8.0_172\\bin;E:\\android_sdk\\platform-tools;E:\\android_sdk\\tools;E:\\Program Files (x86)\\opencv\\build\\x64\\vc15\\bin;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;E:\\MinGW\\include;E:\\MinGW\\lib;E:\\Python;E:\\Program Files\\Git\\cmd;C:\\Users\\Peng\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files\\Java\\jdk1.8.0_172\\bin;;E:\\Program Files\\Microsoft VS Code\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4 Server at localhost Port 8080</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'E:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/xampp/htdocs/basic/web/index.php'
+    'REMOTE_PORT' => '53151'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=pharmacist/list'
+    'REQUEST_URI' => '/basic/web/index.php?r=pharmacist/list'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1563712631.512
+    'REQUEST_TIME' => 1563712631
+]
+2019-07-21 14:37:25 [::1][0][fk5m4n5td46dnr3pvk6or20k46][error][Error] Error: Call to a member function getModels() on array in E:\xampp\htdocs\basic\vendor\yiisoft\yii2\grid\GridView.php:589
+Stack trace:
+#0 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\grid\GridView.php(543): yii\grid\GridView->guessColumns()
+#1 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\grid\GridView.php(288): yii\grid\GridView->initColumns()
+#2 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\grid\GridView->init()
+#3 [internal function]: yii\base\BaseObject->__construct(Array)
+#4 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\di\Container.php(384): ReflectionClass->newInstanceArgs(Array)
+#5 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\di\Container.php(156): yii\di\Container->build('yii\\grid\\GridVi...', Array, Array)
+#6 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\BaseYii.php(349): yii\di\Container->get('yii\\grid\\GridVi...', Array, Array)
+#7 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Widget.php(137): yii\BaseYii::createObject(Array)
+#8 E:\xampp\htdocs\basic\views\pharmacist\list.php(10): yii\base\Widget::widget(Array)
+#9 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\View.php(348): require('E:\\xampp\\htdocs...')
+#10 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('E:\\xampp\\htdocs...', Array)
+#11 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('E:\\xampp\\htdocs...', Array, Object(app\controllers\PharmacistController))
+#12 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render('list', Array, Object(app\controllers\PharmacistController))
+#13 E:\xampp\htdocs\basic\controllers\PharmacistController.php(116): yii\base\Controller->render('list', Array)
+#14 [internal function]: app\controllers\PharmacistController->actionList()
+#15 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#16 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#17 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('list', Array)
+#18 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('pharmacist/list', Array)
+#19 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#20 E:\xampp\htdocs\basic\web\index.php(12): yii\base\Application->run()
+#21 {main}
+2019-07-21 14:37:25 [::1][0][fk5m4n5td46dnr3pvk6or20k46][info][application] $_GET = [
+    'r' => 'pharmacist/list'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Phpstorm-669499eb' => 'd4c24652-d7f0-4aa9-96f5-594c93671c41'
+    '_identity' => 'bafcae2801332795a28f7679205fd393554cb3c4be5d247a8fe8663d1f8e5ba4a:2:{i:0;s:9:\"_identity\";i:1;s:14:\"[0,\"\",2592000]\";}'
+    'PHPSESSID' => 'fk5m4n5td46dnr3pvk6or20k46'
+    '_csrf' => 'b57e248c1fa82ae0fdd106a73815303d48c8c6a84a6c6cd15c7ba7793315e956a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"IFiGPLpLvfk19z_GBoSlrTsidklbr84O\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 0
+    'userId' => '0'
+    'machine' => 0
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'Phpstorm-669499eb=d4c24652-d7f0-4aa9-96f5-594c93671c41; _identity=bafcae2801332795a28f7679205fd393554cb3c4be5d247a8fe8663d1f8e5ba4a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A14%3A%22%5B0%2C%22%22%2C2592000%5D%22%3B%7D; PHPSESSID=fk5m4n5td46dnr3pvk6or20k46; _csrf=b57e248c1fa82ae0fdd106a73815303d48c8c6a84a6c6cd15c7ba7793315e956a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22IFiGPLpLvfk19z_GBoSlrTsidklbr84O%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\VanDyke Software\\Clients\\;E:\\Python27\\;E:\\Python27\\Scripts;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\dotnet\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Java\\jdk1.8.0_172\\bin;E:\\android_sdk\\platform-tools;E:\\android_sdk\\tools;E:\\Program Files (x86)\\opencv\\build\\x64\\vc15\\bin;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;E:\\MinGW\\include;E:\\MinGW\\lib;E:\\Python;E:\\Program Files\\Git\\cmd;C:\\Users\\Peng\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files\\Java\\jdk1.8.0_172\\bin;;E:\\Program Files\\Microsoft VS Code\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4 Server at localhost Port 8080</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'E:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/xampp/htdocs/basic/web/index.php'
+    'REMOTE_PORT' => '53170'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=pharmacist/list'
+    'REQUEST_URI' => '/basic/web/index.php?r=pharmacist/list'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1563712645.274
+    'REQUEST_TIME' => 1563712645
+]
+2019-07-21 15:17:19 [::1][0][fk5m4n5td46dnr3pvk6or20k46][error][yii\base\ErrorException:2] yii\base\ErrorException: scandir(E:\xampp\htdocs\basic\controllers\../../prescription,E:\xampp\htdocs\basic\controllers\../../prescription): ϵͳ�Ҳ���ָ�����ļ��� (code: 2) in E:\xampp\htdocs\basic\controllers\PharmacistController.php:115
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'scandir(E:\\xamp...', 'E:\\xampp\\htdocs...', 115, Array)
+#1 E:\xampp\htdocs\basic\controllers\PharmacistController.php(115): scandir('E:\\xampp\\htdocs...')
+#2 [internal function]: app\controllers\PharmacistController->actionList()
+#3 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#4 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#5 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('list', Array)
+#6 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('pharmacist/list', Array)
+#7 E:\xampp\htdocs\basic\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 E:\xampp\htdocs\basic\web\index.php(12): yii\base\Application->run()
+#9 {main}
+2019-07-21 15:17:19 [::1][0][fk5m4n5td46dnr3pvk6or20k46][info][application] $_GET = [
+    'r' => 'pharmacist/list'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Phpstorm-669499eb' => 'd4c24652-d7f0-4aa9-96f5-594c93671c41'
+    '_identity' => 'bafcae2801332795a28f7679205fd393554cb3c4be5d247a8fe8663d1f8e5ba4a:2:{i:0;s:9:\"_identity\";i:1;s:14:\"[0,\"\",2592000]\";}'
+    'PHPSESSID' => 'fk5m4n5td46dnr3pvk6or20k46'
+    '_csrf' => 'b57e248c1fa82ae0fdd106a73815303d48c8c6a84a6c6cd15c7ba7793315e956a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"IFiGPLpLvfk19z_GBoSlrTsidklbr84O\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 0
+    'userId' => '0'
+    'machine' => 0
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_COOKIE' => 'Phpstorm-669499eb=d4c24652-d7f0-4aa9-96f5-594c93671c41; _identity=bafcae2801332795a28f7679205fd393554cb3c4be5d247a8fe8663d1f8e5ba4a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A14%3A%22%5B0%2C%22%22%2C2592000%5D%22%3B%7D; PHPSESSID=fk5m4n5td46dnr3pvk6or20k46; _csrf=b57e248c1fa82ae0fdd106a73815303d48c8c6a84a6c6cd15c7ba7793315e956a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22IFiGPLpLvfk19z_GBoSlrTsidklbr84O%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\VanDyke Software\\Clients\\;E:\\Python27\\;E:\\Python27\\Scripts;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\dotnet\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Java\\jdk1.8.0_172\\bin;E:\\android_sdk\\platform-tools;E:\\android_sdk\\tools;E:\\Program Files (x86)\\opencv\\build\\x64\\vc15\\bin;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;E:\\MinGW\\include;E:\\MinGW\\lib;E:\\Python;E:\\Program Files\\Git\\cmd;C:\\Users\\Peng\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Program Files\\Java\\jdk1.8.0_172\\bin;;E:\\Program Files\\Microsoft VS Code\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4 Server at localhost Port 8080</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'E:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/xampp/htdocs/basic/web/index.php'
+    'REMOTE_PORT' => '56026'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=pharmacist/list'
+    'REQUEST_URI' => '/basic/web/index.php?r=pharmacist/list'
+    'SCRIPT_NAME' => '/basic/web/index.php'
+    'PHP_SELF' => '/basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1563715039.189
+    'REQUEST_TIME' => 1563715039
+]

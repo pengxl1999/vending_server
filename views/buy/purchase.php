@@ -68,6 +68,10 @@ $this->params['breadcrumbs'][] = $this->title;
                             return '收货超出期限';
                         case \app\models\AppointmentStatus::$ALREADY_REFUND:
                             return '已退款';
+                        case \app\models\AppointmentStatus::$CHECKED_OK:
+                            return '审核通过';
+                        case \app\models\AppointmentStatus::$CHECKED_BAD:
+                            return '审核未通过';
                         default:
                             return "错误！";
                     }
@@ -114,6 +118,12 @@ $this->params['breadcrumbs'][] = $this->title;
                                 return null;
                             case \app\models\AppointmentStatus::$ALREADY_REFUND:
                                 return null;
+                            case \app\models\AppointmentStatus::$CHECKED_OK:
+                                return Html::a('付款', ['buy/payorder', 'order' => $model->ca_order],
+                                    ['class' => "btn btn-sm btn-success",
+                                        'style' => 'font-size:xx-small; margin-top: 5px']);
+                            case \app\models\AppointmentStatus::$CHECKED_BAD:
+                                return null;
                             default:
                                 return "错误！";
                         }
@@ -140,6 +150,12 @@ $this->params['breadcrumbs'][] = $this->title;
                                 return Html::a('退款', null,
                                     ['class' => "btn btn-sm btn-danger", 'style' => 'font-size:xx-small; margin-top: 5px', 'onclick' => 'confirmDelete("退款",'. $model->ca_order . ')']);
                             case \app\models\AppointmentStatus::$ALREADY_REFUND:
+                                return Html::a('删除', null,
+                                    ['class' => "btn btn-sm btn-danger", 'style' => 'font-size:xx-small; margin-top: 5px', 'onclick' => 'confirmDelete("删除",'. $model->ca_order . ')']);
+                            case \app\models\AppointmentStatus::$CHECKED_OK:
+                                return Html::a('取消', null,
+                                    ['class' => "btn btn-sm btn-danger", 'style' => 'font-size:xx-small; margin-top: 5px', 'onclick' => 'confirmDelete("取消",'. $model->ca_order . ')']);
+                            case \app\models\AppointmentStatus::$CHECKED_BAD:
                                 return Html::a('删除', null,
                                     ['class' => "btn btn-sm btn-danger", 'style' => 'font-size:xx-small; margin-top: 5px', 'onclick' => 'confirmDelete("删除",'. $model->ca_order . ')']);
                             default:

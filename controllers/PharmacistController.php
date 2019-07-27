@@ -2,6 +2,8 @@
 
 namespace app\controllers;
 
+use app\models\CustomerAppointmentSearch;
+use app\models\CustomerPurchaseSearch;
 use Yii;
 use app\models\Pharmacist;
 use app\models\PharmacistSearch;
@@ -108,11 +110,33 @@ class PharmacistController extends Controller
         return $this->redirect(['index']);
     }
 
-    public function actionList() {
+    /**
+     * 待审核列表
+     * @param int $option
+     * @param string order
+     * @return string
+     */
+    public function actionList($option = 0, $order = '') {
         $dir = dirname(__FILE__) . DIRECTORY_SEPARATOR . '../../prescription';
-        $file = scandir($dir);
-        print_r($file);
-        return $this->render('list');
+        $files = scandir($dir);
+        $orders = [];
+        $count = 0;
+        unset($files[0]);
+        unset($files[1]);
+        foreach($files as $file) {
+            $orders[$count] = substr($file, 0, strlen($file)-4);
+            $count++;
+        }
+
+        //$searchModel = new CustomerPurchaseSearch();
+        //$dataProvider = $searchModel->searchByParams(['cp_order' => $files]);
+        $searchModel = new CustomerAppointmentSearch();
+        $caProvider = $searchModel->pharmacistSearch($orders);
+
+        print_r($orders);
+        return $this->render('list', [
+            'caProvider' => $caProvider,
+        ]);
     }
 
     /**
