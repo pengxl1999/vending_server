@@ -267,6 +267,9 @@ class BuyController extends Controller
         foreach($appointmentProvider->models as $appointment) {
             $medicine = Medicine::findOne(['m_id' => $appointment->m_id]);
             $mMoney += $medicine->money * $appointment->num;
+            if($appointment->status === AppointmentStatus::$CHECKED_OK) {
+                BuyStatus::$isUploaded = true;
+            }
             if(BuyStatus::$vemChosen !== 0) {
                 $appointment->v_id = BuyStatus::$vemChosen;
                 $appointment->save();
